@@ -2,7 +2,7 @@ import '../custom.css';
 import { Image } from 'react-bootstrap';
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedin, faDiscord } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faLinkedin, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 
@@ -29,9 +29,15 @@ function LandingPage() {
                 </div>
                 <div className='row' style={{ height: '50px' }}></div>
                 <div className='row center mt-5'>
-                    <h6 className='fontRubik' style={{ fontWeight: 'bold' }} >scroll down to know more  <span style={{ color: '#19A7CE' }}>about me</span></h6>
+                    <h6 className='fontRubik' style={{ fontWeight: 'bold' }} >
+                        scroll down to know more
+                        <span style={{ color: '#19A7CE' }}> about me</span>
+                    </h6>
+
                     <div className='row' style={{ height: '50px' }} />
                 </div>
+
+                <div class="section"></div>
             </div>
 
             <div className='row' style={{ paddingLeft: '300px', paddingRight: '300px', paddingTop: '20px', backgroundColor: '#EDE4FF' }}>
@@ -198,31 +204,81 @@ function LandingPage() {
                                 </svg>
                             </div>
 
-                            CONTENTS TO FOLLOW
+                            <div className='row' style={{ justifyContent: 'center' }}>
+                                <div className='card m-5' style={{ width: '650px' }}>
+                                    <div className='card-header' >
+                                        <div className='row'>
+                                            <p className='fontRubik' style={{ height: '20px', fontWeight: 'bold', fontSize: '20px' }}>
+                                                IMS:<span style={{ color: '#FF8400' }}> Inventory Management System</span>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p className='fontRubik' style={{ height: '20px', fontWeight: 'bold', fontSize: '15px', display: 'inline-block' }}>
+                                                <a className='fontKanit' href="https://inventoryapp-330808.web.app/home">
+                                                    https://inventoryapp-330808.web.app/home
+                                                </a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
+                                        <Image className=' card' src={require('../Assets/Projects/IMS/IMS1.png')} rounded='true' style={{ height: '250px' }} />
+                                    </div>
+                                    <div className='center' style={{ display: 'inline-block', width: '600px' }}>
+                                        <div className='card mx-3' style={{ display: 'inline-block' }}>
+                                            <Image className=' card' src={require('../Assets/Projects/IMS/IMS2.png')} rounded='true' style={{ height: '120px' }} />
+                                        </div>
+                                        <div className='card' style={{ display: 'inline-block' }}>
+                                            <Image className=' card' src={require('../Assets/Projects/IMS/IMS3.png')} rounded='true' style={{ height: '120px' }} />
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div className='row' style={{ justifyContent: 'center' }}>
+                                <div className='card m-5' style={{ width: '450px' }}>
+                                    <div className='card-header align-middle' style={{ height: '50px' }}>
+                                        <p className='fontRubik ' style={{ fontWeight: 'bold', fontSize: '20px' }}>
+                                            Woop!<span style={{ color: '#FF8400' }}> (Internship Project)</span>
+                                        </p>
+                                    </div>
+                                    <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
+                                        <Image className=' card' src={require('../Assets/Projects/Woop/Woop1.png')} rounded='true' style={{ height: '450px' }} />
+                                    </div>
+
+
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>
                 </div >
             }
 
-            <div className='row card shadow' style={{ height: '200px', marginTop: '100px', backgroundColor: '#EDE4FF' }}>
-                contact me
-                <div class="social-icons mt-4">
-                    <a href="https://www.linkedin.com/in/adrianoadriannn/" style={{ fontSize: '10px' }}>
-                        <FontAwesomeIcon icon={faLinkedin} />
-                    </a>
-                    <a href="mailto:adrianoadriannn@gmail.com" style={{ fontSize: '10px' }}>
-                        <span> <FontAwesomeIcon icon={faEnvelope} /> adrianoadriannn@gmail.com</span>
-                    </a>
-                    <a href="https://www.facebook.com/ADRIANOadriann/" style={{ fontSize: '10px' }}>
-                        <FontAwesomeIcon icon={faFacebook} />
-                    </a>
-                    <a href="https://www.discordapp.com/users/adriannn#3845" style={{ fontSize: '10px' }}>
-                        <FontAwesomeIcon icon={faDiscord} />
-                    </a>
+            <div className='footer' style={{ height: '200px', marginTop: '100px', backgroundColor: '#EDE4FF' }}>
+                <div className='center'>
+                    <h5 className='fontRubik my-5' style={{fontWeight:'bold'}}> my personal <span style={{ color: '#FF8400' }}>accounts</span> </h5>
+                    <div className='my-5' style={{ fontSize: '7px' }}>
+                        <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
+                            <FontAwesomeIcon icon={faEnvelope} />
+                        </a>
+                        <a className='mx-3' href="https://www.linkedin.com/in/adrianoadriannn/" style={{ display: 'inline-block' }}>
+                            <FontAwesomeIcon icon={faLinkedin} />
+                        </a>
+                        <a className='mx-3' href="https://www.facebook.com/ADRIANOadriann/" style={{ display: 'inline-block' }}>
+                            <FontAwesomeIcon icon={faFacebook} />
+                        </a>
+                        <a className='mx-3' href="https://www.discordapp.com/users/adriannn#3845" style={{ display: 'inline-block' }}>
+                            <FontAwesomeIcon icon={faDiscord} />
+                        </a>
+                        <a className='mx-3' href="https://github.com/adrianoadree" style={{ display: 'inline-block' }}>
+                            <FontAwesomeIcon icon={faGithub} />
+                        </a>
+                    </div>
                 </div>
 
-            </div>
+            </div >
 
 
 
