@@ -9,16 +9,10 @@ const Navigation = () => {
         <>
             <Navbar className="bg-dark fontInconsolata" >
                 <Container>
-                    <Navbar.Brand className="text-white animate-charcter" href="/">
+                    <Navbar.Brand className="text-white m-auto" href="/">
                         A Adriano
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="me-auto">
-                            <Nav.Link className="text-white" href="/arts">Digital Arts</Nav.Link>
-                            <Nav.Link className="text-white" href="/projects">Projects</Nav.Link>
-                        </Nav>
-                    </Navbar.Collapse>
+                   
                 </Container>
             </Navbar>
             <Outlet />
