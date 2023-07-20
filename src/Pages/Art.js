@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { Image, Button, Tabs, Tab } from 'react-bootstrap';
-import styles from '../custom.css'
+import { Image } from 'react-bootstrap';
+
+
 
 class Arts extends Component {
   render() {
+
+
 
     return (
       <>
@@ -67,34 +70,65 @@ class Arts extends Component {
               </div>
             </div>
           </div>
-        </div >
 
-        <div className='row mt-5'>
-          <div className='row center' style={{ justifyContent: 'center' }}>
-            <button className='mx-2 fontKanit' style={{ width: '350px', height: '70px', border: '1px solid gray', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF' }}>PROJECTS</button>
-            <button className='mx-2 fontKanit' style={{ width: '350px', height: '70px', border: '1px solid gray', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF' }}>DIGITAL ARTS</button>
+        </div >
+        <div className='center mt-5'>
+          <div className='separator'>
+            <h4 className='fontRubik' style={{ fontWeight: 'bold' }}>MY <span style={{ color: '#19A7CE' }}>CAPABILITIES</span></h4>
+          </div>
+          <div className='row'>
+            <span className='fontKanit'>• ReachJS • Flutter Technology • Firebase Database • Firestore •  JavaScript • HTML • CSS • C++ • Adobe Illustrator • Adobe Photoshop •  Adobe Lightroom • </span><br />
           </div>
         </div>
 
+        <div className='row mt-5'>
+
+          <div className='row center' style={{ justifyContent: 'center' }}>
+            <button className='mx-2 fontKanit' style={{ width: '350px', height: '70px', border: '1px solid gray', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '20px' }}>PROJECTS</button>
+            <button className='mx-2 fontKanit' style={{ width: '350px', height: '70px', border: '1px solid gray', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '20px' }}>DIGITAL ARTS</button>
+          </div>
+        </div>
+
+
         <div className='row mt-3'>
           <div className='row center' style={{ justifyContent: 'center' }}>
-            <div className='guide shadow' style={{ width: '720px', height: '1500px', border: '1px solid gray', borderRadius: '20px', backgroundColor: '#EDE4FF' }}>
-              <svg viewBox="0 0 960 300">
-                <symbol id="s-text">
-                  <text text-anchor="middle" x="50%" y="80%">ARTS </text>
-                  <text text-anchor="middle" x="51%" y="80%">ARTS </text>
+            <div className='guide card shadow' style={{ width: '720px', borderRadius: '20px', backgroundColor: '#EDE4FF' }}>
+              <div className='row mt-5 bg-white shadow' style={{ height: '170px' }}>
+                <svg>
+                  <symbol id="s-text">
+                    <text text-anchor="middle" x="50%" y="80%">ARTS </text>
+                    <text text-anchor="middle" x="51%" y="80%">ARTS </text>
+                  </symbol>
+                  <g class="g-ants">
+                    <use xlinkHref="#s-text" class="text-copy"></use>
+                    <use xlinkHref="#s-text" class="text-copy"></use>
+                    <use xlinkHref="#s-text" class="text-copy"></use>
+                    <use xlinkHref="#s-text" class="text-copy"></use>
+                    <use xlinkHref="#s-text" class="text-copy"></use>
+                  </g>
+                </svg>
+              </div>
+              <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
+                <div className='card bg-white shadow bgImageArt1 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+                <div className='card bg-white shadow bgImageArt2 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+              </div>
+              <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
+                <div className='card bg-white shadow bgImageArt3 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+                <div className='card bg-white shadow bgImageArt4 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+              </div>
+              <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
+                <div className='card bg-white shadow bgImageArt5 mx-3' style={{ height: "350px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+                <div className='card bg-white shadow bgImageArt6 mx-3' style={{ height: "350px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+              </div>
+              <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
+                <div className='card bg-white shadow bgImageArt7 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+                <div className='card bg-white shadow bgImageArt8 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+              </div>
 
-                </symbol>
-
-                <g class="g-ants">
-                  <use xlinkHref="#s-text" class="text-copy"></use>
-                  <use xlinkHref="#s-text" class="text-copy"></use>
-                  <use xlinkHref="#s-text" class="text-copy"></use>
-                  <use xlinkHref="#s-text" class="text-copy"></use>
-                  <use xlinkHref="#s-text" class="text-copy"></use>
-                </g>
-              </svg>
-
+              <div className='row my-5  iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
+                <div className='card bg-white shadow bgImageArt9 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+                <div className='card bg-white shadow bgImageArt10 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
+              </div>
             </div>
           </div>
         </div>

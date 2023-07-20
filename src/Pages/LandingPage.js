@@ -2,12 +2,6 @@ import '../custom.css';
 import { Container, Image } from 'react-bootstrap';
 
 
-
-
-
-
-
-
 function LandingPage() {
     return (
         <div>

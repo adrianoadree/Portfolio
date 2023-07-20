@@ -5,7 +5,6 @@ import Arts from './Pages/Art';
 import Projects from './Pages/Projects';
 import { Routes, Route } from 'react-router-dom';
 
-
 function App() {
   return (
     <div className="App">
