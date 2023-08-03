@@ -3,7 +3,7 @@ import { Image } from 'react-bootstrap';
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedin, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope, faEye } from '@fortawesome/free-regular-svg-icons';
 
 
 function LandingPage() {
@@ -204,22 +204,27 @@ function LandingPage() {
                                 </svg>
                             </div>
 
+
                             <div className='row' style={{ justifyContent: 'center' }}>
+
                                 <div className='card m-5' style={{ width: '650px' }}>
                                     <div className='card-header' >
-                                        <div className='row'>
-                                            <p className='fontRubik' style={{ height: '20px', fontWeight: 'bold', fontSize: '20px' }}>
-                                                IMS:<span style={{ color: '#FF8400' }}> Inventory Management System</span>
-                                            </p>
-                                        </div>
-                                        <div>
-                                            <p className='fontRubik' style={{ height: '20px', fontWeight: 'bold', fontSize: '15px', display: 'inline-block' }}>
-                                                <a className='fontKanit' href="https://inventoryapp-330808.web.app/home">
-                                                    https://inventoryapp-330808.web.app/home
-                                                </a>
-                                            </p>
-                                        </div>
 
+                                        <div>
+                                            <a className='fontRubik'
+                                                style={{ height: '20px', fontWeight: 'bold', fontSize: '20px' }}
+                                                href='/view-project-ims'>
+                                                <span style={{ color: 'black' }}>IMS:</span><span style={{ color: '#FF8400' }}> Inventory Management System</span>
+                                            </a>
+                                        </div>
+                                        <div className="pt-2 d-flex flex-row-reverse bd-highlight">
+                                            <a className="px-3 bd-highlight" href='https://github.com/adrianoadree/IMSweb'>
+                                                <FontAwesomeIcon className='buttonHover' icon={faGithub} style={{ fontSize: '30px', }} />
+                                            </a>
+                                            <a className="px-3 bd-highlight" href='https://inventoryapp-330808.web.app'>
+                                                <FontAwesomeIcon className='buttonHover' icon={faEye} style={{ fontSize: '30px', }} />
+                                            </a>
+                                        </div>
                                     </div>
                                     <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
                                         <Image className=' card' src={require('../Assets/Projects/IMS/IMS1.png')} rounded='true' style={{ height: '250px' }} />
@@ -236,20 +241,25 @@ function LandingPage() {
                                 </div>
                             </div>
                             <div className='row' style={{ justifyContent: 'center' }}>
-                                <div className='card m-5' style={{ width: '450px' }}>
-                                    <div className='card-header align-middle' style={{ height: '50px' }}>
-                                        <p className='fontRubik ' style={{ fontWeight: 'bold', fontSize: '20px' }}>
-                                            Woop!<span style={{ color: '#FF8400' }}> (Internship Project)</span>
-                                        </p>
+                                <div className='card m-5' style={{ width: '550px' }}>
+                                    <div className='card-header align-middle'>
+                                        <a className='fontRubik '
+                                            href='/view-project-woop'
+                                            style={{ fontWeight: 'bold', fontSize: '20px' }}>
+                                            <span style={{ color: 'black' }}>Woop!</span>
+                                            <span style={{ color: '#FF8400' }}> (Internship Project)</span>
+                                        </a>
+                                        <div className="pt-2 d-flex flex-row-reverse bd-highlight">
+                                            <a className="px-3 bd-highlight" href='https://github.com/markguchi/woop/tree/main/mobile_customer'>
+                                                <FontAwesomeIcon className='buttonHover' icon={faGithub} style={{ fontSize: '30px', }} />
+                                            </a>
+                                        </div>
                                     </div>
                                     <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
-                                        <Image className=' card' src={require('../Assets/Projects/Woop/Woop1.png')} rounded='true' style={{ height: '450px' }} />
+                                        <Image className=' card' src={require('../Assets/Projects/Woop/Woop_Logo_Outlined.png')} rounded='true' style={{ height: '250px' }} />
                                     </div>
-
-
                                 </div>
                             </div>
-
                         </div>
 
                     </div>
@@ -258,7 +268,7 @@ function LandingPage() {
 
             <div className='footer' style={{ height: '200px', marginTop: '100px', backgroundColor: '#EDE4FF' }}>
                 <div className='center'>
-                    <h5 className='fontRubik my-5' style={{fontWeight:'bold'}}> my personal <span style={{ color: '#FF8400' }}>accounts</span> </h5>
+                    <h5 className='fontRubik my-5' style={{ fontWeight: 'bold' }}> my personal <span style={{ color: '#FF8400' }}>accounts</span> </h5>
                     <div className='my-5' style={{ fontSize: '7px' }}>
                         <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
                             <FontAwesomeIcon icon={faEnvelope} />

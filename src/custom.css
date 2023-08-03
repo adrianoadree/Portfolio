@@ -66,6 +66,12 @@
   scale: 1.3
 }
 
+
+.buttonHover :hover {
+  scale: 1.3;
+  cursor:pointer;
+}
+
 .word {
   margin: auto;
   color: white;
@@ -312,7 +318,7 @@ svg {
 .social-icons {
   cursor: pointer;
 }
-.fa-facebook:hover,.fa-envelope:hover,.fa-discord:hover,.fa-linkedin:hover, .fa-github:hover {
+.fa-facebook:hover,.fa-envelope:hover,.fa-discord:hover,.fa-linkedin:hover, .fa-github:hover, .fa-eye:hover {
   color: #FF8400;
 }
 .fab {
