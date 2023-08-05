@@ -1,17 +1,24 @@
 import { Image } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 function Woop() {
 
     return (
         <>
-            <div className='mt-5 shadow' style={{ backgroundColor: 'white' }}>
+            <motion.div
+                initial={{ x: "100%" }}
+                animate={{
+                    x: "calc(50vw - 50%)", transition: { duration: 0.5},
+                }}
+                className='mt-5 shadow'
+                style={{ backgroundColor: 'white' }}>
                 <div className='center'>
                     <Image
                         src={require('../Assets/Projects/Woop/Woop_Logo_Outlined.png')}
                         style={{ width: '300px' }}
                     />
                 </div>
-            </div>
+            </motion.div>
 
             <div className='center fontRubik text-justify mt-3'>
                 <p style={{ fontWeight: 'bold', fontSize: '20px' }}>

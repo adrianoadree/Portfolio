@@ -1,26 +1,33 @@
 import { Image } from 'react-bootstrap';
+import { motion } from 'framer-motion';
 
 function Ims() {
 
     return (
         <>
-            <div className='mt-5 shadow' style={{ backgroundColor: 'white' }}>
+            <motion.div
+                initial={{ x: "100%" }}
+                animate={{
+                    x: "calc(50vw - 50%)", transition: { duration: 0.5},
+                }}
+                className='mt-5 shadow'
+                style={{ backgroundColor: 'white' }}>
                 <div className='center'>
                     <Image
                         src={require('../Assets/Projects/IMS/IMS_Logo.png')}
                         style={{ width: '150px' }}
                     />
                 </div>
-            </div>
+            </motion.div>
 
             <div className='center fontRubik text-justify mt-3'>
                 <p style={{ fontWeight: 'bold', fontSize: '20px' }}>
                     IMS: : Inventory Management System
                 </p>
-                <p style={{ fontWeight: 'bold', fontSize: '20px',  color: '#FF8400' }}>
+                <p style={{ fontWeight: 'bold', fontSize: '20px', color: '#FF8400' }}>
                     (Capstone Project 2022)
                 </p>
-               
+
             </div>
             <div className='center fontRubik text-justify'>
                 <p>IMS is an inventory management system that focuses on MSME’s. The system is composed of 2 components, web, and mobile component. The mobile application focuses on easing the business owners stock level tracking and for scanning QR codes and barcodes of the business’ products. While the Web component is more complex and displays detailed information about the user’s sales and purchase record, displays product information, generates sales and purchase reports, printable QR and barcodes. It also generates custom made barcodes for those products that are manufactured by the business. The web component also displays forecasting of each product’s reorder point and a warehouse map that is customizable for the user’s physical warehouse.  </p>

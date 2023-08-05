@@ -3,294 +3,399 @@ import { Image } from 'react-bootstrap';
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faLinkedin, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faEye } from '@fortawesome/free-regular-svg-icons';
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import {
+    MDBFooter,
+    MDBContainer,
+} from 'mdb-react-ui-kit';
+import Fade from '@mui/material/Fade';
+import { Tooltip } from '@mui/material';
 
 
 function LandingPage() {
-    const [projectButtonBool, setProjectButtonBool] = useState(true);
-    const [artButtonBool, setArtButtonBool] = useState(false);
 
 
     return (
 
         <>
-            <div className='row center' style={{ width: '100%', padding: '40px' }}>
-                <div className='card shadow bgImage' style={{ width: '100%', padding: '50px', borderRadius: '30px' }}>
-                    <h2 className='fontRubik font-weight-bold' style={{ padding: '40px' }}>
-                        <span style={{ color: '#27374D', fontWeight: 'bold' }}>
-                            Hello World! my name is <span style={{ color: '#19A7CE' }}>Adrian Adriano</span>
-                        </span>
-                        <br />
-                        <span className='text-color1 font-weight-bold' style={{ color: '#526D82' }}>I'm a Front-End Developer</span>
-                    </h2>
-                    <span className='text-color1 font-weight-bold' style={{ color: '#9DB2BF' }}>
-                        I create user-centered User Interface for Web and Mobile Applications
-                    </span>
+            <div className='shadowBottom' style={{ backgroundColor: '#F5F5F5' }}>
+                <div className='row m-auto' id='about' style={{ width: '1000px', height: '90vh', }}>
+                    <motion.div className='col-7 p-5'
+                        initial={{ x: "100%" }}
+                        animate={{
+                            x: "calc(100vw - 220%)", transition: { duration: 1.5 },
+                        }}>
+                        <p className='fontBorel m-auto' style={{ fontSize: '120px', paddingTop: '100px' }}>
+                            hello!<span class="wave">👋🏻</span>
+                        </p>
+                        <p className='fontBree' style={{ fontSize: '50px', textAlign: 'center' }}>I'm Adrian </p>
+                        <p className='fontBree' style={{ fontSize: '20px', textAlign: 'center' }}>A Front-End Developer and Digital Artist</p>
+                    </motion.div>
+                    <div className='col-5'>
+                        <Image className='m-5' src={require('../Assets/vectorportrait.png')} style={{ height: '500px' }} />
+                    </div>
                 </div>
-                <div className='row' style={{ height: '50px' }}></div>
-                <div className='row center mt-5'>
-                    <h6 className='fontRubik' style={{ fontWeight: 'bold' }} >
-                        scroll down to know more
-                        <span style={{ color: '#19A7CE' }}> about me</span>
-                    </h6>
-
-                    <div className='row' style={{ height: '50px' }} />
-                </div>
-
-                <div class="section"></div>
             </div>
+            <div className='my-5'>
+                <div id='projects' className='center fontRubik p-5'>
+                    <p className='fontBree' style={{ float: 'left', fontSize: '30px', textAlign: 'center' }}>
+                        PROJECTS ⚙️
+                    </p>
+                </div>
 
-            <div className='row' style={{ paddingLeft: '300px', paddingRight: '300px', paddingTop: '20px', backgroundColor: '#EDE4FF' }}>
-                <div className='row center'>
-
-                    <div class="card-body">
-                        <div className='separator'>
-                            <h4 className='fontRubik' style={{ fontWeight: 'bold' }}>EDUCATIONAL <span style={{ color: '#FF8400' }}>BACKGROUND</span></h4>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}
+                    className='shadow center mt-5 p-5'
+                    style={{ width: '900px', borderRadius: '20px' }}>
+                    <div className='row'>
+                        <div className='col-4'>
+                            <h5 className='fontKanit'
+                                style={{ textAlign: 'center', fontWeight: 'bold' }}>IMS: Inventory Management System 🖥️</h5>
+                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Capstone Project 2022</p>
+                            <p className='fontRubik'
+                                style={{ textAlign: 'justify' }}>
+                                A web applications catered for MSMEs to keep track of their product's stock level and to create their own virtual warehouse that provides indoor mapping to ease locating products</p>
                         </div>
-                        <div class="d-flex justify-content-center mb-3" >
-                            <div class="p-2">
-                                <Image src={require('../Assets/Ateneo_de_Naga_University_logo.png')} roundedCircle='true' style={{ height: '150px' }} />
+                        <Tooltip
+                            TransitionComponent={Fade}
+                            TransitionProps={{ timeout: 600 }}
+                            title="Click to view Project's screenshots"
+                            followCursor
+                        >
+                            <div className='col-8' >
+                                <Link to='/view-project-ims'>
+                                    <motion.button
+                                        initial={{ opacity: 0.6 }}
+                                        whileHover={{
+                                            scale: 1.1,
+                                            transition: { duration: 0.2 },
+                                        }}
+                                        whileTap={{ scale: 0.9 }}
+                                        whileInView={{ opacity: 1 }}
+                                        className='bgIMS boxshadow m-1'
+                                        style={{ width: '500px', height: '220px' }}
+                                    />
+                                </Link>
                             </div>
-                            <div class="p-2 ">
-                                <br />
-                                <div className='fontKanit'>
-                                    <span >Bachelor of Science in Information Technology</span><br />
-                                    <span>Ateneo de Naga University</span><br />
-                                    <span>Naga City, Camarines Sur</span><br />
-                                    <span>Class of 2023</span><br />
+                        </Tooltip>
+
+                    </div>
+                    <div class="d-flex bd-highlight">
+                        <div class="py-2 bd-highlight">
+                            <Image className='shadow mx-2' src={require('../Assets/Skills/ReactJS.png')} rounded='true' style={{ height: '50px' }} />
+                        </div>
+                        <div class="me-auto py-2 bd-highlight shado">
+                            <Image className='shadow mx-2' src={require('../Assets/Skills/firebase.png')} rounded='true' style={{ height: '50px' }} />
+                        </div>
+
+                        <div class="py-2 px-2 bd-highlight text-black hoverColorChange">
+                            <Button className='boxshadow text-black '
+                                style={{ border: '1px solid black' }}
+                                href='https://inventoryapp-330808.web.app'
+                                endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
+                                />}>
+                                <span style={{ fontWeight: 'bold' }}>Visit App</span>
+                            </Button>
+                        </div>
+                        <div class="py-2 px-4 bd-highlight text-black hoverColorChange">
+                            <Button className='boxshadow text-black '
+                                style={{ border: '1px solid black' }}
+                                href='https://github.com/adrianoadree/IMSweb'
+                                endIcon={<FontAwesomeIcon icon={faGithub}
+                                />}>
+                                <span style={{ fontWeight: 'bold' }}>View Code</span>
+                            </Button>
+                        </div>
+                    </div>
+                </motion.div>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}
+                    className='shadow center p-5 my-5'
+                    style={{ width: '900px', borderRadius: '20px' }}>
+                    <div className='row'>
+                        <div className='col-4'>
+                            <Tooltip
+                                TransitionComponent={Fade}
+                                TransitionProps={{ timeout: 600 }}
+                                title="Click to view Project's screenshots"
+                                followCursor
+                            >
+                                <Link to='/view-project-woop'>
+                                    <motion.button
+                                        initial={{ opacity: 0.6 }}
+                                        whileHover={{
+                                            scale: 1.1,
+                                            transition: { duration: 0.2 },
+                                        }}
+                                        whileTap={{ scale: 0.9 }}
+                                        whileInView={{ opacity: 1 }}
+                                        className='bgWoop boxshadow m-1'
+                                        style={{ width: '240px', height: '400px' }}
+                                    />
+                                </Link>
+                            </Tooltip>
+                        </div>
+                        <div className='col-8 p-5'>
+                            <h5 className='fontKanit'
+                                style={{ textAlign: 'center', fontWeight: 'bold' }}>
+                                Woop! Bicycle Errand Services 📱
+                            </h5>
+                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Internship Project 2023</p>
+                            <p className='fontRubik'
+                                style={{ textAlign: 'justify' }}>
+                                Woop! Is a bicycle errand service based in Naga City. The project composed of 3 components, 2 mobile applications for the biker and customer of Woop! And 1 web application for the administrators of the application. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment. Pasa-Buy is composed of 3 different types. Food, Medicine, and Grocery. The images shown are the screenshots from the Mobile-User Component of the project
+                            </p>
+                            <div class="d-flex bd-highlight">
+
+                                <div class="me-auto bd-highlight">
+                                    <Image className='shadow ml-2' src={require('../Assets/Skills/flutter-review.jpeg')} rounded='true' style={{ height: '50px' }} />
+                                </div>
+                                <div class="py-2 px-2 bd-highlight text-black hoverColorChange">
+                                    <Button className='boxshadow text-black '
+                                        style={{ border: '1px solid black' }}
+                                        href='https://github.com/markguchi/woop/tree/main/mobile_customer'
+                                        endIcon={<FontAwesomeIcon icon={faGithub}
+                                        />}>
+                                        <span style={{ fontWeight: 'bold' }}>View Code</span>
+                                    </Button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-body pt-5">
-                        <div className='separator'>
-                            <h4 className='fontRubik' style={{ fontWeight: 'bold' }}>INTERNSHIP <span style={{ color: '#FF8400' }}>EXPERIENCE</span></h4>
+
+                </motion.div>
+            </div>
+
+
+
+            <div className=''
+                style={{ width: '100%', }}>
+                <div id='arts' className='center fontRubik p-5'>
+                    <p className='fontBree' style={{ float: 'left', fontSize: '30px', textAlign: 'center' }}>
+                        DIGITAL ARTS 🎨
+                    </p>
+                </div>
+                <div className='m-auto p-5'
+                    style={{ width: '900px', borderRadius: '20px' }}>
+
+                    <div className='row'>
+                        <div className='col-6'>
+
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow p-3'
+                                style={{ height: '600px', width: '400px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/E11_Adriano.jpg')} style={{ borderRadius: '20px', height: '500px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Naruto Pixel Art</h5>
+                                <h6 className='fontKanit  m-auto'>Course Activity</h6>
+                            </motion.div>
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3'
+                                style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Conventionalism1.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Conventionalism 🐺</h5>
+                                <h6 className='fontKanit  m-auto'>Course Activity</h6>
+                            </motion.div>
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3' style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Conventionalism2.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Conventionalism 🐶</h5>
+                                <h6 className='fontKanit  m-auto'>Course Activity</h6>
+                            </motion.div>
+                            <motion.div
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3'
+                                style={{ height: '650px', width: '400px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Hedonism.jpg')} style={{ borderRadius: '20px', height: '550px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Hedonism</h5>
+                                <h6 className='fontKanit  m-auto'>Course Activity</h6>
+                            </motion.div>
                         </div>
-                        <div class="d-flex justify-content-center mb-3" >
-                            <div class="p-2">
-                                <Image src={require('../Assets/pandalivery-logo.jpg')} rounded='true' style={{ height: '180px' }} />
-                            </div>
-                            <div class="p-2">
-                                <span className='fontKanit'>Intern / Mobile Application Developer</span><br />
-                                <span className='fontKanit'>Pandalivery Naga</span><br />
-                                <span className='fontKanit'>Naga City, Camarines Sur</span><br />
-                                <span className='fontInconsolata' style={{ fontSize: '14px' }}>- Responsible for the front-end development of the mobile Application. Flutter technology was
-                                    used to develop to cater Android and iOS users of Woop! a bicycle based errand services</span>
-                            </div>
+                        <div className='col-6'>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow p-3'
+                                style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/Logo.jpg')} style={{ borderRadius: '20px', height: '260px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>AdNU DCS Logo Entry</h5>
+                                <h6 className='fontKanit m-auto'>Course Activity</h6>
+                            </motion.div>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3'
+                                style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/Business_Logo.jpg')} style={{ borderRadius: '20px', height: '270px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Family Business Logo 🥡</h5>
+                                <h6 className='fontKanit m-auto'></h6>
+                            </motion.div>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3'
+                                style={{ float: 'right', height: '500px', width: '320px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/robredosword.png')} style={{ borderRadius: '20px', height: '400px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Jesse Robredo Sword ⚔️</h5>
+                                <h6 className='fontKanit m-auto'>Course Activity</h6>
+                            </motion.div>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3'
+                                style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/VectorArt.jpg')} style={{ borderRadius: '20px', height: '270px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Vector Art</h5>
+                                <h6 className='fontKanit m-auto'></h6>
+                            </motion.div>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3'
+                                style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Functionalism.jpg')} style={{ borderRadius: '20px', height: '270px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Functionalism</h5>
+                                <h6 className='fontKanit m-auto'>Course Activity</h6>
+                            </motion.div>
+                            <motion.div initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5 }}
+                                variants={{
+                                    visible: { opacity: 1, scale: 1 },
+                                    hidden: { opacity: 0, scale: 0 }
+                                }}
+                                className='bg-white boxshadow mt-5 p-3'
+                                style={{ float: 'right', height: '460px', width: '320px', borderRadius: '20px' }}>
+                                <Image className='m-auto card' src={require('../Assets/Arts/Art_as_communication_of_emotion.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
+                                <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Art as communication of emotion</h5>
+                                <h6 className='fontKanit m-auto'>Course Activity</h6>
+                            </motion.div>
                         </div>
+
                     </div>
+
                 </div>
 
             </div >
-            <div className='center mt-5'>
-                <div className='separator'>
-                    <h4 className='fontRubik' style={{ fontWeight: 'bold' }}>MY <span style={{ color: '#19A7CE' }}>CAPABILITIES</span></h4>
-                </div>
-                <div className='row'>
-                    <span className='fontKanit'>• ReachJS • Flutter Technology • Firebase Database • Firestore •  JavaScript • HTML • CSS • C++ • Adobe Illustrator • Adobe Photoshop •  Adobe Lightroom • </span><br />
-                </div>
-            </div>
-
-            <div className='row mt-5'>
-
-                <div className='row center' style={{ justifyContent: 'center' }}>
-                    {projectButtonBool ?
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '5px solid #19A7CE', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '25px' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            PROJECTS
-                        </button>
-                        :
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '1px solid white', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '20px', color: '#526D82' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            PROJECTS
-                        </button>
-                    }
-                    {artButtonBool ?
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '5px solid #19A7CE', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '25px' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            DIGITAL ARTS
-                        </button>
-                        :
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '1px solid white', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '20px', color: '#526D82' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            DIGITAL ARTS
-                        </button>
-                    }
-
-                </div>
-            </div>
-
-            {artButtonBool ?
-                <div className='row mt-3'>
-                    <div className='row center' style={{ justifyContent: 'center' }}>
-                        <div className='guide card shadow' style={{ width: '720px', borderRadius: '20px', backgroundColor: '#EDE4FF' }}>
-                            <div className='row mt-5 bg-white shadow' style={{ height: '170px' }}>
-                                <svg>
-                                    <symbol id="s-text">
-                                        <text text-anchor="middle" x="50%" y="80%">ARTS </text>
-                                        <text text-anchor="middle" x="51%" y="80%">ARTS </text>
-                                    </symbol>
-                                    <g class="g-ants">
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt1 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt2 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt3 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt4 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt5 mx-3' style={{ height: "350px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt6 mx-3' style={{ height: "350px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt7 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt8 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-
-                            <div className='row my-5  iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt9 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt10 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                :
-                <div className='row mt-3'>
-                    <div className='row center' style={{ justifyContent: 'center' }}>
-                        <div className='guide card shadow' style={{ width: '720px', borderRadius: '20px', backgroundColor: '#EDE4FF' }}>
-                            <div className='row mt-5 bg-white shadow' style={{ height: '170px' }}>
-                                <svg>
-                                    <symbol id="s-text">
-                                        <text text-anchor="middle" x="50%" y="80%">PROJECTS </text>
-                                        <text text-anchor="middle" x="51%" y="80%">PROJECTS </text>
-                                    </symbol>
-                                    <g class="g-ants">
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                    </g>
-                                </svg>
-                            </div>
 
 
-                            <div className='row' style={{ justifyContent: 'center' }}>
 
-                                <div className='card m-5' style={{ width: '650px' }}>
-                                    <div className='card-header' >
 
-                                        <div>
-                                            <a className='fontRubik'
-                                                style={{ height: '20px', fontWeight: 'bold', fontSize: '20px' }}
-                                                href='/view-project-ims'>
-                                                <span style={{ color: 'black' }}>IMS:</span><span style={{ color: '#FF8400' }}> Inventory Management System</span>
-                                            </a>
-                                        </div>
-                                        <div className="pt-2 d-flex flex-row-reverse bd-highlight">
-                                            <a className="px-3 bd-highlight" href='https://github.com/adrianoadree/IMSweb'>
-                                                <FontAwesomeIcon className='buttonHover' icon={faGithub} style={{ fontSize: '30px', }} />
-                                            </a>
-                                            <a className="px-3 bd-highlight" href='https://inventoryapp-330808.web.app'>
-                                                <FontAwesomeIcon className='buttonHover' icon={faEye} style={{ fontSize: '30px', }} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
-                                        <Image className=' card' src={require('../Assets/Projects/IMS/IMS1.png')} rounded='true' style={{ height: '250px' }} />
-                                    </div>
-                                    <div className='center' style={{ display: 'inline-block', width: '600px' }}>
-                                        <div className='card mx-3' style={{ display: 'inline-block' }}>
-                                            <Image className=' card' src={require('../Assets/Projects/IMS/IMS2.png')} rounded='true' style={{ height: '120px' }} />
-                                        </div>
-                                        <div className='card' style={{ display: 'inline-block' }}>
-                                            <Image className=' card' src={require('../Assets/Projects/IMS/IMS3.png')} rounded='true' style={{ height: '120px' }} />
-                                        </div>
-                                    </div>
 
-                                </div>
-                            </div>
-                            <div className='row' style={{ justifyContent: 'center' }}>
-                                <div className='card m-5' style={{ width: '550px' }}>
-                                    <div className='card-header align-middle'>
-                                        <a className='fontRubik '
-                                            href='/view-project-woop'
-                                            style={{ fontWeight: 'bold', fontSize: '20px' }}>
-                                            <span style={{ color: 'black' }}>Woop!</span>
-                                            <span style={{ color: '#FF8400' }}> (Internship Project)</span>
-                                        </a>
-                                        <div className="pt-2 d-flex flex-row-reverse bd-highlight">
-                                            <a className="px-3 bd-highlight" href='https://github.com/markguchi/woop/tree/main/mobile_customer'>
-                                                <FontAwesomeIcon className='buttonHover' icon={faGithub} style={{ fontSize: '30px', }} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
-                                        <Image className=' card' src={require('../Assets/Projects/Woop/Woop_Logo_Outlined.png')} rounded='true' style={{ height: '250px' }} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-                </div >
-            }
-
-            <div className='footer' style={{ height: '200px', marginTop: '100px', backgroundColor: '#EDE4FF' }}>
-                <div className='center'>
-                    <h5 className='fontRubik my-5' style={{ fontWeight: 'bold' }}> my personal <span style={{ color: '#FF8400' }}>accounts</span> </h5>
-                    <div className='my-5' style={{ fontSize: '7px' }}>
+            <MDBFooter id='contact' className='text-center mt-5' color='white' bgColor='dark'>
+                <MDBContainer className='p-4'>
+                    <section className='mb-4' >
                         <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faEnvelope} />
+                            <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} />
                         </a>
                         <a className='mx-3' href="https://www.linkedin.com/in/adrianoadriannn/" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faLinkedin} />
+                            <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '50px' }} />
                         </a>
                         <a className='mx-3' href="https://www.facebook.com/ADRIANOadriann/" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faFacebook} />
+                            <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '50px' }} />
                         </a>
                         <a className='mx-3' href="https://www.discordapp.com/users/adriannn#3845" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faDiscord} />
+                            <FontAwesomeIcon icon={faDiscord} style={{ fontSize: '50px' }} />
                         </a>
                         <a className='mx-3' href="https://github.com/adrianoadree" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faGithub} />
+                            <FontAwesomeIcon icon={faGithub} style={{ fontSize: '50px' }} />
                         </a>
-                    </div>
+                    </section>
+                </MDBContainer>
+                <div className='text-center p-3' style={{ height: '50px', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
+                    <p style={{ float: 'left' }}> ©Adrian Adriano 2023 </p>
+                    <section style={{ float: 'right' }}>
+                        <a className='text-white m-5' href='#about'>
+                            profile
+                        </a>
+                        <a className='text-white m-5' href='#projects'>
+                            project
+                        </a>
+                        <a className='text-white m-5' href='#arts'>
+                            arts
+                        </a>
+
+
+                    </section>
+
                 </div>
-
-            </div >
-
-
+            </MDBFooter>
 
         </>
     );
