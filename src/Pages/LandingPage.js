@@ -36,7 +36,7 @@ function LandingPage() {
                             <p className='fontBorel m-auto' style={{ fontSize: '120px', paddingTop: '100px' }}>
                                 hello!<span className="wave">👋🏻</span>
                             </p>
-                            <p className='fontBree' style={{ fontSize: '50px', textAlign: 'center' }}>I'm Adrian </p>
+                            <p className='fontBree' style={{ fontSize: '50px', textAlign: 'center' }}>I'm Adrasdasdasdian </p>
                             <p className='fontBree' style={{ fontSize: '20px', textAlign: 'center' }}>A Front-End Developer and Digital Artist</p>
                         </motion.div>
                         <div className='col-md-5 col-xs-12'>
