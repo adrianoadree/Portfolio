@@ -1,11 +1,4 @@
-import React, { Component } from 'react';
-import { Image } from 'react-bootstrap';
-import { useState } from 'react';
-
 import { motion } from "framer-motion";
-import { AnimatePresence } from 'framer-motion';
-
-
 
 function Arts() {
 
