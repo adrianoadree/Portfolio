@@ -232,6 +232,15 @@ svg {
   background-size: cover;
 }
 
+.bgTuwayan {
+  background-image:
+    url('../src/Assets/Projects/Tuwayan/tuwayan1.png');
+  margin-top: -70px;
+  margin-left: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .bgWoop {
   background-image:
     url('../src/Assets/Projects/Woop/Woop1.png');

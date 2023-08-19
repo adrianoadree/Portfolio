@@ -6,6 +6,7 @@ import Projects from './Pages/Projects';
 import Navigation from "./Layout/Navigation";
 import Woop from "./Pages/Woop";
 import Ims from "./Pages/Ims";
+import Tuwayan from "./Pages/Tuwayan";
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
           <Route path="projects" element={<Projects />} />
           <Route path="view-project-woop" element={<Woop />} />
           <Route path="view-project-ims" element={<Ims />} />
+          <Route path="view-project-tuwayan" element={<Tuwayan />} />
         </Route>
       </Routes>
     </BrowserRouter>

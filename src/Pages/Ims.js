@@ -22,7 +22,7 @@ function Ims() {
 
             <div className='center fontRubik text-justify mt-3'>
                 <p style={{ fontWeight: 'bold', fontSize: '20px' }}>
-                    IMS: : Inventory Management System
+                    IMS : Inventory Management System
                 </p>
                 <p style={{ fontWeight: 'bold', fontSize: '20px', color: '#FF8400' }}>
                     (Capstone Project 2022)

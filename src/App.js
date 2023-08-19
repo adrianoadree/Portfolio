@@ -6,6 +6,7 @@ import Projects from './Pages/Projects';
 import { Routes, Route } from 'react-router-dom';
 import Woop from './Pages/Woop';
 import Ims from './Pages/Ims';
+import Tuwayan from './Pages/Tuwayan';
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         <Route path='/projects' to={<Projects />} />
         <Route path='/view-project-woop' to={<Woop />} />
         <Route path='/view-project-ims' to={<Ims />} />
-
+        <Route path='/view-project-tuwayan' to={<Tuwayan />} />
       </Routes>
     </div>
   );

@@ -60,6 +60,70 @@ function LandingPage() {
                             visible: { opacity: 1, scale: 1 },
                             hidden: { opacity: 0, scale: 0 }
                         }}
+                        className='shadow center p-5 my-5'
+                        style={{ width: '900px', borderRadius: '20px' }}>
+                        <div className='row'>
+                            <div className='col-4'>
+                                <Tooltip
+                                    TransitionComponent={Fade}
+                                    TransitionProps={{ timeout: 600 }}
+                                    title="Click to view Project's screenshots"
+                                    followCursor
+                                >
+                                    <Link to='/view-project-woop'>
+                                        <motion.button
+                                            initial={{ opacity: 0.6 }}
+                                            whileHover={{
+                                                scale: 1.1,
+                                                transition: { duration: 0.2 },
+                                            }}
+                                            whileTap={{ scale: 0.9 }}
+                                            whileInView={{ opacity: 1 }}
+                                            className='bgWoop boxshadow m-1'
+                                            style={{ width: '240px', height: '400px' }}
+                                        />
+                                    </Link>
+                                </Tooltip>
+                            </div>
+                            <div className='col-8 p-5'>
+                                <h5 className='fontKanit'
+                                    style={{ textAlign: 'center', fontWeight: 'bold' }}>
+                                    Woop! Bicycle Errand Services 📱
+                                </h5>
+                                <p className='fontInconsolata' style={{ textAlign: 'center' }}>Internship Project 2023</p>
+                                <p className='fontRubik'
+                                    style={{ textAlign: 'justify' }}>
+                                    Woop! Is a bicycle errand service based in Naga City. The project composed of 3 components, 2 mobile applications for the biker and customer of Woop! And 1 web application for the administrators of the application. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment. Pasa-Buy is composed of 3 different types. Food, Medicine, and Grocery. The images shown are the screenshots from the Mobile-User Component of the project
+                                </p>
+                                <div className="d-flex bd-highlight">
+
+                                    <div className="me-auto bd-highlight">
+                                        <Image className='shadow ml-2' src={require('../Assets/Skills/flutter-review.jpeg')} rounded='true' style={{ height: '50px' }} />
+                                    </div>
+                                    <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
+                                        <Button className='boxshadow text-black '
+                                            style={{ border: '1px solid black' }}
+                                            href='https://github.com/markguchi/woop/tree/main/mobile_customer'
+                                            endIcon={<FontAwesomeIcon icon={faGithub}
+                                            />}>
+                                            <span style={{ fontWeight: 'bold' }}>View Code</span>
+                                        </Button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </motion.div>
+
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}
                         className='shadow center mt-5 p-5'
                         style={{ width: '900px', borderRadius: '20px' }}>
                         <div className='row'>
@@ -133,60 +197,71 @@ function LandingPage() {
                             visible: { opacity: 1, scale: 1 },
                             hidden: { opacity: 0, scale: 0 }
                         }}
-                        className='shadow center p-5 my-5'
+                        className='shadow center mt-5 p-5'
                         style={{ width: '900px', borderRadius: '20px' }}>
                         <div className='row'>
-                            <div className='col-4'>
-                                <Tooltip
-                                    TransitionComponent={Fade}
-                                    TransitionProps={{ timeout: 600 }}
-                                    title="Click to view Project's screenshots"
-                                    followCursor
-                                >
-                                    <Link to='/view-project-woop'>
-                                        <motion.button
-                                            initial={{ opacity: 0.6 }}
-                                            whileHover={{
-                                                scale: 1.1,
-                                                transition: { duration: 0.2 },
-                                            }}
-                                            whileTap={{ scale: 0.9 }}
-                                            whileInView={{ opacity: 1 }}
-                                            className='bgWoop boxshadow m-1'
-                                            style={{ width: '240px', height: '400px' }}
-                                        />
-                                    </Link>
-                                </Tooltip>
+                            <div className='col-8' >
+                                <Link to='/view-project-tuwayan'>
+                                    <motion.button
+                                        initial={{ opacity: 0.6 }}
+                                        whileHover={{
+                                            scale: 1.1,
+                                            transition: { duration: 0.2 },
+                                        }}
+                                        whileTap={{ scale: 0.9 }}
+                                        whileInView={{ opacity: 1 }}
+                                        className='bgTuwayan boxshadow m-1'
+                                        style={{ width: '500px', height: '220px' }}
+                                    />
+                                </Link>
                             </div>
-                            <div className='col-8 p-5'>
+                            <div className='col-4'>
                                 <h5 className='fontKanit'
-                                    style={{ textAlign: 'center', fontWeight: 'bold' }}>
-                                    Woop! Bicycle Errand Services 📱
-                                </h5>
-                                <p className='fontInconsolata' style={{ textAlign: 'center' }}>Internship Project 2023</p>
-                                <p className='fontRubik'
+                                    style={{ textAlign: 'center', fontWeight: 'bold' }}>Tuwayan: An Online Trading System for Barter Enthusiasts 🖥️</h5>
+                                <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2021</p>
+                                <p className='fontRubik mb-5'
                                     style={{ textAlign: 'justify' }}>
-                                    Woop! Is a bicycle errand service based in Naga City. The project composed of 3 components, 2 mobile applications for the biker and customer of Woop! And 1 web application for the administrators of the application. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment. Pasa-Buy is composed of 3 different types. Food, Medicine, and Grocery. The images shown are the screenshots from the Mobile-User Component of the project
+                                    a web application that facilitate the exchange of goods between online traders.
                                 </p>
-                                <div className="d-flex bd-highlight">
+                            </div>
+                            <Tooltip
+                                TransitionComponent={Fade}
+                                TransitionProps={{ timeout: 600 }}
+                                title="Click to view Project's screenshots"
+                                followCursor
+                            >
+                            </Tooltip>
 
-                                    <div className="me-auto bd-highlight">
-                                        <Image className='shadow ml-2' src={require('../Assets/Skills/flutter-review.jpeg')} rounded='true' style={{ height: '50px' }} />
-                                    </div>
-                                    <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
-                                        <Button className='boxshadow text-black '
-                                            style={{ border: '1px solid black' }}
-                                            href='https://github.com/markguchi/woop/tree/main/mobile_customer'
-                                            endIcon={<FontAwesomeIcon icon={faGithub}
-                                            />}>
-                                            <span style={{ fontWeight: 'bold' }}>View Code</span>
-                                        </Button>
-                                    </div>
-                                </div>
+                        </div>
+                        <div className="d-flex bd-highlight">
+                            <div className="py-2 bd-highlight">
+                                <Image className='shadow mx-2' src={require('../Assets/Skills/HTML.png')} rounded='true' style={{ height: '60px' }} />
+                            </div>
+                            <div className="me-auto py-2 bd-highlight shado">
+                                <Image className='shadow mx-3' src={require('../Assets/Skills/CSS.png')} rounded='true' style={{ height: '60px' }} />
+                            </div>
+
+                            <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
+                                <Button className='boxshadow text-black '
+                                    style={{ border: '1px solid black' }}
+                                    href='https://tuwayan.vercel.app/index.html'
+                                    endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
+                                    />}>
+                                    <span style={{ fontWeight: 'bold' }}>Visit App</span>
+                                </Button>
+                            </div>
+                            <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
+                                <Button className='boxshadow text-black '
+                                    style={{ border: '1px solid black' }}
+                                    href='https://github.com/adrianoadree/tuwayan'
+                                    endIcon={<FontAwesomeIcon icon={faGithub}
+                                    />}>
+                                    <span style={{ fontWeight: 'bold' }}>View Code</span>
+                                </Button>
                             </div>
                         </div>
-
                     </motion.div>
+
                 </div>
                 <div className=''
                     style={{ width: '100%', }}>
