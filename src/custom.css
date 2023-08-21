@@ -223,6 +223,7 @@ svg {
 }
 
 
+
 .bgIMS {
   background-image:
     url('../src/Assets/Projects/IMS/IMS1.png');
@@ -231,6 +232,18 @@ svg {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+.bgBrickBreaker {
+  background-image:
+    url('../src/Assets/Projects/Brickbreaker/brickbreaker.png');
+  margin-top: -70px;
+  margin-left: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
 
 .bgTuwayan {
   background-image:
@@ -482,5 +495,3 @@ svg {
     transform: rotate(0.0deg)
   }
 }
-
-
