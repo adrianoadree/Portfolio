@@ -281,7 +281,7 @@ function LandingPage() {
                                 <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2019</p>
                                 <p className='fontRubik'
                                     style={{ textAlign: 'justify' }}>
-                                        A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City
+                                    A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City
                                 </p>
                             </div>
                             <Tooltip
@@ -571,6 +571,58 @@ function LandingPage() {
                         PROJECTS ⚙️
                     </p>
                 </div>
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}
+                    className='shadow center mt-5 p-4'
+                    style={{ width: '60vh', borderRadius: '20px' }}>
+                    <div className='row'>
+                        <div >
+                            <Link to='/view-project-woop'>
+                                <motion.button
+                                    initial={{ opacity: 0.6 }}
+                                    whileHover={{
+                                        scale: 1.1,
+                                        transition: { duration: 0.2 },
+                                    }}
+                                    whileTap={{ scale: 0.9 }}
+                                    whileInView={{ opacity: 1 }}
+                                    className='bgWoop boxshadow m-1'
+                                    style={{ width: '200px', height: '320px' }}
+                                />
+                            </Link>
+                        </div>
+                        <div className='row mt-3'>
+                            <h5 className='fontKanit'
+                                style={{ textAlign: 'center', fontWeight: 'bold' }}>Woop! Bicycle Errand Services 📱
+                            </h5>
+                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Internship Project 2023</p>
+                            <p className='fontRubik'
+                                style={{ textAlign: 'justify' }}>
+                                Woop! Is a bicycle errand service based in Naga City. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="d-flex bd-highlight">
+                        <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
+                            <Button className='boxshadow text-black '
+                                style={{ border: '1px solid black', width: '150px' }}
+                                href='https://github.com/markguchi/woop/tree/main/mobile_customer'
+                                endIcon={<FontAwesomeIcon icon={faGithub}
+                                />}>
+                                <span style={{ fontWeight: 'bold' }}>View Code</span>
+                            </Button>
+                        </div>
+                    </div>
+                </motion.div>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -629,6 +681,65 @@ function LandingPage() {
                         </div>
                     </div>
                 </motion.div>
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}
+                    className='shadow center mt-5 p-4'
+                    style={{ width: '60vh', borderRadius: '20px' }}>
+                    <div className='row'>
+                        <div >
+                            <Link to='/view-project-tuwayan'>
+                                <motion.button
+                                    initial={{ opacity: 0.6 }}
+                                    whileHover={{
+                                        scale: 1.1,
+                                        transition: { duration: 0.2 },
+                                    }}
+                                    whileTap={{ scale: 0.9 }}
+                                    whileInView={{ opacity: 1 }}
+                                    className='bgTuwayan boxshadow m-1'
+                                    style={{ width: '250px', height: '100px' }}
+                                />
+                            </Link>
+                        </div>
+                        <div className='row mt-3'>
+                            <h5 className='fontKanit'
+                                style={{ textAlign: 'center', fontWeight: 'bold' }}>Tuwayan: An Online Trading System for Barter Enthusiasts 🖥️</h5>
+                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2021</p>
+                            <p className='fontRubik'
+                                style={{ textAlign: 'justify' }}>
+                                a web application that facilitate the exchange of goods between online traders.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div className="d-flex bd-highlight">
+                        <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
+                            <Button className='boxshadow text-black '
+                                style={{ border: '1px solid black', width: '150px' }}
+                                href='https://tuwayan.vercel.app/index.html'
+                                endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
+                                />}>
+                                <span style={{ fontWeight: 'bold' }}>Visit App</span>
+                            </Button>
+                        </div>
+                        <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
+                            <Button className='boxshadow text-black '
+                                style={{ border: '1px solid black', width: '150px' }}
+                                href='https://github.com/adrianoadree/tuwayan'
+                                endIcon={<FontAwesomeIcon icon={faGithub}
+                                />}>
+                                <span style={{ fontWeight: 'bold' }}>View Code</span>
+                            </Button>
+                        </div>
+                    </div>
+                </motion.div>
 
                 <motion.div
                     initial="hidden"
@@ -643,7 +754,7 @@ function LandingPage() {
                     style={{ width: '60vh', borderRadius: '20px' }}>
                     <div className='row'>
                         <div >
-                            <Link to='/view-project-woop'>
+                            <Link to='/view-project-brickbreaker'>
                                 <motion.button
                                     initial={{ opacity: 0.6 }}
                                     whileHover={{
@@ -652,18 +763,18 @@ function LandingPage() {
                                     }}
                                     whileTap={{ scale: 0.9 }}
                                     whileInView={{ opacity: 1 }}
-                                    className='bgWoop boxshadow m-1'
-                                    style={{ width: '200px', height: '320px' }}
+                                    className='bgBrickBreaker boxshadow m-1'
+                                    style={{ width: '250px', height: '100px' }}
                                 />
                             </Link>
                         </div>
                         <div className='row mt-3'>
                             <h5 className='fontKanit'
-                                style={{ textAlign: 'center', fontWeight: 'bold' }}>IMS: Inventory Management System 🖥️</h5>
-                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Capstone Project 2022</p>
+                                style={{ textAlign: 'center', fontWeight: 'bold' }}>Brick Breaker 🎮</h5>
+                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2019</p>
                             <p className='fontRubik'
                                 style={{ textAlign: 'justify' }}>
-                                Woop! Is a bicycle errand service based in Naga City. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment.
+                                A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City
                             </p>
                         </div>
                     </div>
@@ -672,7 +783,7 @@ function LandingPage() {
                         <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
                             <Button className='boxshadow text-black '
                                 style={{ border: '1px solid black', width: '150px' }}
-                                href='https://github.com/markguchi/woop/tree/main/mobile_customer'
+                                href='https://github.com/adrianoadree/brickbreaker'
                                 endIcon={<FontAwesomeIcon icon={faGithub}
                                 />}>
                                 <span style={{ fontWeight: 'bold' }}>View Code</span>
@@ -829,6 +940,7 @@ function LandingPage() {
                 </motion.div>
                 <MDBFooter id='contact' className='text-center mt-5' color='white' bgColor='dark'>
                     <MDBContainer className='p-4'>
+
                         <section className='mb-4' >
                             <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
                                 <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} />
