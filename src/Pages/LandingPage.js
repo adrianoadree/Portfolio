@@ -22,6 +22,8 @@ import bgIMS from '../Assets/Projects/IMS/IMS1.png';
 import bgTuwayan from '../Assets/Projects/Tuwayan/tuwayan1.png';
 import bgBrickBreaker from '../Assets/Projects/Brickbreaker/brickbreaker.png';
 import bgWoop from '../Assets/Projects/Woop/Woop1.png';
+import WoopLogo from '../Assets/Projects/Woop/Woop_Logo_Outlined.png';
+
 
 import reactJsSkill from '../Assets/Skills/ReactJS.png';
 import firebaseSkill from '../Assets/Skills/firebase.png';
@@ -33,8 +35,15 @@ import UnitySkill from '../Assets/Skills/unity.png';
 import ProjectCardMobile1 from '../Components/ProjectCardMobile1';
 
 
-function LandingPage() {
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import ProjectCardMobileVer from '../Components/ProjectCardMobileVer';
+import ProjectCardMobileVerDeployed from '../Components/ProjectCardMobileVerDeployed';
 
+function LandingPage() {
 
 
     return (
@@ -280,227 +289,45 @@ function LandingPage() {
                         PROJECTS ⚙️
                     </p>
                 </div>
+                <ProjectCardMobileVer
+                    codeLink='https://github.com/markguchi/woop/tree/main/mobile_customer'
+                    projectTitle='Woop! Bicycle Errand Services 📱'
+                    projectYear='Internship Project 2023'
+                    projectDescription='Woop! Is a bicycle errand service based in Naga City. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment.'
+                    projectScreenshots='/view-project-woop'
+                    bgImageProject={WoopLogo}
+                />
 
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='shadow center mt-5 p-4'
-                    style={{ width: '60vh', borderRadius: '20px' }}>
-                    <div className='row'>
-                        <div >
-                            <Link to='/view-project-woop'>
-                                <motion.button
-                                    initial={{ opacity: 0.6 }}
-                                    whileHover={{
-                                        scale: 1.1,
-                                        transition: { duration: 0.2 },
-                                    }}
-                                    whileTap={{ scale: 0.9 }}
-                                    whileInView={{ opacity: 1 }}
-                                    className='bgWoop boxshadow m-1'
-                                    style={{ width: '200px', height: '320px' }}
-                                />
-                            </Link>
-                        </div>
-                        <div className='row mt-3'>
-                            <h5 className='fontKanit'
-                                style={{ textAlign: 'center', fontWeight: 'bold' }}>Woop! Bicycle Errand Services 📱
-                            </h5>
-                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Internship Project 2023</p>
-                            <p className='fontRubik'
-                                style={{ textAlign: 'justify' }}>
-                                Woop! Is a bicycle errand service based in Naga City. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment.
-                            </p>
-                        </div>
-                    </div>
+                <ProjectCardMobileVerDeployed
+                    appLink='https://inventoryapp-330808.web.app'
+                    codeLink='https://github.com/adrianoadree/IMSweb'
+                    projectTitle='IMS: Inventory Management System 🖥️'
+                    projectYear='Capstone Project 2022'
+                    projectDescription='A web applications catered for MSMEs to keep track of their product stock level and to create their own virtual warehouse that provides indoor mapping to ease locating products'
+                    projectScreenshots='/view-project-ims'
+                    bgImageProject={bgIMS}
+                />
 
-                    <div className="d-flex bd-highlight">
-                        <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
-                            <Button className='boxshadow text-black '
-                                style={{ border: '1px solid black', width: '150px' }}
-                                href='https://github.com/markguchi/woop/tree/main/mobile_customer'
-                                endIcon={<FontAwesomeIcon icon={faGithub}
-                                />}>
-                                <span style={{ fontWeight: 'bold' }}>View Code</span>
-                            </Button>
-                        </div>
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='shadow center mt-5 p-4'
-                    style={{ width: '60vh', borderRadius: '20px' }}>
-                    <div className='row'>
-                        <div >
-                            <Link to='/view-project-ims'>
-                                <motion.button
-                                    initial={{ opacity: 0.6 }}
-                                    whileHover={{
-                                        scale: 1.1,
-                                        transition: { duration: 0.2 },
-                                    }}
-                                    whileTap={{ scale: 0.9 }}
-                                    whileInView={{ opacity: 1 }}
-                                    className='bgIMS boxshadow m-1'
-                                    style={{ width: '250px', height: '100px' }}
-                                />
-                            </Link>
-                        </div>
-                        <div className='row mt-3'>
-                            <h5 className='fontKanit'
-                                style={{ textAlign: 'center', fontWeight: 'bold' }}>IMS: Inventory Management System 🖥️</h5>
-                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Capstone Project 2022</p>
-                            <p className='fontRubik'
-                                style={{ textAlign: 'justify' }}>
-                                A web applications catered for MSMEs to keep track of their product's stock level and to create their own virtual warehouse that provides indoor mapping to ease locating products</p>
-                        </div>
-                    </div>
+                <ProjectCardMobileVerDeployed
+                    appLink='https://tuwayan.vercel.app/index.html'
+                    codeLink='https://github.com/adrianoadree/tuwayan'
+                    projectTitle='Tuwayan: An Online Trading System for Barter Enthusiasts 🖥️'
+                    projectYear='Course Project 2021'
+                    projectDescription='a web application that facilitate the exchange of goods between online traders.'
+                    projectScreenshots='/view-project-tuwayan'
+                    bgImageProject={bgTuwayan}
+                />
 
-                    <div className="d-flex bd-highlight">
-                        <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
-                            <Button className='boxshadow text-black '
-                                style={{ border: '1px solid black', width: '150px' }}
-                                href='https://inventoryapp-330808.web.app'
-                                endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
-                                />}>
-                                <span style={{ fontWeight: 'bold' }}>Visit App</span>
-                            </Button>
-                        </div>
-                        <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
-                            <Button className='boxshadow text-black '
-                                style={{ border: '1px solid black', width: '150px' }}
-                                href='https://github.com/adrianoadree/IMSweb'
-                                endIcon={<FontAwesomeIcon icon={faGithub}
-                                />}>
-                                <span style={{ fontWeight: 'bold' }}>View Code</span>
-                            </Button>
-                        </div>
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='shadow center mt-5 p-4'
-                    style={{ width: '60vh', borderRadius: '20px' }}>
-                    <div className='row'>
-                        <div >
-                            <Link to='/view-project-tuwayan'>
-                                <motion.button
-                                    initial={{ opacity: 0.6 }}
-                                    whileHover={{
-                                        scale: 1.1,
-                                        transition: { duration: 0.2 },
-                                    }}
-                                    whileTap={{ scale: 0.9 }}
-                                    whileInView={{ opacity: 1 }}
-                                    className='bgTuwayan boxshadow m-1'
-                                    style={{ width: '250px', height: '100px' }}
-                                />
-                            </Link>
-                        </div>
-                        <div className='row mt-3'>
-                            <h5 className='fontKanit'
-                                style={{ textAlign: 'center', fontWeight: 'bold' }}>Tuwayan: An Online Trading System for Barter Enthusiasts 🖥️</h5>
-                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2021</p>
-                            <p className='fontRubik'
-                                style={{ textAlign: 'justify' }}>
-                                a web application that facilitate the exchange of goods between online traders.
-                            </p>
-                        </div>
-                    </div>
+                <ProjectCardMobileVer
+                    codeLink='https://github.com/adrianoadree/brickbreaker'
+                    projectTitle='Brick Breaker 🎮'
+                    projectYear='Course Project 2019'
+                    projectDescription='A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City'
+                    projectScreenshots='/view-project-brickbreaker'
+                    bgImageProject={bgBrickBreaker}
+                />
 
-                    <div className="d-flex bd-highlight">
-                        <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
-                            <Button className='boxshadow text-black '
-                                style={{ border: '1px solid black', width: '150px' }}
-                                href='https://tuwayan.vercel.app/index.html'
-                                endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
-                                />}>
-                                <span style={{ fontWeight: 'bold' }}>Visit App</span>
-                            </Button>
-                        </div>
-                        <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
-                            <Button className='boxshadow text-black '
-                                style={{ border: '1px solid black', width: '150px' }}
-                                href='https://github.com/adrianoadree/tuwayan'
-                                endIcon={<FontAwesomeIcon icon={faGithub}
-                                />}>
-                                <span style={{ fontWeight: 'bold' }}>View Code</span>
-                            </Button>
-                        </div>
-                    </div>
-                </motion.div>
-
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='shadow center mt-5 p-4'
-                    style={{ width: '70%', borderRadius: '20px' }}>
-                    <div className='row'
-                        style={{ borderRadius: '20px' }}>
-                        <div >
-                            <Link to='/view-project-brickbreaker'>
-                                <motion.button
-                                    initial={{ opacity: 0.6 }}
-                                    whileHover={{
-                                        scale: 1.1,
-                                        transition: { duration: 0.2 },
-                                    }}
-                                    whileTap={{ scale: 0.9 }}
-                                    whileInView={{ opacity: 1 }}
-                                    className='bgBrickBreaker boxshadow m-1'
-                                    style={{ width: '250px', height: '100px' }}
-                                />
-                            </Link>
-                        </div>
-                        <div className='row mt-3'>
-                            <h5 className='fontKanit'
-                                style={{ textAlign: 'center', fontWeight: 'bold' }}>Brick Breaker 🎮</h5>
-                            <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2019</p>
-                            <p className='fontRubik'
-                                style={{ textAlign: 'justify' }}>
-                                A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City
-                            </p>
-                        </div>
-                    </div>
-
-                    <div className="d-flex bd-highlight">
-                        <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
-                            <Button className='boxshadow text-black '
-                                style={{ border: '1px solid black', width: '150px' }}
-                                href='https://github.com/adrianoadree/brickbreaker'
-                                endIcon={<FontAwesomeIcon icon={faGithub}
-                                />}>
-                                <span style={{ fontWeight: 'bold' }}>View Code</span>
-                            </Button>
-                        </div>
-                    </div>
-                </motion.div>
+              
                 <div id='arts' className='fontRubik p-5'>
                     <p className='fontBree' style={{ float: 'left', fontSize: '20px', }}>
                         DIGITAL ARTS 🎨
