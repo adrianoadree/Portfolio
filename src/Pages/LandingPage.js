@@ -14,11 +14,26 @@ import {
 import Fade from '@mui/material/Fade';
 import { Tooltip } from '@mui/material';
 import { Responsive } from 'typed-responsive-react';
+import ArtCard from '../Components/ArtCard';
+import ProjectCardWeb1 from '../Components/ProjectCardWeb1';
+import ProjectCardWeb2 from '../Components/ProjectCardWeb2';
 
+import bgIMS from '../Assets/Projects/IMS/IMS1.png';
+import bgTuwayan from '../Assets/Projects/Tuwayan/tuwayan1.png';
+import bgBrickBreaker from '../Assets/Projects/Brickbreaker/brickbreaker.png';
+import bgWoop from '../Assets/Projects/Woop/Woop1.png';
+
+import reactJsSkill from '../Assets/Skills/ReactJS.png';
+import firebaseSkill from '../Assets/Skills/firebase.png';
+import HTMLSkill from '../Assets/Skills/HTML.png';
+import CSSSkill from '../Assets/Skills/CSS.png';
+import FlutterSkill from '../Assets/Skills/flutter-review.jpeg';
+import CSharpSkill from '../Assets/Skills/cSharp.jpg';
+import UnitySkill from '../Assets/Skills/unity.png';
+import ProjectCardMobile1 from '../Components/ProjectCardMobile1';
 
 
 function LandingPage() {
-
 
 
 
@@ -44,455 +59,149 @@ function LandingPage() {
                         </div>
                     </div>
                 </div>
+
                 <div className='my-5'>
                     <div id='projects' className='center fontRubik p-5'>
                         <p className='fontBree' style={{ float: 'left', fontSize: '30px', textAlign: 'center' }}>
                             PROJECTS ⚙️
                         </p>
                     </div>
-
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        variants={{
-                            visible: { opacity: 1, scale: 1 },
-                            hidden: { opacity: 0, scale: 0 }
-                        }}
-                        className='shadow center p-5 my-5'
-                        style={{ width: '900px', borderRadius: '20px' }}>
-                        <div className='row'>
-                            <div className='col-4'>
-                                <Tooltip
-                                    TransitionComponent={Fade}
-                                    TransitionProps={{ timeout: 600 }}
-                                    title="Click to view Project's screenshots"
-                                    followCursor
-                                >
-                                    <Link to='/view-project-woop'>
-                                        <motion.button
-                                            initial={{ opacity: 0.6 }}
-                                            whileHover={{
-                                                scale: 1.1,
-                                                transition: { duration: 0.2 },
-                                            }}
-                                            whileTap={{ scale: 0.9 }}
-                                            whileInView={{ opacity: 1 }}
-                                            className='bgWoop boxshadow m-1'
-                                            style={{ width: '240px', height: '400px' }}
-                                        />
-                                    </Link>
-                                </Tooltip>
-                            </div>
-                            <div className='col-8 p-5'>
-                                <h5 className='fontKanit'
-                                    style={{ textAlign: 'center', fontWeight: 'bold' }}>
-                                    Woop! Bicycle Errand Services 📱
-                                </h5>
-                                <p className='fontInconsolata' style={{ textAlign: 'center' }}>Internship Project 2023</p>
-                                <p className='fontRubik'
-                                    style={{ textAlign: 'justify' }}>
-                                    Woop! Is a bicycle errand service based in Naga City. The project composed of 3 components, 2 mobile applications for the biker and customer of Woop! And 1 web application for the administrators of the application. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment. Pasa-Buy is composed of 3 different types. Food, Medicine, and Grocery. The images shown are the screenshots from the Mobile-User Component of the project
-                                </p>
-                                <div className="d-flex bd-highlight">
-
-                                    <div className="me-auto bd-highlight">
-                                        <Image className='shadow ml-2' src={require('../Assets/Skills/flutter-review.jpeg')} rounded='true' style={{ height: '50px' }} />
-                                    </div>
-                                    <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
-                                        <Button className='boxshadow text-black '
-                                            style={{ border: '1px solid black' }}
-                                            href='https://github.com/markguchi/woop/tree/main/mobile_customer'
-                                            endIcon={<FontAwesomeIcon icon={faGithub}
-                                            />}>
-                                            <span style={{ fontWeight: 'bold' }}>View Code</span>
-                                        </Button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </motion.div>
-
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        variants={{
-                            visible: { opacity: 1, scale: 1 },
-                            hidden: { opacity: 0, scale: 0 }
-                        }}
-                        className='shadow center mt-5 p-5'
-                        style={{ width: '900px', borderRadius: '20px' }}>
-                        <div className='row'>
-                            <div className='col-4'>
-                                <h5 className='fontKanit'
-                                    style={{ textAlign: 'center', fontWeight: 'bold' }}>IMS: Inventory Management System 🖥️</h5>
-                                <p className='fontInconsolata' style={{ textAlign: 'center' }}>Capstone Project 2022</p>
-                                <p className='fontRubik'
-                                    style={{ textAlign: 'justify' }}>
-                                    A web applications catered for MSMEs to keep track of their product's stock level and to create their own virtual warehouse that provides indoor mapping to ease locating products</p>
-                            </div>
-                            <Tooltip
-                                TransitionComponent={Fade}
-                                TransitionProps={{ timeout: 600 }}
-                                title="Click to view Project's screenshots"
-                                followCursor
-                            >
-                                <div className='col-8' >
-                                    <Link to='/view-project-ims'>
-                                        <motion.button
-                                            initial={{ opacity: 0.6 }}
-                                            whileHover={{
-                                                scale: 1.1,
-                                                transition: { duration: 0.2 },
-                                            }}
-                                            whileTap={{ scale: 0.9 }}
-                                            whileInView={{ opacity: 1 }}
-                                            className='bgIMS boxshadow m-1'
-                                            style={{ width: '500px', height: '220px' }}
-                                        />
-                                    </Link>
-                                </div>
-                            </Tooltip>
-
-                        </div>
-                        <div className="d-flex bd-highlight">
-                            <div className="py-2 bd-highlight">
-                                <Image className='shadow mx-2' src={require('../Assets/Skills/ReactJS.png')} rounded='true' style={{ height: '50px' }} />
-                            </div>
-                            <div className="me-auto py-2 bd-highlight shado">
-                                <Image className='shadow mx-2' src={require('../Assets/Skills/firebase.png')} rounded='true' style={{ height: '50px' }} />
-                            </div>
-
-                            <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
-                                <Button className='boxshadow text-black '
-                                    style={{ border: '1px solid black' }}
-                                    href='https://inventoryapp-330808.web.app'
-                                    endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
-                                    />}>
-                                    <span style={{ fontWeight: 'bold' }}>Visit App</span>
-                                </Button>
-                            </div>
-                            <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
-                                <Button className='boxshadow text-black '
-                                    style={{ border: '1px solid black' }}
-                                    href='https://github.com/adrianoadree/IMSweb'
-                                    endIcon={<FontAwesomeIcon icon={faGithub}
-                                    />}>
-                                    <span style={{ fontWeight: 'bold' }}>View Code</span>
-                                </Button>
-                            </div>
-                        </div>
-                    </motion.div>
-
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        variants={{
-                            visible: { opacity: 1, scale: 1 },
-                            hidden: { opacity: 0, scale: 0 }
-                        }}
-                        className='shadow center mt-5 p-5'
-                        style={{ width: '900px', borderRadius: '20px' }}>
-                        <div className='row'>
-                            <div className='col-8' >
-                                <Link to='/view-project-tuwayan'>
-                                    <motion.button
-                                        initial={{ opacity: 0.6 }}
-                                        whileHover={{
-                                            scale: 1.1,
-                                            transition: { duration: 0.2 },
-                                        }}
-                                        whileTap={{ scale: 0.9 }}
-                                        whileInView={{ opacity: 1 }}
-                                        className='bgTuwayan boxshadow m-1'
-                                        style={{ width: '500px', height: '220px' }}
-                                    />
-                                </Link>
-                            </div>
-                            <div className='col-4'>
-                                <h5 className='fontKanit'
-                                    style={{ textAlign: 'center', fontWeight: 'bold' }}>Tuwayan: An Online Trading System for Barter Enthusiasts 🖥️</h5>
-                                <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2021</p>
-                                <p className='fontRubik mb-5'
-                                    style={{ textAlign: 'justify' }}>
-                                    a web application that facilitate the exchange of goods between online traders.
-                                </p>
-                            </div>
-                            <Tooltip
-                                TransitionComponent={Fade}
-                                TransitionProps={{ timeout: 600 }}
-                                title="Click to view Project's screenshots"
-                                followCursor
-                            >
-                            </Tooltip>
-
-                        </div>
-                        <div className="d-flex bd-highlight">
-                            <div className="py-2 bd-highlight">
-                                <Image className='shadow mx-2' src={require('../Assets/Skills/HTML.png')} rounded='true' style={{ height: '60px' }} />
-                            </div>
-                            <div className="me-auto py-2 bd-highlight shado">
-                                <Image className='shadow mx-3' src={require('../Assets/Skills/CSS.png')} rounded='true' style={{ height: '60px' }} />
-                            </div>
-
-                            <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
-                                <Button className='boxshadow text-black '
-                                    style={{ border: '1px solid black' }}
-                                    href='https://tuwayan.vercel.app/index.html'
-                                    endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
-                                    />}>
-                                    <span style={{ fontWeight: 'bold' }}>Visit App</span>
-                                </Button>
-                            </div>
-                            <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
-                                <Button className='boxshadow text-black '
-                                    style={{ border: '1px solid black' }}
-                                    href='https://github.com/adrianoadree/tuwayan'
-                                    endIcon={<FontAwesomeIcon icon={faGithub}
-                                    />}>
-                                    <span style={{ fontWeight: 'bold' }}>View Code</span>
-                                </Button>
-                            </div>
-                        </div>
-                    </motion.div>
-
-
-                    <motion.div
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        variants={{
-                            visible: { opacity: 1, scale: 1 },
-                            hidden: { opacity: 0, scale: 0 }
-                        }}
-                        className='shadow center mt-5 p-5'
-                        style={{ width: '900px', borderRadius: '20px' }}>
-                        <div className='row'>
-                            <div className='col-4'>
-                                <h5 className='fontKanit'
-                                    style={{ textAlign: 'center', fontWeight: 'bold' }}>Brick Breaker 🎮</h5>
-                                <p className='fontInconsolata' style={{ textAlign: 'center' }}>Course Project 2019</p>
-                                <p className='fontRubik'
-                                    style={{ textAlign: 'justify' }}>
-                                    A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City
-                                </p>
-                            </div>
-                            <Tooltip
-                                TransitionComponent={Fade}
-                                TransitionProps={{ timeout: 600 }}
-                                title="Click to view Project's screenshots"
-                                followCursor
-                            >
-                                <div className='col-8' >
-                                    <Link to='/view-project-brickbreaker'>
-                                        <motion.button
-                                            initial={{ opacity: 0.6 }}
-                                            whileHover={{
-                                                scale: 1.1,
-                                                transition: { duration: 0.2 },
-                                            }}
-                                            whileTap={{ scale: 0.9 }}
-                                            whileInView={{ opacity: 1 }}
-                                            className='bgBrickBreaker boxshadow m-1'
-                                            style={{ width: '500px', height: '220px' }}
-                                        />
-                                    </Link>
-                                </div>
-                            </Tooltip>
-
-                        </div>
-                        <div className="d-flex mt-3 bd-highlight">
-                            <div className="py-2 bd-highlight">
-                                <Image className='shadow mx-2' src={require('../Assets/Skills/unity.png')} rounded='true' style={{ height: '50px' }} />
-                            </div>
-                            <div className="me-auto py-2 bd-highlight shado">
-                                <Image className='shadow mx-2' src={require('../Assets/Skills/cSharp.jpg')} rounded='true' style={{ height: '50px' }} />
-                            </div>
-                            <div className="py-2 px-4 bd-highlight text-black hoverColorChange">
-                                <Button className='boxshadow text-black '
-                                    style={{ border: '1px solid black' }}
-                                    href='https://github.com/adrianoadree/brickbreaker'
-                                    endIcon={<FontAwesomeIcon icon={faGithub}
-                                    />}>
-                                    <span style={{ fontWeight: 'bold' }}>View Code</span>
-                                </Button>
-                            </div>
-                        </div>
-                    </motion.div>
-
-
+                    <ProjectCardMobile1
+                        bgImageProject={bgWoop}
+                        projectTitle='Woop! Bicycle Errand Services 📱'
+                        projectYear='Internship Project 2023'
+                        projectDescription='Woop! Is a bicycle errand service based in Naga City. The project composed of 3 components, 2 mobile applications for the biker and customer of Woop! And 1 web application for the administrators of the application. Woop offers errand services such as Pasa-Buy, Parcel Pickups, and Bills payment. Pasa-Buy is composed of 3 different types. Food, Medicine, and Grocery. The images shown are the screenshots from the Mobile-User Component of the project'
+                        codeLink='https://github.com/markguchi/woop/tree/main/mobile_customer'
+                        projectScreenshots='/view-project-woop'
+                        skill1={FlutterSkill}
+                    />
+                    <ProjectCardWeb1
+                        bgImageProject={bgIMS}
+                        projectTitle='IMS: Inventory Management System 🖥️'
+                        projectYear='Capstone Project 2022'
+                        projectDescription='A web applications catered for MSMEs to keep track of their products stock level and to create their own virtual warehouse that provides indoor mapping to ease locating products'
+                        appLink='https://inventoryapp-330808.web.app'
+                        codeLink='https://github.com/adrianoadree/IMSweb'
+                        projectScreenshots='/view-project-ims'
+                        skill1={reactJsSkill} skill2={firebaseSkill}
+                    />
+                    <ProjectCardWeb2
+                        bgImageProject={bgTuwayan}
+                        projectTitle='Tuwayan: An Online Trading System for Barter Enthusiasts 🖥️'
+                        projectYear='Course Project 2021'
+                        projectDescription='a web application that facilitate the exchange of goods between online traders.'
+                        appLink='https://tuwayan.vercel.app/index.html'
+                        codeLink='https://github.com/adrianoadree/tuwayan'
+                        projectScreenshots='/view-project-tuwayan'
+                        skill1={HTMLSkill} skill2={CSSSkill}
+                    />
+                    <ProjectCardWeb1
+                        bgImageProject={bgBrickBreaker}
+                        projectTitle='Brick Breaker 🎮'
+                        projectYear='Course Project 2019'
+                        projectDescription='A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City'
+                        codeLink='https://github.com/adrianoadree/brickbreaker'
+                        projectScreenshots='/view-project-brickbreaker'
+                        skill1={UnitySkill} skill2={CSharpSkill}
+                    />
 
                 </div>
-                <div className=''
-                    style={{ width: '100%', }}>
-                    <div id='arts' className='center fontRubik p-5'>
-                        <p className='fontBree' style={{ float: 'left', fontSize: '30px', textAlign: 'center' }}>
-                            DIGITAL ARTS 🎨
-                        </p>
-                    </div>
-                    <div className='m-auto p-5'
-                        style={{ width: '900px', borderRadius: '20px' }}>
+                <>
+                    <div style={{ width: '100%', }}>
+                        <div id='arts' className='center fontRubik p-5'>
+                            <p className='fontBree' style={{ float: 'left', fontSize: '30px', textAlign: 'center' }}>
+                                DIGITAL ARTS 🎨
+                            </p>
+                        </div>
+                        <div className='m-auto p-5'
+                            style={{ width: '900px', borderRadius: '20px' }}>
 
-                        <div className='row'>
-                            <div className='col-6'>
+                            <div className='row'>
+                                <div className='col-6'>
+                                    <ArtCard
+                                        title='Naruto Pixel Art'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/E11_Adriano.jpg')}
+                                        height={'570px'}
+                                        width={'380px'}
+                                        imageHeight={'480px'}
+                                    />
+                                    <ArtCard
+                                        title='Aesthetic Conventionalism 🐺'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/Aesthetic_Conventionalism1.jpg')}
+                                        width={'380px'}
+                                        imageHeight={'350px'}
+                                    />
+                                    <ArtCard
+                                        title='Aesthetic Conventionalism 🐶'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/Aesthetic_Conventionalism2.jpg')}
+                                        width={'380px'}
+                                        imageHeight={'350px'}
+                                    />
+                                    <ArtCard
+                                        title='Aesthetic Hedonism'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/Aesthetic_Hedonism.jpg')}
+                                        height={'650px'}
+                                        width={'380px'}
+                                        imageHeight={'550px'}
+                                    />
+                                    <ArtCard
+                                        title='Aesthetic Functionalism'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/Aesthetic_Functionalism.jpg')}
+                                        width={'380px'}
+                                        imageHeight={'350px'}
+                                    />
+                                </div>
+                                <div className='col-6'>
+                                    <ArtCard
+                                        title='AdNU DCS Logo Entry'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/Logo.jpg')}
+                                        width={'380px'}
+                                        imageHeight={'350px'}
+                                    />
+                                    <ArtCard
+                                        title='Family Business Logo'
+                                        source={require('../Assets/Arts/Business_Logo.jpg')}
+                                        width={'380px'}
+                                        imageHeight={'350px'}
+                                    />
+                                    <ArtCard
+                                        title='Jesse Robredo Sword ⚔️'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/robredosword.png')}
+                                        height={'570px'}
+                                        width={'380px'}
+                                        imageHeight={'480px'}
+                                    />
+                                    <ArtCard
+                                        title='Vector Art'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/VectorArt.jpg')}
+                                        width={'380px'}
+                                        imageHeight={'350px'}
+                                    />
+                                    <ArtCard
+                                        title='Art as communication of emotion'
+                                        artType='Course Activity'
+                                        source={require('../Assets/Arts/Art_as_communication_of_emotion.jpg')}
+                                        height={'530px'}
+                                        width={'380px'}
+                                        imageHeight={'440px'}
+                                    />
+                                </div>
 
-                                <motion.div
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow p-3'
-                                    style={{ height: '600px', width: '400px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/E11_Adriano.jpg')} style={{ borderRadius: '20px', height: '500px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Naruto Pixel Art</h5>
-                                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                                </motion.div>
-                                <motion.div
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3'
-                                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Conventionalism1.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Conventionalism 🐺</h5>
-                                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                                </motion.div>
-                                <motion.div
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3' style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Conventionalism2.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Conventionalism 🐶</h5>
-                                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                                </motion.div>
-                                <motion.div
-                                    initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3'
-                                    style={{ height: '650px', width: '400px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Hedonism.jpg')} style={{ borderRadius: '20px', height: '550px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Hedonism 👑</h5>
-                                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                                </motion.div>
-                            </div>
-                            <div className='col-6'>
-                                <motion.div initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow p-3'
-                                    style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/Logo.jpg')} style={{ borderRadius: '20px', height: '260px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>AdNU DCS Logo Entry</h5>
-                                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                                </motion.div>
-                                <motion.div initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3'
-                                    style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/Business_Logo.jpg')} style={{ borderRadius: '20px', height: '270px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Family Business Logo 🥡</h5>
-                                </motion.div>
-                                <motion.div initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3'
-                                    style={{ float: 'right', height: '500px', width: '320px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/robredosword.png')} style={{ borderRadius: '20px', height: '400px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Jesse Robredo Sword ⚔️</h5>
-                                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                                </motion.div>
-                                <motion.div initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3'
-                                    style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/VectorArt.jpg')} style={{ borderRadius: '20px', height: '270px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Vector Art</h5>
-                                </motion.div>
-                                <motion.div initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3'
-                                    style={{ float: 'right', height: '350px', width: '320px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Functionalism.jpg')} style={{ borderRadius: '20px', height: '270px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Functionalism</h5>
-                                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                                </motion.div>
-                                <motion.div initial="hidden"
-                                    whileInView="visible"
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5 }}
-                                    variants={{
-                                        visible: { opacity: 1, scale: 1 },
-                                        hidden: { opacity: 0, scale: 0 }
-                                    }}
-                                    className='bg-white boxshadow mt-5 p-3'
-                                    style={{ float: 'right', height: '460px', width: '320px', borderRadius: '20px' }}>
-                                    <Image className='m-auto card' src={require('../Assets/Arts/Art_as_communication_of_emotion.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Art as communication of emotion</h5>
-                                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                                </motion.div>
                             </div>
 
                         </div>
 
-                    </div>
+                    </div >
+                </>
 
-                </div >
 
                 <MDBFooter id='contact' className='text-center mt-5' color='white' bgColor='dark'>
                     <MDBContainer className='p-4'>
@@ -751,8 +460,9 @@ function LandingPage() {
                         hidden: { opacity: 0, scale: 0 }
                     }}
                     className='shadow center mt-5 p-4'
-                    style={{ width: '60vh', borderRadius: '20px' }}>
-                    <div className='row'>
+                    style={{ width: '70%', borderRadius: '20px' }}>
+                    <div className='row'
+                        style={{ borderRadius: '20px' }}>
                         <div >
                             <Link to='/view-project-brickbreaker'>
                                 <motion.button
