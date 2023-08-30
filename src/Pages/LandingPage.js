@@ -327,188 +327,124 @@ function LandingPage() {
                     bgImageProject={bgBrickBreaker}
                 />
 
-              
+
                 <div id='arts' className='fontRubik p-5'>
                     <p className='fontBree' style={{ float: 'left', fontSize: '20px', }}>
                         DIGITAL ARTS 🎨
                     </p>
                 </div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white center boxshadow p-3'
-                    style={{ height: '600px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/E11_Adriano.jpg')} style={{ borderRadius: '20px', height: '500px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Naruto Pixel Art</h5>
-                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow center mt-5 p-3'
-                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Conventionalism1.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Conventionalism 🐺</h5>
-                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow mt-5 p-3 center'
-                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Conventionalism2.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Conventionalism 🐶</h5>
-                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow center mt-5 p-3'
-                    style={{ height: '650px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Hedonism.jpg')} style={{ borderRadius: '20px', height: '550px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Hedonism 👑</h5>
-                    <h6 className='fontKanit  m-auto'>Course Activity</h6>
-                </motion.div>
-                <motion.div initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow mt-5 p-3 center'
-                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/Logo.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>AdNU DCS Logo Entry</h5>
-                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                </motion.div>
-                <motion.div initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow mt-5 p-3 center'
-                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/Business_Logo.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Family Business Logo 🥡</h5>
-                </motion.div>
-                <motion.div initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow mt-5 p-3 center'
-                    style={{ height: '550px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/robredosword.png')} style={{ borderRadius: '20px', height: '450px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Jesse Robredo Sword ⚔️</h5>
-                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                </motion.div>
-                <motion.div initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow mt-5 p-3 center'
-                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/VectorArt.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Vector Art</h5>
-                </motion.div>
-                <motion.div initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow mt-5 p-3 center'
-                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/Aesthetic_Functionalism.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Aesthetic Functionalism</h5>
-                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                </motion.div>
-                <motion.div initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='bg-white boxshadow mt-5 p-3 center'
-                    style={{ height: '450px', width: '400px', borderRadius: '20px' }}>
-                    <Image className='m-auto card' src={require('../Assets/Arts/Art_as_communication_of_emotion.jpg')} style={{ borderRadius: '20px', height: '350px' }} />
-                    <h5 className='fontKanit  m-auto pt-2' style={{ fontWeight: 'bold' }}>Art as communication of emotion</h5>
-                    <h6 className='fontKanit m-auto'>Course Activity</h6>
-                </motion.div>
+
+                <ArtCard
+                    title='Naruto Pixel Art'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/E11_Adriano.jpg')}
+                    height={'470px'}
+                    width={'300px'}
+                    imageHeight={'380px'}
+                />
+
+                <ArtCard
+                    title='Aesthetic Conventionalism 🐺'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/Aesthetic_Conventionalism1.jpg')}
+                    height={'380px'}
+                    width={'300px'}
+                    imageHeight={'260px'}
+                />
+
+                <ArtCard
+                    title='Aesthetic Conventionalism 🐶'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/Aesthetic_Conventionalism2.jpg')}
+                    height={'380px'}
+                    width={'300px'}
+                    imageHeight={'260px'}
+                />
+
+                <ArtCard
+                    title='Aesthetic Hedonism'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/Aesthetic_Hedonism.jpg')}
+                    height={'470px'}
+                    width={'300px'}
+                    imageHeight={'380px'}
+                />
+                <ArtCard
+                    title='Aesthetic Functionalism'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/Aesthetic_Functionalism.jpg')}
+                    height={'350px'}
+                    width={'300px'}
+                    imageHeight={'260px'}
+                />
+
+                <ArtCard
+                    title='AdNU DCS Logo Entry'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/Logo.jpg')}
+                    height={'350px'}
+                    width={'300px'}
+                    imageHeight={'260px'}
+                />
+
+                <ArtCard
+                    title='Family Business Logo'
+                    artType='Personal Project'
+                    source={require('../Assets/Arts/Business_Logo.jpg')}
+                    height={'350px'}
+                    width={'300px'}
+                    imageHeight={'260px'}
+                />
+
+                <ArtCard
+                    title='Jesse Robredo Sword ⚔️'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/robredosword.png')}
+                    height={'470px'}
+                    width={'300px'}
+                    imageHeight={'380px'}
+                />
+                <ArtCard
+                    title='Vector Art'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/VectorArt.jpg')}
+                    height={'350px'}
+                    width={'300px'}
+                    imageHeight={'260px'}
+                />
+
+                <ArtCard
+                    title='Art as communication of emotion'
+                    artType='Course Activity'
+                    source={require('../Assets/Arts/Art_as_communication_of_emotion.jpg')}
+                    height={'370px'}
+                    width={'300px'}
+                    imageHeight={'260px'}
+                />
+
                 <MDBFooter id='contact' className='text-center mt-5' color='white' bgColor='dark'>
                     <MDBContainer className='p-4'>
 
                         <section className='mb-4' >
                             <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
-                                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} />
+                                <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '20px' }} />
                             </a>
                             <a className='mx-3' href="https://www.linkedin.com/in/adrianoadriannn/" style={{ display: 'inline-block' }}>
-                                <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '50px' }} />
+                                <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: '20px' }} />
                             </a>
                             <a className='mx-3' href="https://www.facebook.com/ADRIANOadriann/" style={{ display: 'inline-block' }}>
-                                <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '50px' }} />
+                                <FontAwesomeIcon icon={faFacebook} style={{ fontSize: '20px' }} />
                             </a>
                             <a className='mx-3' href="https://www.discordapp.com/users/adriannn#3845" style={{ display: 'inline-block' }}>
-                                <FontAwesomeIcon icon={faDiscord} style={{ fontSize: '50px' }} />
+                                <FontAwesomeIcon icon={faDiscord} style={{ fontSize: '20px' }} />
                             </a>
                             <a className='mx-3' href="https://github.com/adrianoadree" style={{ display: 'inline-block' }}>
-                                <FontAwesomeIcon icon={faGithub} style={{ fontSize: '50px' }} />
+                                <FontAwesomeIcon icon={faGithub} style={{ fontSize: '20px' }} />
                             </a>
                         </section>
                     </MDBContainer>
                     <div className='text-center p-3' style={{ height: '50px', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                         <p> ©Adrian Adriano 2023 </p>
-                        <section >
-                            <a className='text-white m-5' href='#about'>
-                                profile
-                            </a>
-                            <a className='text-white m-5' href='#projects'>
-                                project
-                            </a>
-                            <a className='text-white m-5' href='#arts'>
-                                arts
-                            </a>
-                        </section>
                     </div>
                 </MDBFooter>
             </Responsive>
