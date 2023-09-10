@@ -46,6 +46,7 @@ import Typography from '@mui/material/Typography';
 import ProjectCardMobileVer from '../Components/ProjectCardMobileVer';
 import ProjectCardMobileVerDeployed from '../Components/ProjectCardMobileVerDeployed';
 import { Icon } from '@iconify/react';
+import ContactMe from '../Components/ContactMe';
 
 function LandingPage() {
 
@@ -174,6 +175,7 @@ function LandingPage() {
                         <div className='center fontRubik' style={{ textAlign: 'justify', fontSize: '20px' }}>
                             Here are several projects from my academic years, including internship assignments, capstone projects, and other academic endeavors. These projects showcase my versatility in programming languages across web development, mobile application development, and game development.
                         </div>
+
                     </motion.div>
 
 
@@ -331,6 +333,7 @@ function LandingPage() {
 
                     </div >
                 </>
+                <ContactMe  />
 
 
                 <MDBFooter id='contact' className='text-center mt-5' color='white' bgColor='dark'>
