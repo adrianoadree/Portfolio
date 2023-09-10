@@ -5,10 +5,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
 
 .guide {
   border: 1px solid red;
+}
+
+.container div {
+  height: 400px;
+  min-width: 300px;
+  margin-left: 10px;
+  animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-1500px, 0, 0); /* The image width */
+  }
+}
+.container {
+  overflow: hidden;
+  display: flex;
+  height: 500px;
+  width: 3000px;
+  margin: 0 auto;
+}
+
+.container div {
+  height: 400px;
+  min-width: 300px;
+  margin-left: 30px;
 }
 
 .bg {
@@ -198,6 +227,14 @@ svg {
   padding: 10px;
   box-shadow: 5px 5px #3a3a3a;
   border-radius: 15px;
+}
+
+
+.circleshadow {
+  border: 1px solid #3a3a3a;
+  padding: 10px;
+  box-shadow: 5px 5px #3a3a3a;
+  border-radius: 100px;
 }
 
 .bgImage {
@@ -424,6 +461,7 @@ svg {
   width: 100%;
 }
 
+
 .section::before {
   animation: bounce 1s ease infinite;
   bottom: 2rem;
@@ -494,4 +532,65 @@ svg {
   100% {
     transform: rotate(0.0deg)
   }
+}
+
+
+
+.bounce1 {
+  animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce1 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.bounce2 {
+  animation: bounce2 2s ease infinite;
+  animation-delay: 0.2s;
+
+}
+
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+
+.bounce3 {
+  animation: bounce2 2s ease infinite;
+  animation-delay: 0.4s;
+
+}
+
+@keyframes bounce3 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.bounce4 {
+  animation: bounce2 2s ease infinite;
+  animation-delay: 0.6s;
+
+}
+
+@keyframes bounce4 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+
+.bounce5 {
+  animation: bounce2 2s ease infinite;
+  animation-delay: 0.8s;
+
+}
+
+@keyframes bounce5 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
 }

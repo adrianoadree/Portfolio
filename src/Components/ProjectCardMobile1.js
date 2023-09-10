@@ -9,8 +9,9 @@ import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { Icon } from '@iconify/react';
 
-const ProjectCardMobile1 = ({ appLink, codeLink, projectTitle, projectYear, projectDescription, projectScreenshots, skill1, skill2, bgImageProject }) => {
+const ProjectCardMobile1 = ({ codeLink, projectTitle, projectYear, projectDescription, projectScreenshots, skill1, skill2, bgImageProject }) => {
 
 
 
@@ -34,8 +35,8 @@ const ProjectCardMobile1 = ({ appLink, codeLink, projectTitle, projectYear, proj
                         title="Click to view Project's screenshots"
                         followCursor
                     >
-                        <Link to={projectScreenshots}>
-                            <motion.button
+                        <a href={projectScreenshots} >
+                            <motion.img src={bgImageProject} style={{ height: '500px' }}
                                 initial={{ opacity: 0.6 }}
                                 whileHover={{
                                     scale: 1.1,
@@ -43,18 +44,8 @@ const ProjectCardMobile1 = ({ appLink, codeLink, projectTitle, projectYear, proj
                                 }}
                                 whileTap={{ scale: 0.9 }}
                                 whileInView={{ opacity: 1 }}
-                                style={{
-                                    width: '240px',
-                                    height: '400px',
-                                    backgroundImage: `url(${bgImageProject})`,
-                                    backgroundSize: '100% 100%',
-                                    border: '1px solid #3a3a3a',
-                                    padding: '10px',
-                                    borderRadius: '15px',
-                                    boxShadow: '5px 5px #3a3a3a'
-                                }}
                             />
-                        </Link>
+                        </a>
                     </Tooltip>
                 </div>
                 <div className='col-8 p-5'>
@@ -62,24 +53,30 @@ const ProjectCardMobile1 = ({ appLink, codeLink, projectTitle, projectYear, proj
                         style={{ textAlign: 'center', fontWeight: 'bold' }}>
                         {projectTitle}
                     </h5>
-                    <p className='fontInconsolata' style={{ textAlign: 'center' }}>{projectYear}</p>
+                    <p className='fontInconsolata' style={{ textAlign: 'center' }}>
+                        {projectYear}
+                    </p>
                     <p className='fontRubik'
                         style={{ textAlign: 'justify' }}>
                         {projectDescription}
                     </p>
-                    <div className="d-flex bd-highlight">
-
-                        <div className="me-auto bd-highlight">
-                            <Image className='shadow ml-2' src={skill1} rounded='true' style={{ height: '50px' }} />
+                    <div class="d-flex bd-highlight mb-3">
+                        <div class="p-2 bd-highlight">
+                            <Icon icon={skill1} className='circleshadow' style={{ width: '100', height: '100px', }} />
                         </div>
-                        <div className="py-2 px-2 bd-highlight text-black hoverColorChange">
-                            <Button className='boxshadow text-black '
-                                style={{ border: '1px solid black' }}
-                                href={codeLink}
-                                endIcon={<FontAwesomeIcon icon={faGithub}
-                                />}>
-                                <span style={{ fontWeight: 'bold' }}>View Code</span>
-                            </Button>
+                        <div class="ms-auto p-2 bd-highlight">
+                            <a href={codeLink}>
+                                <motion.button className="boxshadow "
+                                    initial={{ opacity: 0.6 }}
+                                    whileHover={{
+                                        scale: 1.1,
+                                        transition: { duration: 0.2 },
+                                    }}
+                                    whileTap={{ scale: 0.9 }}
+                                    whileInView={{ opacity: 1 }}>
+                                    <Icon icon="icon-park:github" style={{ height: '50px', }} />View Code
+                                </motion.button>
+                            </a>
                         </div>
                     </div>
                 </div>
