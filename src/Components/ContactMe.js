@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { Icon } from '@iconify/react';
@@ -6,6 +6,9 @@ import { Icon } from '@iconify/react';
 
 const ContactMe = () => {
     const form = useRef();
+    const [messageContent, setMessageContent] = useState('')
+    const [nameContent, setNameContent] = useState('')
+    const [emailContent, setEmailContent] = useState('')
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -26,6 +29,9 @@ const ContactMe = () => {
                     console.log(error.text);
                 }
             );
+        setMessageContent('');
+        setEmailContent('');
+        setNameContent('');
     };
 
     return (
@@ -39,7 +45,7 @@ const ContactMe = () => {
                 hidden: { opacity: 0, scale: 0 }
             }}
             className='shadow center p-5'
-            style={{ width: '900px', borderRadius: '20px', marginBottom:'100px' }}
+            style={{ width: '900px', borderRadius: '20px', marginBottom: '100px' }}
         >
             <div class="d-flex flex-row bd-highlight center">
                 <div class="bd-highlight"><Icon icon="line-md:email-twotone" style={{ height: '80px' }} /></div>
@@ -63,6 +69,8 @@ const ContactMe = () => {
                     className='mt-3 px-5'
                     type="text"
                     name="user_name"
+                    value={nameContent}
+                    onChange={(event) => { setNameContent(event.target.value); }}
                     placeholder='Enter your Full Name'
                     style={{
                         width: '600px',
@@ -83,6 +91,8 @@ const ContactMe = () => {
                     className='mt-3 px-5'
                     type="email"
                     name="user_email"
+                    value={emailContent}
+                    onChange={(event) => { setEmailContent(event.target.value); }}
                     placeholder='Enter your Email Address'
                     style={{
                         width: '600px',
@@ -104,6 +114,8 @@ const ContactMe = () => {
                     className='mt-3 px-5 pt-2'
                     placeholder='Enter Message'
                     name="message"
+                    value={messageContent}
+                    onChange={(event) => { setMessageContent(event.target.value); }}
                     style={{
                         width: '600px',
                         height: '300px',
