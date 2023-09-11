@@ -57,22 +57,21 @@ function LandingPage() {
             <Responsive displayIn={["laptop"]}>
                 <div className='shadowBottom container-fluid' style={{ backgroundColor: '#F5F5F5' }}>
                     <div className='row m-auto' id='about' style={{ width: '1000px', height: '90vh', }}>
-                        <motion.div className='col-md-7 col-xs-12 p-5'
-                            initial={{ x: "100%" }}
-                            animate={{
-                                x: "calc(100vw - 220%)", transition: { duration: 1.5 },
-                            }}>
+                        <div className='col-md-7 col-xs-12 p-5 bounce-in-right'
+                        >
                             <p className='fontBorel m-auto' style={{ fontSize: '120px', paddingTop: '100px' }}>
                                 hello!<span className="wave">👋🏻</span>
                             </p>
                             <p className='fontBree' style={{ fontSize: '50px', textAlign: 'center' }}>I'm Adrian </p>
                             <p className='fontBree' style={{ fontSize: '20px', textAlign: 'center' }}>A Front-End Developer and Digital Artist</p>
-                        </motion.div>
-                        <div className='col-md-5 col-xs-12'>
+                        </div>
+                        <div className='col-md-5 col-xs-12 bounce-in'>
                             <Image className='m-5' src={require('../Assets/vectorportrait.png')} style={{ height: '500px' }} />
                         </div>
                     </div>
                 </div>
+
+
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -333,12 +332,12 @@ function LandingPage() {
 
                     </div >
                 </>
-                <ContactMe  />
+                <ContactMe />
 
 
                 <MDBFooter id='contact' className='text-center mt-5' color='white' bgColor='dark'>
-                    <MDBContainer className='p-4'>
-                        <section className='mb-4' >
+                    <MDBContainer className='p-4 ' style={{ height: '100px' }}>
+                        <section className='mb-4'   >
                             <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
                                 <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '50px' }} />
                             </a>
@@ -357,21 +356,7 @@ function LandingPage() {
                         </section>
                     </MDBContainer>
                     <div className='text-center p-3' style={{ height: '50px', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                        <p style={{ float: 'left' }}> ©Adrian Adriano 2023 </p>
-                        <section style={{ float: 'right' }}>
-                            <a className='text-white m-5' href='#about'>
-                                profile
-                            </a>
-                            <a className='text-white m-5' href='#projects'>
-                                project
-                            </a>
-                            <a className='text-white m-5' href='#arts'>
-                                arts
-                            </a>
-
-
-                        </section>
-
+                        <p> ©Adrian Adriano 2023 </p>
                     </div>
                 </MDBFooter>
             </Responsive >
