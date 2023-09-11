@@ -32,7 +32,10 @@ const ContactMe = () => {
         setMessageContent('');
         setEmailContent('');
         setNameContent('');
+        alert("Your message was successfully emailed to Adrian");
+
     };
+
 
     return (
         <motion.div
@@ -138,6 +141,7 @@ const ContactMe = () => {
                     value="Send Message"
                     style={{ width: '500px' }} />
             </form>
+
         </motion.div>
 
 
