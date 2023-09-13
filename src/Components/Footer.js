@@ -1,7 +1,4 @@
 import { Responsive } from 'typed-responsive-react';
-import { Icon } from '@iconify/react';
-import { motion } from "framer-motion";
-import ArtCard from '../Components/ArtCard';
 import {
     MDBFooter,
     MDBContainer,

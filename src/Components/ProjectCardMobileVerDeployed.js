@@ -1,10 +1,6 @@
 
 import React from 'react';
-import { Image } from 'react-bootstrap';
 import { motion } from "framer-motion";
-import { Tooltip } from '@mui/material';
-import Fade from '@mui/material/Fade';
-import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
@@ -51,7 +47,7 @@ const ProjectCardMobileVerDeployed = ({ appLink, codeLink, projectTitle, project
                         <Button className='boxshadow text-black '
                             style={{ border: '1px solid black', width: '12  0px' }}
                             href={appLink}
-                            endIcon={<FontAwesomeIcon icon={faGithub}
+                            endIcon={<FontAwesomeIcon icon={faArrowUpRightFromSquare}
                             />}>
                             <span style={{ fontSize: '10px', fontWeight: 'bold' }}>Visit App</span>
                         </Button>

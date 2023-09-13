@@ -1,14 +1,8 @@
 
 import React from 'react';
-import { Image } from 'react-bootstrap';
 import { motion } from "framer-motion";
 import { Tooltip } from '@mui/material';
 import Fade from '@mui/material/Fade';
-import { Link } from 'react-router-dom';
-import Button from '@mui/material/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { Icon } from '@iconify/react';
 
 const ProjectCardWeb2 = ({ appLink, codeLink, projectTitle, projectYear, projectDescription, projectScreenshots, skill1, skill2, bgImageProject }) => {

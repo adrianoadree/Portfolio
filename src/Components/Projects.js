@@ -5,7 +5,6 @@ import WoopDisplay from '../Assets/WoopDisplay.png'
 import IMSDisplay from '../Assets/IMSDisplay.png'
 import TuwayanDisplay from '../Assets/TuwayanDisplay.png'
 import BrickBreakerDisplay from '../Assets/Brickbreakerdisplay.png'
-
 import ProjectCardWeb1 from '../Components/ProjectCardWeb1';
 import ProjectCardWeb2 from '../Components/ProjectCardWeb2';
 import ProjectCardMobile1 from '../Components/ProjectCardMobile1';
