@@ -96,21 +96,23 @@ const Skills = () => {
                         visible: { opacity: 1, scale: 1 },
                         hidden: { opacity: 0, scale: 0 }
                     }}>
-                    <div className="d-flex justify-content-between  mt-1" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="devicon:react" className='circleshadow bounce1' style={{ height: '100px' }} />
-                        <Icon icon="vscode-icons:file-type-flutter" className='circleshadow bounce2' style={{ marginLeft: '10px',height: '100px' }} />
-                        <Icon icon="logos:firebase" className='circleshadow bounce3' style={{ marginLeft: '10px',height: '100px' }} />
-                        <Icon icon="icon-park:github" className='circleshadow bounce4' style={{ marginLeft: '10px',height: '100px' }} />
+                    <div className="d-flex justify-content-between px-2 mt-1" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+                        <Icon icon="devicon:react" className='circleshadow bounce1' style={{ height: '80px' }} />
+                        <Icon icon="vscode-icons:file-type-flutter" className='circleshadow bounce2' style={{ marginLeft: '10px', height: '80px' }} />
+                        <Icon icon="logos:firebase" className='circleshadow bounce3' style={{ marginLeft: '10px', height: '80px' }} />
+                        <Icon icon="icon-park:github" className='circleshadow bounce4' style={{ marginLeft: '10px', height: '80px' }} />
 
                     </div>
-                    <div className="d-flex justify-content-between mt-3" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="logos:html-5" className='circleshadow' style={{ marginLeft: '10px', height: '50px' }} />
-                        <Icon icon="logos:css-3" className='circleshadow' style={{ marginLeft: '10px', height: '50px' }} />
-                        <Icon icon="vscode-icons:file-type-js-official" className='circleshadow' style={{ marginLeft: '10px', height: '50px' }} />
-                        <Icon icon="logos:c-plusplus" className='circleshadow' style={{ marginLeft: '10px', height: '50px' }} />
-                        <Icon icon="devicon:dart-wordmark" className='circleshadow' style={{ marginLeft: '10px', height: '50px' }} />
-                        <Icon icon="logos:adobe-photoshop" className='circleshadow' style={{ marginLeft: '10px', height: '50px' }} />
-                        <Icon icon="skill-icons:illustrator" className='circleshadow' style={{ marginLeft: '10px', height: '50px' }} />
+                    <div className="d-flex justify-content-between mt-3" style={{ width:'250px',  marginLeft: 'auto', marginRight: 'auto' }}>
+                        <Icon icon="logos:html-5" className='circleshadow'  style={{ marginLeft: '10px',width:'50px', height: '50px' }}  />
+                        <Icon icon="logos:css-3" className='circleshadow'  style={{ marginLeft: '10px',width:'50px', height: '50px' }}  />
+                        <Icon icon="vscode-icons:file-type-js-official" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
+                        <Icon icon="logos:c-plusplus" className='circleshadow'  style={{ marginLeft: '10px',width:'50px', height: '50px' }}  />
+                    </div>
+                    <div className="d-flex justify-content-center center" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+                        <Icon icon="devicon:dart-wordmark" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
+                        <Icon icon="logos:adobe-photoshop" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
+                        <Icon icon="skill-icons:illustrator" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
                     </div>
                 </motion.div>
 
