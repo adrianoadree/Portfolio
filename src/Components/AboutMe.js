@@ -49,6 +49,16 @@ const AboutMe = () => {
                         hidden: { opacity: 0, scale: 0 }
                     }}>
                     <div className='mt-5'>
+                        <div className=' px-5 row'>
+                            <div className='col-2 guide'>
+                                <Icon icon="flat-color-icons:about" style={{ height: '70px' }} />
+                            </div>
+                            <div className='col-10'>
+                                <p className='fontBree' style={{ float: 'left', fontSize: '40px', display: 'inline-block' }}>
+                                    ABOUT ME
+                                </p>
+                            </div>
+                        </div>
                         <div class="px-5 d-flex bd-highlight">
                             <div class=" bd-highlight guide">
                                 <Icon icon="flat-color-icons:about" style={{ height: '55px' }} />
