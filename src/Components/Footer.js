@@ -44,8 +44,7 @@ const Footer = () => {
 
                 <MDBFooter id='contact' className='text-center mt-5' color='white' bgColor='dark' >
                     <MDBContainer className='p-4' style={{ height: '70px' }}>
-
-                        <section className='mb-4'  >
+                        <div class="d-flex justify-content-center">
                             <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
                                 <FontAwesomeIcon icon={faEnvelope} style={{ fontSize: '20px' }} />
                             </a>
@@ -61,7 +60,7 @@ const Footer = () => {
                             <a className='mx-3' href="https://github.com/adrianoadree" style={{ display: 'inline-block' }}>
                                 <FontAwesomeIcon icon={faGithub} style={{ fontSize: '20px' }} />
                             </a>
-                        </section>
+                        </div>
                     </MDBContainer>
                     <div className='text-center p-3' style={{ height: '50px', backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
                         <p> ©Adrian Adriano 2023 </p>
