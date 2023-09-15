@@ -9,6 +9,7 @@ const AboutMe = () => {
     return (
         <>
             <Responsive displayIn={["laptop"]}>
+
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
@@ -18,14 +19,14 @@ const AboutMe = () => {
                         visible: { opacity: 1, scale: 1 },
                         hidden: { opacity: 0, scale: 0 }
                     }}>
-                    <div className='mt-5'>
-                        <div class="d-flex flex-row bd-highlight center">
-                            <div class="bd-highlight"><Icon icon="flat-color-icons:about" style={{ height: '80px' }} /></div>
-                            <div class="bd-highlight">
-                                <p className='fontBree' style={{ float: 'left', fontSize: '50px', display: 'inline-block' }}>
-                                    ABOUT ME
-                                </p>
-                            </div>
+                    <div class="d-flex bd-highlight center mt-5">
+                        <div class="p-2 bd-highlight">
+                            <Icon icon="flat-color-icons:about" style={{ height: '80px' }} />
+                        </div>
+                        <div class="p-2 flex-grow-1 bd-highlight">
+                            <p className='fontBree' style={{ float: 'left', fontSize: '50px', display: 'inline-block' }}>
+                                ABOUT ME
+                            </p>
                         </div>
                     </div>
                     <div className='center fontRubik' style={{ textAlign: 'justify', fontSize: '20px' }}>
@@ -48,9 +49,11 @@ const AboutMe = () => {
                         hidden: { opacity: 0, scale: 0 }
                     }}>
                     <div className='mt-5'>
-                        <div class="px-5 d-flex flex-row bd-highlight">
-                            <div class="bd-highlight"><Icon icon="flat-color-icons:about" style={{ height: '55px' }} /></div>
-                            <div class="bd-highlight">
+                        <div class="px-5 d-flex bd-highlight">
+                            <div class="p-2 bd-highlight">
+                                <Icon icon="flat-color-icons:about" style={{ height: '55px' }} />
+                            </div>
+                            <div class="p-2 flex-grow-1 bd-highlight">
                                 <p className='fontBree' style={{ float: 'left', fontSize: '40px', display: 'inline-block' }}>
                                     ABOUT ME
                                 </p>
