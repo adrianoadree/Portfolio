@@ -41,8 +41,9 @@ const ProjectCardMobileVerDeployed = ({ appLink, codeLink, projectTitle, project
                     {projectDescription}
                 </p>
             </div>
-            <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 bd-highlight">
+            <div class="row mb-3">
+                <div className='col-4'></div>
+                <div className="p-2 col-4">
                     <a href='asdassdfff'>
                         <Button className='boxshadow text-black '
                             style={{ border: '1px solid black', width: '12  0px' }}
@@ -53,7 +54,7 @@ const ProjectCardMobileVerDeployed = ({ appLink, codeLink, projectTitle, project
                         </Button>
                     </a>
                 </div>
-                <div class="ms-auto p-2 bd-highlight">
+                <div className="p-2 col-4">
                     <a href='asdassdfff'>
                         <Button className='boxshadow text-black '
                             style={{ border: '1px solid black', width: '12  0px' }}
