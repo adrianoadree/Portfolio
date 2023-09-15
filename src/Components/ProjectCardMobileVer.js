@@ -41,9 +41,9 @@ const ProjectCardMobileVer = ({ codeLink, projectTitle, projectYear, projectDesc
                     {projectDescription}
                 </p>
             </div>
-            <div class="d-flex bd-highlight mb-3">
-                <div class="p-2 flex-grow-1 bd-highlight guide"></div>
-                <div class="p-2 bd-highlight">
+            <div class="row">
+                <div class="p-2 col-8"></div>
+                <div class="p-2 col-4">
                     <a href={codeLink}>
                         <Button className='boxshadow text-black '
                             style={{ border: '1px solid black', width: '12  0px' }}
