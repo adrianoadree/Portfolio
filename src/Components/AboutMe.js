@@ -50,17 +50,17 @@ const AboutMe = () => {
                     }}>
                     <div className='mt-5'>
                         <div class="px-5 d-flex bd-highlight">
-                            <div class="p-2 bd-highlight">
+                            <div class=" bd-highlight guide">
                                 <Icon icon="flat-color-icons:about" style={{ height: '55px' }} />
                             </div>
-                            <div class="p-2 flex-grow-1 bd-highlight">
+                            <div class="flex-grow-1 guide bd-highlight">
                                 <p className='fontBree' style={{ float: 'left', fontSize: '40px', display: 'inline-block' }}>
                                     ABOUT ME
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div className='p-5 fontRubik' style={{ textAlign: 'justify', fontSize: '18px' }}>
+                    <div className='guide p-5 fontRubik' style={{ textAlign: 'justify', fontSize: '18px' }}>
                         I recently completed my Bachelor of Science in Information Technology at Ateneo de Naga University, graduating in the class of 2023. I hail from Iriga City, Camarines Sur, and I have a strong ambition to become a front-end developer. My expertise lies in crafting web designs utilizing the React.js framework, and I am also passionate about graphic artistry, particularly in creating vector illustrations. I possess proficiency in various web development tools, including JavaScript, HTML, and CSS.
                     </div>
                 </motion.div>
