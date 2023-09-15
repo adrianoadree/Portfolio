@@ -154,7 +154,7 @@ const ContactMe = () => {
 
 
                 <motion.div
-                    className='mt-5'
+                    className='mt-5 shadow mx-2'
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
@@ -163,17 +163,15 @@ const ContactMe = () => {
                         visible: { opacity: 1, scale: 1 },
                         hidden: { opacity: 0, scale: 0 }
                     }}
-                    style={{ borderRadius: '20px', marginBottom: '100px', marginTop:'100px',paddingTop:'30px',paddingBottom:'30px' }}
-                    className='shadow mx-2'
-
+                    style={{ borderRadius: '20px', marginBottom: '100px', marginTop: '100px', paddingTop: '30px', paddingBottom: '30px' }}
                 >
                     <div className='mt-5'>
-                        <div class="d-flex flex-row bd-highlight px-5">
-                            <div class="bd-highlight">
-                                <Icon icon="line-md:email-twotone" style={{ height: '55px' }} />
+                        <div className=' px-5 row'>
+                            <div className='col-2'>
+                                <Icon icon="line-md:email-twotone" style={{ height: '70' }} />
                             </div>
-                            <div class="bd-highlight">
-                                <p className='fontBree' style={{ float: 'left', fontSize: '35px', display: 'inline-block' }}>
+                            <div className='col-10'>
+                                <p className='fontBree' style={{ float: 'left', fontSize: '38px', display: 'inline-block' }}>
                                     CONTACT ME
                                 </p>
                             </div>

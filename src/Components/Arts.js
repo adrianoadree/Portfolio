@@ -136,12 +136,12 @@ const Arts = () => {
                         hidden: { opacity: 0, scale: 0 }
                     }}>
                     <div className='mt-5'>
-                        <div class="d-flex flex-row bd-highlight px-5">
-                            <div class="bd-highlight">
-                                <Icon icon="fluent:draw-shape-24-regular" style={{ height: '55px' }} />
+                        <div className=' px-5 row'>
+                            <div className='col-2'>
+                                <Icon icon="fluent:draw-shape-24-regular" style={{ height: '70px' }} />
                             </div>
-                            <div class="bd-highlight">
-                                <p className='fontBree' style={{ float: 'left', fontSize: '35px', display: 'inline-block' }}>
+                            <div className='col-10'>
+                                <p className='fontBree' style={{ float: 'left', fontSize: '38px', display: 'inline-block' }}>
                                     DIGITAL ARTS
                                 </p>
                             </div>

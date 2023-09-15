@@ -101,9 +101,11 @@ const Projects = () => {
                         hidden: { opacity: 0, scale: 0 }
                     }}>
                     <div className='mt-5'>
-                        <div class="d-flex flex-row bd-highlight px-5">
-                            <div class="bd-highlight"><Icon icon="ant-design:code-outlined" style={{ height: '55px' }} /></div>
-                            <div class="bd-highlight">
+                        <div className=' px-5 row'>
+                            <div className='col-2'>
+                                <Icon icon="ant-design:code-outlined" style={{ height: '70px' }} />
+                            </div>
+                            <div className='col-10'>
                                 <p className='fontBree' style={{ float: 'left', fontSize: '40px', display: 'inline-block' }}>
                                     PROJECTS
                                 </p>
