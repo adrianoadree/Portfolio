@@ -97,10 +97,10 @@ const Skills = () => {
                         hidden: { opacity: 0, scale: 0 }
                     }}>
                     <div className="d-flex justify-content-between px-2 mt-1" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="devicon:react" className='circleshadow bounce1' style={{ height: '80px' }} />
-                        <Icon icon="vscode-icons:file-type-flutter" className='circleshadow bounce2' style={{ marginLeft: '10px', height: '80px' }} />
-                        <Icon icon="logos:firebase" className='circleshadow bounce3' style={{ marginLeft: '10px', height: '80px' }} />
-                        <Icon icon="icon-park:github" className='circleshadow bounce4' style={{ marginLeft: '10px', height: '80px' }} />
+                        <Icon icon="devicon:react" className='circleshadow bounce1' style={{ width: '80px', height: '80px' }} />
+                        <Icon icon="vscode-icons:file-type-flutter" className='circleshadow bounce2' style={{ width: '80px',marginLeft: '10px', height: '80px' }} />
+                        <Icon icon="logos:firebase" className='circleshadow bounce3' style={{ marginLeft: '10px', width: '80px',height: '80px' }} />
+                        <Icon icon="icon-park:github" className='circleshadow bounce4' style={{ marginLeft: '10px', width: '80px',  height: '80px' }} />
 
                     </div>
                     <div className="d-flex justify-content-between mt-3" style={{ width:'250px',  marginLeft: 'auto', marginRight: 'auto' }}>
