@@ -84,7 +84,7 @@ const Skills = () => {
                         </div>
                     </div>
                     <div className='p-5 fontRubik' style={{ textAlign: 'justify', fontSize: '18px' }}>
-                        I recently completed my Bachelor of Science in Information Technology at Ateneo de Naga University, graduating in the class of 2023. I hail from Iriga City, Camarines Sur, and I have a strong ambition to become a front-end developer. My expertise lies in crafting web designs utilizing the React.js framework, and I am also passionate about graphic artistry, particularly in creating vector illustrations. I possess proficiency in various web development tools, including JavaScript, HTML, and CSS.
+                        In my academic years, I cultivated a diverse set of technical skills as a Front-End Developer through hands-on project experiences. Below, you'll find the tools I employed for designing web and mobile applications.
                     </div>
                 </motion.div>
                 <motion.div
