@@ -1,13 +1,15 @@
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from './Pages/LandingPage';
-import Arts from './Pages/Art';
+import Home from './Pages/Home';
+import Arts from './Pages/Arts';
 import Projects from './Pages/Projects';
 import Navigation from "./Layout/Navigation";
 import Woop from "./Pages/Woop";
 import Ims from "./Pages/Ims";
 import Tuwayan from "./Pages/Tuwayan";
 import BrickBreaker from "./Pages/BrickBreaker";
+import Test from "./Pages/Test";
+import About from "./Pages/About";
 
 
 export default function App() {
@@ -15,13 +17,15 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Navigation />}>
-          <Route index element={<LandingPage />} />
+          <Route index element={<Home />} />
+          <Route path="about-me" element={<About />} />
           <Route path="arts" element={<Arts />} />
           <Route path="projects" element={<Projects />} />
-          <Route path="view-project-woop" element={<Woop />} />
-          <Route path="view-project-ims" element={<Ims />} />
-          <Route path="view-project-tuwayan" element={<Tuwayan />} />
-          <Route path="view-project-brickbreaker" element={<BrickBreaker />} />
+          <Route path="projects/woop" element={<Woop />} />
+          <Route path="projects/ims" element={<Ims />} />
+          <Route path="projects/tuwayan" element={<Tuwayan />} />
+          <Route path="projects/brickbreaker" element={<BrickBreaker />} />
+          <Route path="test" element={<Test />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,295 +1,289 @@
-import '../custom.css';
-import { Image } from 'react-bootstrap';
-import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faLinkedin, faDiscord, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faEye } from '@fortawesome/free-regular-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { motion } from "framer-motion";
+import WoopLogo from '../Assets/Projects/Woop/Woop_Logo_Outlined.png'
+import WoopDisplay from '../Assets/WoopDisplay.png'
+import IMSDisplay from '../Assets/IMSDisplay.png'
+import IMSLogo from '../Assets/Projects/IMS/IMS_Logo.png'
+import TuwayanDisplay from '../Assets/TuwayanDisplay.png'
+import TuwayanLogo from '../Assets/Projects/Tuwayan/tuwayan_logo.png'
+import BrickBreakerDisplay from '../Assets/Brickbreakerdisplay.png'
+import BrickBreakerLogo from '../Assets/Projects/Brickbreaker/paddle.png'
+import Footer from '../Components/Footer';
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import ContactMe from '../Components/ContactMe';
 
-function Projects() {
+const Projects = () => {
 
-    const [projectButtonBool, setProjectButtonBool] = useState(true);
-    const [artButtonBool, setArtButtonBool] = useState(false);
+
 
     return (
-
         <>
-            <div className='row center' style={{ width: '100%', padding: '40px' }}>
-                <div className='card shadow bgImage' style={{ width: '100%', padding: '50px', borderRadius: '30px' }}>
-                    <h2 className='fontRubik font-weight-bold' style={{ padding: '40px' }}>
-                        <span style={{ color: '#27374D', fontWeight: 'bold' }}>
-                            Hello World! my name is <span style={{ color: '#19A7CE' }}>Adrian Adriano</span>
-                        </span>
-                        <br />
-                        <span className='text-color1 font-weight-bold' style={{ color: '#526D82' }}>I'm a Front-End Developer</span>
-                    </h2>
-                    <span className='text-color1 font-weight-bold' style={{ color: '#9DB2BF' }}>
-                        I create user-centered User Interface for Web and Mobile Applications
-                    </span>
-                </div>
-                <div className='row' style={{ height: '50px' }}></div>
-                <div className='row center mt-5'>
-                    <h6 className='fontRubik' style={{ fontWeight: 'bold' }} >
-                        scroll down to know more
-                        <span style={{ color: '#19A7CE' }}> about me</span>
-                    </h6>
-
-                    <div className='row' style={{ height: '50px' }} />
-                </div>
-
-                <div class="section"></div>
-            </div>
-
-            <div className='row' style={{ paddingLeft: '300px', paddingRight: '300px', paddingTop: '20px', backgroundColor: '#EDE4FF' }}>
-                <div className='row center'>
-
-                    <div class="card-body">
-                        <div className='separator'>
-                            <h4 className='fontRubik' style={{ fontWeight: 'bold' }}>EDUCATIONAL <span style={{ color: '#FF8400' }}>BACKGROUND</span></h4>
-                        </div>
-                        <div class="d-flex justify-content-center mb-3" >
-                            <div class="p-2">
-                                <Image src={require('../Assets/Ateneo_de_Naga_University_logo.png')} roundedCircle='true' style={{ height: '150px' }} />
-                            </div>
-                            <div class="p-2 ">
-                                <br />
-                                <div className='fontKanit'>
-                                    <span >Bachelor of Science in Information Technology</span><br />
-                                    <span>Ateneo de Naga University</span><br />
-                                    <span>Naga City, Camarines Sur</span><br />
-                                    <span>Class of 2023</span><br />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body pt-5">
-                        <div className='separator'>
-                            <h4 className='fontRubik' style={{ fontWeight: 'bold' }}>INTERNSHIP <span style={{ color: '#FF8400' }}>EXPERIENCE</span></h4>
-                        </div>
-                        <div class="d-flex justify-content-center mb-3" >
-                            <div class="p-2">
-                                <Image src={require('../Assets/pandalivery-logo.jpg')} rounded='true' style={{ height: '180px' }} />
-                            </div>
-                            <div class="p-2">
-                                <span className='fontKanit'>Intern / Mobile Application Developer</span><br />
-                                <span className='fontKanit'>Pandalivery Naga</span><br />
-                                <span className='fontKanit'>Naga City, Camarines Sur</span><br />
-                                <span className='fontInconsolata' style={{ fontSize: '14px' }}>- Responsible for the front-end development of the mobile Application. Flutter technology was
-                                    used to develop to cater Android and iOS users of Woop! a bicycle based errand services</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div >
-            <div className='center mt-5'>
-                <div className='separator'>
-                    <h4 className='fontRubik' style={{ fontWeight: 'bold' }}>MY <span style={{ color: '#19A7CE' }}>CAPABILITIES</span></h4>
-                </div>
-                <div className='row'>
-                    <span className='fontKanit'>• ReachJS • Flutter Technology • Firebase Database • Firestore •  JavaScript • HTML • CSS • C++ • Adobe Illustrator • Adobe Photoshop •  Adobe Lightroom • </span><br />
+            <div className='row px-5' style={{ height: 'auto', minHeight: '100vh', backgroundColor: '#1d1d1dff' }}>
+                <div style={{ marginTop: '10em' }}>
+                    <h1 className='fade-text text-center fontTitle px-5 pt-5 m-auto' style={{ marginTop: '.2em', fontSize: "10em", color: "wheat" }}>
+                        Projects
+                    </h1>
+                    <motion.p className="fontRaleway p-5" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
+                        I’ve had the opportunity to work on a wide range of projects, from internship tasks and capstone work during my academic years to a recent personal project that I pursued out of pure interest. Each project has given me the chance to explore different areas of development, whether it’s building websites, creating mobile apps, or experimenting with game design.
+                        t
+                        Along the way, I’ve worked with different programming languages and frameworks, adapting to new tools and challenges with every project. What excites me most is seeing an idea turn into something functional and tangible, whether it’s a polished app or a simple prototype. This collection represents not just what I’ve built, but also how I continue to grow as a developer — curious, creative, and always ready to learn something new.
+                    </motion.p>
                 </div>
             </div>
+            <div className='row px-5 fontRaleway py-5' style={{ backgroundColor: '#0F0E0E', color: "#948979", textAlign: 'justify' }}>
+                <motion.div className='row mt-5 m-auto' initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}>
+                    <div className='col-lg-5 text-center'>
+                        <a href='/projects/woop' >
+                            <motion.img src={WoopDisplay} style={{ maxHeight: '70vh' }}
+                                initial={{ opacity: 0.6 }}
+                                whileHover={{
+                                    scale: 1.1,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9 }}
+                                whileInView={{ opacity: 1 }}
+                            />
+                        </a>
+                        <p>click me to view screens</p>
+                    </div>
+                    <div className='col-lg-7 text-center' >
+                        <img className='align-center' src={WoopLogo} alt='Woop!' style={{ maxHeight: '10em' }} />
+                        <div className='row'>
+                            <h1 className='pt-1' style={{ fontSize: '4em', color: 'wheat' }}>Woop! Bicycle Errand Services</h1>
+                            <h2 className='' style={{}}>Internship Project 2023</h2>
+                            <p></p>
+                            <p className="fontRaleway p-1"
+                                style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979", textAlign: 'justify' }}
+                            >
+                                Woop! is a bicycle-powered errand service based in Naga City, featuring two mobile apps (for riders and customers) and a web application for administrators. The service covers Pasa-Buy (Food, Medicine, and Grocery), parcel pickups, and bill payments.
 
-            <div className='row mt-5'>
+                                My Role: I focused on the UI/UX design of the customer-facing mobile app, ensuring intuitive navigation, clean layouts, and a seamless ordering experience tailored for everyday errands.
+                            </p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                                Built with Flutter, and Dart
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
+                                <a
+                                    href="https://github.com/markguchi/woop/tree/main/mobile_customer"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <button className="projects-button dropshadow-hover fontRaleway  px-4 py-3">
+                                        <FontAwesomeIcon icon={faGithub} style={{ fontSize: '2em' }} />
+                                        <span>View Code</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+                <motion.div className='row mt-5' initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}>
+                    <div className='col-lg-5 text-center m-auto'>
+                        <a href='/projects/IMS' >
+                            <motion.img src={IMSDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
+                                initial={{ opacity: 0.6 }}
+                                whileHover={{
+                                    scale: 1.1,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9 }}
+                                whileInView={{ opacity: 1 }}
+                            />
+                        </a>
+                        <p>click me to view screens</p>
+                    </div>
+                    <div className='col-lg-7 text-center' >
+                        <img className='align-center' src={IMSLogo} alt='IMS' style={{ maxHeight: '10em' }} />
 
-                <div className='row center' style={{ justifyContent: 'center' }}>
-                    {projectButtonBool ?
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '5px solid #19A7CE', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '25px' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            PROJECTS
-                        </button>
-                        :
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '1px solid white', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '20px', color: '#526D82' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            PROJECTS
-                        </button>
-                    }
-                    {artButtonBool ?
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '5px solid #19A7CE', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '25px' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            DIGITAL ARTS
-                        </button>
-                        :
-                        <button className='mx-2 fontKanit shadow'
-                            style={{ width: '350px', height: '70px', border: '1px solid white', borderRadius: '20px', fontWeight: 'bold', backgroundColor: '#EDE4FF', fontSize: '20px', color: '#526D82' }}
-                            onClick={(event) => {
-                                setProjectButtonBool(!projectButtonBool);
-                                setArtButtonBool(!artButtonBool);
-                            }}
-                        >
-                            DIGITAL ARTS
-                        </button>
-                    }
+                        <div className='row'>
+                            <h1 className='pt-1' style={{ fontSize: '4em', color: 'wheat' }}>IMS: Inventory Management System</h1>
+                            <h2 className='' style={{}}>Capstone Project 2022</h2>
+                            <p></p>
+                            <p className="fontRaleway p-1"
+                                style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979", textAlign: 'justify' }}
+                            >
+                                A web application and mobile application catered for MSMEs in Naga City to keep track of their products stock level and to create their own virtual warehouse that provides indoor mapping to ease locating products
+                            </p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                                Built with ReactJS, Bootstrap, and Google Firebase
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
+                                <a href='https://inventoryapp-330808.web.app' target='_blank' rel='noreferrer'>
+                                    <button className="projects-button dropshadow-hover fontRaleway px-4 py-3">
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                            style={{ fontSize: '2em', marginRight: '8px' }}
+                                        />
+                                        <span>Visit Site</span>
+                                    </button>
+                                </a>
+                                <a href='https://github.com/adrianoadree/IMSweb' target='_blank' rel='noreferrer'>
+                                    <button className="projects-button dropshadow-hover fontRaleway px-4 py-3">
+                                        <FontAwesomeIcon
+                                            icon={faGithub}
+                                            style={{ fontSize: '2em', marginRight: '8px' }}
+                                        />
+                                        <span>View Code</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
 
-                </div>
+                    </div>
+                </motion.div>
+                <motion.div className='row mt-5' initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}>
+                    <div className='col-lg-5 text-center m-auto'>
+                        <a href='/projects/tuwayan' >
+                            <motion.img src={TuwayanDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
+                                initial={{ opacity: 0.6 }}
+                                whileHover={{
+                                    scale: 1.1,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9 }}
+                                whileInView={{ opacity: 1 }}
+                            />
+                        </a>
+                        <p>click me to view screens</p>
+                    </div>
+                    <div className='col-lg-7 text-center' >
+                        <img className='align-center' src={TuwayanLogo} alt='Tuwayan' style={{ maxHeight: '10em' }} />
+
+                        <div className='row'>
+                            <h1 className='pt-1' style={{ fontSize: '4em', color: 'wheat' }}>Tuwayan: An Online Trading System for Barter Enthusiasts</h1>
+                            <h2 className='' style={{}}>Academic Project 2021</h2>
+                            <p></p>
+                            <p className="fontRaleway p-1"
+                                style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979", textAlign: 'justify' }}
+                            >
+                                A web-based platform designed to enable the seamless exchange of goods among online traders.
+                            </p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                                Built with HTML, CSS, and Bootstrap
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
+                                <a href='https://tuwayan.vercel.app/index.html' target='_blank' rel='noreferrer'>
+                                    <button className="projects-button dropshadow-hover fontRaleway px-4 py-3">
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                            style={{ fontSize: '2em', marginRight: '8px' }}
+                                        />
+                                        <span>Visit Site</span>
+                                    </button>
+                                </a>
+                                <a href='https://github.com/adrianoadree/tuwayan' target='_blank' rel='noreferrer'>
+                                    <button className="projects-button dropshadow-hover fontRaleway px-4 py-3">
+                                        <FontAwesomeIcon
+                                            icon={faGithub}
+                                            style={{ fontSize: '2em', marginRight: '8px' }}
+                                        />
+                                        <span>View Code</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </motion.div>
+                <motion.div className='row mt-5' initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}>
+                    <div className='col-lg-5 text-center m-auto'>
+                        <a href='/projects/brickbreaker' >
+                            <motion.img src={BrickBreakerDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
+                                initial={{ opacity: 0.6 }}
+                                whileHover={{
+                                    scale: 1.1,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9 }}
+                                whileInView={{ opacity: 1 }}
+                            />
+                        </a>
+                        <p>click me to view screens</p>
+                    </div>
+                    <div className='col-lg-7 text-center' >
+                        <img className='align-center' src={BrickBreakerLogo} alt='BrickBreaker' style={{ maxHeight: '10em' }} />
+
+                        <div className='row'>
+                            <h1 className='pt-1' style={{ fontSize: '4em', color: 'wheat' }}>Brick Breaker</h1>
+                            <h2 className='' style={{}}>Academic Project 2019</h2>
+                            <p></p>
+                            <p className="fontRaleway p-1"
+                                style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979", textAlign: 'justify' }}
+                            >
+                                A Unity-based Brick Breaker game, coded in C#, incorporates captivating visuals inspired by the Colgante Bridge of Naga City. The game utilizes background images and sprites inspired by this iconic bridge to enhance its aesthetics and gameplay.
+                            </p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                                Built with C#, and Unity
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
+
+                                <a href='https://github.com/adrianoadree/brickbreaker' target='_blank' rel='noreferrer'>
+                                    <button className="projects-button dropshadow-hover fontRaleway px-4 py-3">
+                                        <FontAwesomeIcon
+                                            icon={faGithub}
+                                            style={{ fontSize: '2em', marginRight: '8px' }}
+                                        />
+                                        <span>View Code</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </motion.div>
             </div>
-
-            {artButtonBool ?
-                <div className='row mt-3'>
-                    <div className='row center' style={{ justifyContent: 'center' }}>
-                        <div className='guide card shadow' style={{ width: '720px', borderRadius: '20px', backgroundColor: '#EDE4FF' }}>
-                            <div className='row mt-5 bg-white shadow' style={{ height: '170px' }}>
-                                <svg>
-                                    <symbol id="s-text">
-                                        <text text-anchor="middle" x="50%" y="80%">ARTS </text>
-                                        <text text-anchor="middle" x="51%" y="80%">ARTS </text>
-                                    </symbol>
-                                    <g class="g-ants">
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt1 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt2 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt3 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt4 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt5 mx-3' style={{ height: "350px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt6 mx-3' style={{ height: "350px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                            <div className='row mt-5 iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt7 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt8 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-
-                            <div className='row my-5  iconHover' style={{ justifyContent: 'center', display: 'inline-block' }}>
-                                <div className='card bg-white shadow bgImageArt9 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                                <div className='card bg-white shadow bgImageArt10 mx-3' style={{ height: "250px", width: '250px', backgroundPosition: 'center', display: 'inline-block' }}></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                :
-                <div className='row mt-3'>
-                    <div className='row center' style={{ justifyContent: 'center' }}>
-                        <div className='guide card shadow' style={{ width: '720px', borderRadius: '20px', backgroundColor: '#EDE4FF' }}>
-                            <div className='row mt-5 bg-white shadow' style={{ height: '170px' }}>
-                                <svg>
-                                    <symbol id="s-text">
-                                        <text text-anchor="middle" x="50%" y="80%">PROJECTS </text>
-                                        <text text-anchor="middle" x="51%" y="80%">PROJECTS </text>
-                                    </symbol>
-                                    <g class="g-ants">
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                        <use xlinkHref="#s-text" class="text-copy"></use>
-                                    </g>
-                                </svg>
-                            </div>
-
-                            <div className='row' style={{ justifyContent: 'center' }}>
-                                <div className='card m-5' style={{ width: '650px' }}>
-                                    <div className='card-header' >
-
-                                        <div>
-                                            <a className='fontRubik'
-                                                style={{ height: '20px', fontWeight: 'bold', fontSize: '20px' }}
-                                                href='/view-project-ims'>
-                                                <span style={{ color: 'black' }}>IMS:</span><span style={{ color: '#FF8400' }}> Inventory Management System</span>
-                                            </a>
-                                        </div>
-                                        <div className="pt-2 d-flex flex-row-reverse bd-highlight">
-                                            <a className="px-3 bd-highlight" href='https://github.com/adrianoadree/IMSweb'>
-                                                <FontAwesomeIcon className='buttonHover' icon={faGithub} style={{ fontSize: '30px', }} />
-                                            </a>
-                                            <a className="px-3 bd-highlight" href='https://inventoryapp-330808.web.app'>
-                                                <FontAwesomeIcon className='buttonHover' icon={faEye} style={{ fontSize: '30px', }} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
-                                        <Image className=' card' src={require('../Assets/Projects/IMS/IMS1.png')} rounded='true' style={{ height: '250px' }} />
-                                    </div>
-                                    <div className='center' style={{ display: 'inline-block', width: '600px' }}>
-                                        <div className='card mx-3' style={{ display: 'inline-block' }}>
-                                            <Image className=' card' src={require('../Assets/Projects/IMS/IMS2.png')} rounded='true' style={{ height: '120px' }} />
-                                        </div>
-                                        <div className='card' style={{ display: 'inline-block' }}>
-                                            <Image className=' card' src={require('../Assets/Projects/IMS/IMS3.png')} rounded='true' style={{ height: '120px' }} />
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div className='row' style={{ justifyContent: 'center' }}>
-                                <div className='card m-5' style={{ width: '450px' }}>
-                                    <div className='card-header align-middle'>
-                                        <a className='fontRubik '
-                                            href='/view-project-woop'
-                                            style={{ fontWeight: 'bold', fontSize: '20px' }}>
-                                            <span style={{ color: 'black' }}>Woop!</span>
-                                            <span style={{ color: '#FF8400' }}> (Internship Project)</span>
-                                        </a>
-                                        <div className="pt-2 d-flex flex-row-reverse bd-highlight">
-                                            <a className="px-3 bd-highlight" href='https://github.com/markguchi/woop/tree/main/mobile_customer'>
-                                                <FontAwesomeIcon className='buttonHover' icon={faGithub} style={{ fontSize: '30px', }} />
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className='card-body m-auto' style={{ justifyContent: 'center' }}>
-                                        <Image className=' card' src={require('../Assets/Projects/Woop/Woop1.png')} rounded='true' style={{ height: '450px' }} />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div >
-            }
-
-            <div className='footer' style={{ height: '200px', marginTop: '100px', backgroundColor: '#EDE4FF' }}>
-                <div className='center'>
-                    <h5 className='fontRubik my-5' style={{ fontWeight: 'bold' }}> my personal <span style={{ color: '#FF8400' }}>accounts</span> </h5>
-                    <div className='my-5' style={{ fontSize: '7px' }}>
-                        <a className='mx-3' href="mailto:adrianoadriannn@gmail.com" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faEnvelope} />
-                        </a>
-                        <a className='mx-3' href="https://www.linkedin.com/in/adrianoadriannn/" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faLinkedin} />
-                        </a>
-                        <a className='mx-3' href="https://www.facebook.com/ADRIANOadriann/" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faFacebook} />
-                        </a>
-                        <a className='mx-3' href="https://www.discordapp.com/users/adriannn#3845" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faDiscord} />
-                        </a>
-                        <a className='mx-3' href="https://github.com/adrianoadree" style={{ display: 'inline-block' }}>
-                            <FontAwesomeIcon icon={faGithub} />
-                        </a>
-                    </div>
-                </div>
-
-            </div >
-
-
-
+            <ContactMe />
+            <Footer />
         </>
-    );
-}
+    )
+
+};
+
 export default Projects;
+
+

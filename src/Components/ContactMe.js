@@ -1,275 +1,206 @@
-import React, { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { motion } from "framer-motion";
-import { Icon } from '@iconify/react';
-import { Responsive } from 'typed-responsive-react';
-
+import { useState } from "react";
 
 const ContactMe = () => {
-    const form = useRef();
-    const [messageContent, setMessageContent] = useState('')
-    const [nameContent, setNameContent] = useState('')
-    const [emailContent, setEmailContent] = useState('')
 
-    const sendEmail = (e) => {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
         e.preventDefault();
 
-        emailjs
-            .sendForm(
-                "service_w811plp",
-                "template_jx81ak8",
-                form.current,
-                "dTcFYTUlvOwep2hr9"
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                    console.log("message sent");
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
-        setMessageContent('');
-        setEmailContent('');
-        setNameContent('');
-        alert("Your message was successfully emailed to Adrian");
+        const gmailURL = `https://mail.google.com/mail/?view=cm&fs=1&to=adrianoadriannn@gmail.com&su=Message from ${encodeURIComponent(
+            formData.name
+        )}&body=${encodeURIComponent(
+            `From: ${formData.name} (${formData.email})\n\n${formData.message}`
+        )}`;
 
+        window.open(gmailURL, "_blank");
     };
 
 
+
     return (
-        <>
-            <Responsive displayIn={["laptop"]}>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}
-                    className='shadow center p-5'
-                    style={{ width: '900px', borderRadius: '20px', marginBottom: '100px' }}
+        <div
+            className="row text-center fontRaleway p-5"
+            style={{
+                height: "auto",
+                backgroundColor: "#0F0E0E",
+                display: "flex",
+                alignItems: "center",
+            }}
+        >
+            {/* Left side - Title */}
+            <div className="col-lg-4 d-flex align-items-center justify-content-center">
+                <h1
+                    className="fontTitle px-5"
+                    style={{ fontSize: "10em", color: "#948979", lineHeight: "1.1" }}
                 >
-                    <div class="d-flex flex-row bd-highlight center">
-                        <div class="bd-highlight"><Icon icon="line-md:email-twotone" style={{ height: '80px' }} /></div>
-                        <div class="bd-highlight">
-                            <p className='fontBree' style={{ float: 'left', fontSize: '50px', display: 'inline-block' }}>
-                                CONTACT ME
-                            </p>
-                        </div>
-                    </div>
-                    <div className='center fontRubik' style={{ textAlign: 'justify', fontSize: '20px', width: '600px' }}>
-                        you can utilize this email form to get in touch with me regarding a project or to inquire about my services for project involvement.                        </div>
-                    <form ref={form} onSubmit={sendEmail}>
-                        <motion.input
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 px-5'
-                            type="text"
-                            name="user_name"
-                            value={nameContent}
-                            onChange={(event) => { setNameContent(event.target.value); }}
-                            placeholder='Enter your Full Name'
-                            style={{
-                                width: '600px',
-                                height: '50px',
-                                borderRadius: '20px',
-                                borderStyle: 'solid',
-                                borderColor: 'gray',
-                                borderWidth: '2px'
-                            }} required /><br />
-                        <motion.input
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 px-5'
-                            type="email"
-                            name="user_email"
-                            value={emailContent}
-                            onChange={(event) => { setEmailContent(event.target.value); }}
-                            placeholder='Enter your Email Address'
-                            style={{
-                                width: '600px',
-                                height: '50px',
-                                borderRadius: '20px',
-                                borderStyle: 'solid',
-                                borderColor: 'gray',
-                                borderWidth: '2px'
-                            }}
-                            required /><br />
-                        <motion.textarea
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 px-5 pt-2'
-                            placeholder='Enter Message'
-                            name="message"
-                            value={messageContent}
-                            onChange={(event) => { setMessageContent(event.target.value); }}
-                            style={{
-                                width: '600px',
-                                height: '300px',
-                                borderRadius: '20px',
-                                borderStyle: 'solid',
-                                borderColor: 'gray',
-                                borderWidth: '2px'
-                            }} required>
-                        </motion.textarea><br />
-                        <motion.input
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 boxshadow'
-                            type="submit"
-                            value="Send Message"
-                            style={{ width: '500px' }} />
-                    </form>
+                    Shoot a Message
+                </h1>
+            </div>
 
-                </motion.div>
-            </Responsive >
-
-            <Responsive displayIn={["mobile", "tablet"]}>
-
-
-
-
-                <motion.div
-                    className='mt-5 shadow mx-2'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
+            {/* Right side - Form */}
+            <div className="col-lg-8 d-flex justify-content-center">
+                <form
+                    onSubmit={handleSubmit}
+                    style={{
+                        width: "80%",
+                        maxWidth: "90vw",
+                        display: "flex",
+                        flexDirection: "column",
                     }}
-                    style={{ borderRadius: '20px', marginBottom: '100px', marginTop: '100px', paddingTop: '30px', paddingBottom: '30px' }}
                 >
-                    <div className='mt-5'>
-                        <div className=' px-5 row'>
-                            <div className='col-2'>
-                                <Icon icon="line-md:email-twotone" style={{ height: '70' }} />
-                            </div>
-                            <div className='col-10'>
-                                <p className='fontBree' style={{ float: 'left', fontSize: '38px', display: 'inline-block' }}>
-                                    CONTACT ME
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='p-5 fontRubik' style={{ textAlign: 'justify', fontSize: '20px' }}>
-                        you can utilize this email form to get in touch with me regarding a project or to inquire about my services for project involvement.
-                    </div>
-
-                    <form ref={form} onSubmit={sendEmail} className="px-5">
-                        <motion.input
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 px-5'
+                    {/* Name */}
+                    <div style={{ position: "relative", marginBottom: "2em" }}>
+                        <input
                             type="text"
-                            name="user_name"
-                            value={nameContent}
-                            onChange={(event) => { setNameContent(event.target.value); }}
-                            placeholder='Enter your Full Name'
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            required
                             style={{
-                                width: '300px',
-                                height: '50px',
-                                borderRadius: '20px',
-                                borderStyle: 'solid',
-                                borderColor: 'gray',
-                                borderWidth: '2px'
-                            }} required /><br />
-                        <motion.input
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
+                                width: "100%",
+                                padding: "1.2em 0.75em 0.5em",
+                                border: formData.name ? "2px solid #948979" : "none",
+                                borderBottom: "2px solid #948979",
+                                background: "transparent",
+                                color: "#fff",
+                                fontSize: "1.2em",
+                                outline: "none",
+                                transition: "all 0.3s ease",
                             }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 px-5'
+                            onFocus={(e) => (e.target.style.border = "2px solid #948979")}
+                            onBlur={(e) =>
+                            (e.target.style.border = formData.name
+                                ? "2px solid #948979"
+                                : "none")
+                            }
+                        />
+                        <label
+                            style={{
+                                position: "absolute",
+                                left: "0.75em",
+                                top: formData.name ? "-1.2em" : "1.2em",
+                                fontSize: formData.name ? "1em" : "1.2em",
+                                fontWeight: "600",
+                                color: formData.name ? "#948979" : "#aaa",
+                                transition: "all 0.3s ease",
+                                pointerEvents: "none",
+                                backgroundColor: "#0F0E0E",
+                                padding: "0 0.25em",
+                            }}
+                        >
+                            Your Name
+                        </label>
+                    </div>
+
+                    {/* Email */}
+                    <div style={{ position: "relative", marginBottom: "2em" }}>
+                        <input
                             type="email"
-                            name="user_email"
-                            value={emailContent}
-                            onChange={(event) => { setEmailContent(event.target.value); }}
-                            placeholder='Enter your Email Address'
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            required
                             style={{
-                                width: '300px',
-                                height: '50px',
-                                borderRadius: '20px',
-                                borderStyle: 'solid',
-                                borderColor: 'gray',
-                                borderWidth: '2px'
+                                width: "100%",
+                                padding: "1.2em 0.75em 0.5em",
+                                border: formData.email ? "2px solid #948979" : "none",
+                                borderBottom: "2px solid #948979",
+                                background: "transparent",
+                                color: "#fff",
+                                fontSize: "1.2em",
+                                outline: "none",
+                                transition: "all 0.3s ease",
                             }}
-                            required /><br />
-                        <motion.textarea
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
+                            onFocus={(e) => (e.target.style.border = "2px solid #948979")}
+                            onBlur={(e) =>
+                            (e.target.style.border = formData.email
+                                ? "2px solid #948979"
+                                : "none")
+                            }
+                        />
+                        <label
+                            style={{
+                                position: "absolute",
+                                left: "0.75em",
+                                top: formData.email ? "-1.2em" : "1.2em",
+                                fontSize: formData.email ? "1em" : "1.2em",
+                                fontWeight: "600",
+                                color: formData.email ? "#948979" : "#aaa",
+                                transition: "all 0.3s ease",
+                                pointerEvents: "none",
+                                backgroundColor: "#0F0E0E",
+                                padding: "0 0.25em",
                             }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 px-5 pt-2'
-                            placeholder='Enter Message'
+                        >
+                            Your Email
+                        </label>
+                    </div>
+
+                    {/* Message */}
+                    <div style={{ position: "relative", marginBottom: "2em" }}>
+                        <textarea
                             name="message"
-                            value={messageContent}
-                            onChange={(event) => { setMessageContent(event.target.value); }}
+                            rows="6"
+                            value={formData.message}
+                            onChange={handleChange}
+                            required
                             style={{
-                                width: '300px',
-                                height: '300px',
-                                borderRadius: '20px',
-                                borderStyle: 'solid',
-                                borderColor: 'gray',
-                                borderWidth: '2px'
-                            }} required>
-                        </motion.textarea><br />
-                        <motion.input
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.1,
-                                transition: { duration: 0.2 },
+                                width: "100%",
+                                padding: "1.2em 0.75em 0.5em",
+                                border: formData.message ? "2px solid #948979" : "none",
+                                borderBottom: "2px solid #948979",
+                                background: "transparent",
+                                color: "#fff",
+                                fontSize: "1.2em",
+                                outline: "none",
+                                transition: "all 0.3s ease",
+                                resize: "none",
                             }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }}
-                            className='mt-3 boxshadow'
-                            type="submit"
-                            value="Send Message"
-                            style={{ width: '300px' }} />
-                    </form>
+                            onFocus={(e) => (e.target.style.border = "2px solid #948979")}
+                            onBlur={(e) =>
+                            (e.target.style.border = formData.message
+                                ? "2px solid #948979"
+                                : "none")
+                            }
+                        />
+                        <label
+                            style={{
+                                position: "absolute",
+                                left: "0.75em",
+                                top: formData.message ? "-1.2em" : "1.2em",
+                                fontSize: formData.message ? "1em" : "1.2em",
+                                fontWeight: "600",
+                                color: formData.message ? "#948979" : "#aaa",
+                                transition: "all 0.3s ease",
+                                pointerEvents: "none",
+                                backgroundColor: "#0F0E0E",
+                                padding: "0 0.25em",
+                            }}
+                        >
+                            Your Message
+                        </label>
+                    </div>
 
-                </motion.div>
+                    {/* Button */}
+                    <button
+                        className="submit-button"
+                        type="submit"
+                    >
+                        Send
+                    </button>
+                </form>
+            </div>
+        </div>
 
-
-            </Responsive >
-
-        </>
     );
 };
 

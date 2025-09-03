@@ -1,21 +1,23 @@
 import { Outlet } from "react-router-dom";
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Nav } from "react-bootstrap";
+import AALogo from '../Assets/AA-white.png'
 
 const Navigation = () => {
     return (
         <>
-            <Navbar className="bg-white fontBree shadow container-fluid" >
-                <div style={{float:"right"}}> 
-                    <Navbar.Brand className="text-black buttonHover px-5" href="/">
-                        Adrian
-                    </Navbar.Brand>
-                   
-
+            <nav className='navstyle'>
+                <div className='nav-logo'>
+                    <a className='text-link' href="/">
+                        <img className="dropshadow-hover" src={AALogo} style={{ height: '4em' }} alt="Adrian Adriano" />
+                    </a>
                 </div>
-            </Navbar>
+                <div className='text-link-container ' >
+                    <a className='text-link' href="/about-me">About Me</a>
+                    <a className='text-link' href="/projects">Projects</a>
+                    <a className='text-link' href="/arts">Arts</a>
+                </div>
+
+            </nav >
             <Outlet />
         </>
     )

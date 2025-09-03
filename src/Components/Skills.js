@@ -1,125 +1,104 @@
-import { Responsive } from 'typed-responsive-react';
-import { Icon } from '@iconify/react';
+import ReactJsicon from '../Assets/Skills/reacticon.png'
+import HTMLicon from '../Assets/Skills/HTML.png'
+import JSicon from '../Assets/Skills/JavaScript.png'
+import CSSicon from '../Assets/Skills/CSS.png'
+import firebaseicon from '../Assets/Skills/firebase-logo.png'
+import wordpressicon from '../Assets/Skills/pngfind.com-wordpress-logo-png-2371723.png'
+import octobercms from '../Assets/Skills/octobercms.png'
+import salesforceicon from '../Assets/Skills/toppng.com-salesforce-transparent-logo-640x448.png'
+import bootstrapicon from '../Assets/Skills/bootstrap-logo-shadow@2x.png'
+import fluttericon from '../Assets/Skills/Flutter.png'
+import photoshopicon from '../Assets/Skills/Adobe-Photoshop.png'
+import illustratoricon from '../Assets/Skills/Adobe-Illustrator.png'
+import githubicon from '../Assets/Skills/github-logo.png'
 import { motion } from "framer-motion";
+
 
 const Skills = () => {
 
 
 
     return (
-        <>
-            <Responsive displayIn={["laptop"]}>
-                <motion.div
-                    style={{ marginTop: '100px' }}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div class="d-flex flex-row bd-highlight center">
-                        <div class="bd-highlight"><Icon icon="ph:code-bold" style={{ height: '80px' }} /></div>
-                        <div class="bd-highlight">
-                            <p className='fontBree' style={{ float: 'left', fontSize: '50px', display: 'inline-block' }}>
-                                SKILLS & CAPABILITES
-                            </p>
-                        </div>
-                    </div>
+        <div className='row text-center py-5' style={{ height: 'auto', backgroundColor: '#1E201E' }}>
 
-                    <div className='center fontRubik' style={{ textAlign: 'justify', fontSize: '20px' }}>
-                        In my academic years, I cultivated a diverse set of technical skills as a Front-End Developer through hands-on project experiences. Below, you'll find the tools I employed for designing web and mobile applications.
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className="d-flex justify-content-between  mt-5" style={{ width: '670px', marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="devicon:react" className='circleshadow bounce1' />
-                        <Icon icon="vscode-icons:file-type-flutter" className='circleshadow bounce2' style={{ marginLeft: '30px' }} />
-                        <Icon icon="logos:firebase" className='circleshadow bounce3' style={{ marginLeft: '30px' }} />
-                        <Icon icon="icon-park:github" className='circleshadow bounce4' style={{ marginLeft: '30px' }} />
+            <motion.div className='row'
+                style={{ marginTop: '100px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 }
+                }}
+            >
+                <h1 className='fontTitle' style={{ marginTop: '.2em', fontSize: "10em", color: "#948979" }}>
+                    Skills & Capabilities
+                </h1>
+            </motion.div>
 
-                    </div>
-                    <div className="d-flex justify-content-between mt-3" style={{ width: '900px', marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="logos:html-5" className='circleshadow' style={{ marginLeft: '30px', height: '100px' }} />
-                        <Icon icon="logos:css-3" className='circleshadow' style={{ marginLeft: '30px', height: '100px' }} />
-                        <Icon icon="vscode-icons:file-type-js-official" className='circleshadow' style={{ marginLeft: '30px', height: '100px' }} />
-                        <Icon icon="logos:c-plusplus" className='circleshadow' style={{ marginLeft: '30px', height: '100px' }} />
-                        <Icon icon="devicon:dart-wordmark" className='circleshadow' style={{ marginLeft: '30px', height: '100px' }} />
-                        <Icon icon="logos:adobe-photoshop" className='circleshadow' style={{ marginLeft: '30px', height: '100px' }} />
-                        <Icon icon="skill-icons:illustrator" className='circleshadow' style={{ marginLeft: '30px', height: '100px' }} />
-                    </div>
-                </motion.div>
+            <motion.div className='row text-center mt-5 '
+                style={{ marginTop: '100px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 }
+                }}>
+                <p className="fontRaleway" style={{ fontSize: "2em", color: "#948979" }}>
+                    Web Development Tools, & CMS
+                </p>
+                <p>
+                    <a href='https://react.dev/' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={ReactJsicon} style={{ height: '100px', width: 'auto' }} alt="ReactJS" /></a>
+                    <a href='https://firebase.google.com/?gclsrc=aw.ds&gad_source=1&gad_campaignid=20100026061&gbraid=0AAAAADpUDOjnVVlzJrhHEPJYBAHIT9X6S&gclid=CjwKCAjw2brFBhBOEiwAVJX5GHDdX9Ue8TopsjiRzaLyqmYeLvNNlppQFvbDIDY_l5KPW2KJI17fRhoC-QIQAvD_BwE' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={firebaseicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="Google Firebase" /></a>
+                    <a href='https://getbootstrap.com/' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={bootstrapicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="Bootstrap" /></a>
+                    <a href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={HTMLicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="HTML" /></a>
+                    <a href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={CSSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="CSS" /></a>
+                    <a href='https://www.javascript.com/' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={JSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="JavaScript" /></a>
+                    <a href='https://octobercms.com/docs/' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={octobercms} style={{ height: '100px', width: 'auto', marginLeft: '1.5em' }} alt="octobercms" /></a>
+                    <a href='https://wordpress.com/' target='_blank' rel="noreferrer">
+                        <img className="dropshadow-hover" src={wordpressicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="WordPress" /></a>
+                </p>
+            </motion.div>
 
-            </Responsive>
-            <Responsive displayIn={["mobile", "tablet"]}>
-                <motion.div
-                    className='mt-3'
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className='mt-5'>
-                        <div className=' px-5 row'>
-                            <div className='col-2'>
-                                <Icon icon="ph:code-bold" style={{ height: '70px' }} />
-                            </div>
-                            <div className='col-10'>
-                                <p className='fontBree' style={{ float: 'left', fontSize: '40px', display: 'inline-block' }}>
-                                    SKILLS & CAPABILITES
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className='p-5 fontRubik' style={{ textAlign: 'justify', fontSize: '18px' }}>
-                        In my academic years, I cultivated a diverse set of technical skills as a Front-End Developer through hands-on project experiences. Below, you'll find the tools I employed for designing web and mobile applications.
-                    </div>
-                </motion.div>
-                <motion.div
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className="d-flex justify-content-between px-2 mt-1" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="devicon:react" className='circleshadow bounce1' style={{ width: '80px', height: '80px' }} />
-                        <Icon icon="vscode-icons:file-type-flutter" className='circleshadow bounce2' style={{ width: '80px',marginLeft: '10px', height: '80px' }} />
-                        <Icon icon="logos:firebase" className='circleshadow bounce3' style={{ marginLeft: '10px', width: '80px',height: '80px' }} />
-                        <Icon icon="icon-park:github" className='circleshadow bounce4' style={{ marginLeft: '10px', width: '80px',  height: '80px' }} />
-
-                    </div>
-                    <div className="d-flex justify-content-between mt-3" style={{ width:'250px',  marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="logos:html-5" className='circleshadow'  style={{ marginLeft: '10px',width:'50px', height: '50px' }}  />
-                        <Icon icon="logos:css-3" className='circleshadow'  style={{ marginLeft: '10px',width:'50px', height: '50px' }}  />
-                        <Icon icon="vscode-icons:file-type-js-official" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
-                        <Icon icon="logos:c-plusplus" className='circleshadow'  style={{ marginLeft: '10px',width:'50px', height: '50px' }}  />
-                    </div>
-                    <div className="d-flex justify-content-center center" style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-                        <Icon icon="devicon:dart-wordmark" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
-                        <Icon icon="logos:adobe-photoshop" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
-                        <Icon icon="skill-icons:illustrator" className='circleshadow' style={{ marginLeft: '10px',width:'50px', height: '50px' }} />
-                    </div>
-                </motion.div>
-
-            </Responsive>
-
-
-        </>
+            <motion.div className='row text-center mt-5'
+                style={{ marginTop: '100px' }}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                variants={{
+                    visible: { opacity: 1, scale: 1 },
+                    hidden: { opacity: 0, scale: 0 }
+                }}>
+                <p className="fontRaleway" style={{ fontSize: "2em", color: "#948979" }}>
+                    Mobile Development Tool, Photo Editing, CRM, and Git
+                </p>
+                <div className='row mt-4'>
+                    <p>
+                        <a href='https://flutter.dev/' target='_blank' rel="noreferrer">
+                            <img className="dropshadow-hover" src={fluttericon} style={{ height: '120px', width: 'auto' }} alt="Flutter" /></a>
+                        <a href='https://www.adobe.com/ph_en/products/photoshop.html' target='_blank' rel="noreferrer">
+                            <img className="dropshadow-hover" src={photoshopicon} style={{ height: '120px', marginLeft: '1.5em', width: 'auto' }} alt="Adobe Photoshop" /></a>
+                        <a href='https://www.adobe.com/ph_en/products/illustrator.html' target='_blank' rel="noreferrer">
+                            <img className="dropshadow-hover" src={illustratoricon} style={{ height: '120px', marginLeft: '1.5em', width: 'auto' }} alt="Adobe Illustrator" /></a>
+                        <a href='https://www.salesforce.com/ap/' target='_blank' rel="noreferrer">
+                            <img className="dropshadow-hover" src={salesforceicon} style={{ height: '120px', marginLeft: '1.5em', width: 'auto' }} alt="SalesForce" /></a>
+                        <a href='https://github.com/' target='_blank' rel="noreferrer">
+                            <img className="dropshadow-hover" src={githubicon} style={{ height: '120px', marginLeft: '1.5em', width: 'auto' }} alt="GitHub" /></a>
+                    </p>
+                </div>
+            </motion.div>
+        </div>
     )
 
 };
