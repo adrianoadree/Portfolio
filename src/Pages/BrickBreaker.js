@@ -1,6 +1,5 @@
 import { Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { Icon } from '@iconify/react';
 import Footer from '../Components/Footer';
 
 function BrickBreaker() {
