@@ -4,7 +4,6 @@ import ContactMe from "../Components/ContactMe";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import portrait from '../Assets/IMG_0386.png'
 
 const About = () => {
 
