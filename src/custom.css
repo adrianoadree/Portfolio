@@ -663,6 +663,25 @@ svg {
   font-family: titleFont;
 }
 
+.hero-about {
+  background-image: url('./Assets/IMG_0386.png');
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 100%;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+
+
 .hero {
   background-image: url('./Assets/HeroImageEnhanced.png');
   background-size: cover;
@@ -711,6 +730,7 @@ svg {
   font-family: RaleWay;
   text-decoration: none;
   color: #948979;
+  transition: color 0.3s ease;
 }
 
 .fontRaleway {
@@ -724,6 +744,11 @@ svg {
 
 .text-link:hover {
   color: #DFD0B8;
+}
+
+.active-link {
+  color: rgb(255, 255, 255);
+  /* Highlight color */
 }
 
 .row {

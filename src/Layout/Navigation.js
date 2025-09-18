@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AALogo from '../Assets/AA-white.png'
 
@@ -7,17 +7,43 @@ const Navigation = () => {
         <>
             <nav className='navstyle'>
                 <div className='nav-logo'>
-                    <a className='text-link' href="/">
-                        <img className="dropshadow-hover" src={AALogo} style={{ height: '4em' }} alt="Adrian Adriano" />
-                    </a>
-                </div>
-                <div className='text-link-container ' >
-                    <a className='text-link' href="/about-me">About Me</a>
-                    <a className='text-link' href="/projects">Projects</a>
-                    <a className='text-link' href="/arts">Arts</a>
+                    <NavLink className='text-link' to="/">
+                        <img
+                            className="dropshadow-hover"
+                            src={AALogo}
+                            style={{ height: '4em' }}
+                            alt="Adrian Adriano"
+                        />
+                    </NavLink>
                 </div>
 
-            </nav >
+                <div className='text-link-container'>
+                    <NavLink
+                        to="/about-me"
+                        className={({ isActive }) =>
+                            isActive ? "text-link active-link" : "text-link"
+                        }
+                    >
+                        About Me
+                    </NavLink>
+                    <NavLink
+                        to="/projects"
+                        className={({ isActive }) =>
+                            isActive ? "text-link active-link" : "text-link"
+                        }
+                    >
+                        Projects
+                    </NavLink>
+                    <NavLink
+                        to="/arts"
+                        className={({ isActive }) =>
+                            isActive ? "text-link active-link" : "text-link"
+                        }
+                    >
+                        Arts
+                    </NavLink>
+                </div>
+            </nav>
             <Outlet />
         </>
     )

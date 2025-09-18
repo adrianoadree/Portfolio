@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from "framer-motion";
+import SimoatLogo from '../Assets/Projects/Simoat/SIMOAT-logo-ver2.28f0f1202c52d57f2a61.png'
+import SimoatDisplay from '../Assets/SimOatDisplay.png'
 import WoopLogo from '../Assets/Projects/Woop/Woop_Logo_Outlined.png'
 import WoopDisplay from '../Assets/WoopDisplay.png'
 import IMSDisplay from '../Assets/IMSDisplay.png'
@@ -24,22 +26,77 @@ const Projects = () => {
                     <h1 className='fade-text text-center fontTitle px-5 pt-5 m-auto' style={{ marginTop: '.2em', fontSize: "10em", color: "wheat" }}>
                         Projects
                     </h1>
-                    <motion.p className="fontRaleway p-5" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                        variants={{
-                            visible: { opacity: 1, scale: 1 },
-                            hidden: { opacity: 0, scale: 0 }
-                        }}>
+                    <p className="fontRaleway p-5" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}>
                         I’ve had the opportunity to work on a wide range of projects, from internship tasks and capstone work during my academic years to a recent personal project that I pursued out of pure interest. Each project has given me the chance to explore different areas of development, whether it’s building websites, creating mobile apps, or experimenting with game design.
                         t
                         Along the way, I’ve worked with different programming languages and frameworks, adapting to new tools and challenges with every project. What excites me most is seeing an idea turn into something functional and tangible, whether it’s a polished app or a simple prototype. This collection represents not just what I’ve built, but also how I continue to grow as a developer — curious, creative, and always ready to learn something new.
-                    </motion.p>
+                    </p>
                 </div>
             </div>
             <div className='row px-5 fontRaleway py-5' style={{ backgroundColor: '#0F0E0E', color: "#948979", textAlign: 'justify' }}>
+                <motion.div className='row mt-5' initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}>
+                    <div className='col-lg-5 text-center m-auto'>
+                        <a href='/projects/simoat' >
+                            <motion.img src={SimoatDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
+                                initial={{ opacity: 0.6 }}
+                                whileHover={{
+                                    scale: 1.1,
+                                    transition: { duration: 0.2 },
+                                }}
+                                whileTap={{ scale: 0.9 }}
+                                whileInView={{ opacity: 1 }}
+                            />
+                        </a>
+                        <p>click me to view screens</p>
+                    </div>
+                    <div className='col-lg-7 text-center' >
+                        <img className='align-center' src={SimoatLogo} alt='IMS' style={{ maxHeight: '10em' }} />
+
+                        <div className='row'>
+                            <h1 className='pt-1' style={{ fontSize: '4em', color: 'wheat' }}>SimOat | Your Overnight Oats</h1>
+                            <h2 className='' style={{}}>Personal Project 2025</h2>
+                            <p></p>
+                            <p className="fontRaleway p-1"
+                                style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979", textAlign: 'justify' }}
+                            >
+                                SimOat is a web application showcasing a variety of Overnight Oats products, currently available exclusively for condo unit deliveries within Brixton Place.
+                            </p>
+                        </div>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                            <div>
+                                Built with ReactJS, and Bootstrap
+                            </div>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: '2em' }}>
+                                <a href='https://simoat.vercel.app/' target='_blank' rel='noreferrer'>
+                                    <button className="projects-button dropshadow-hover fontRaleway px-4 py-3">
+                                        <FontAwesomeIcon
+                                            icon={faArrowUpRightFromSquare}
+                                            style={{ fontSize: '2em', marginRight: '8px' }}
+                                        />
+                                        <span>Visit Site</span>
+                                    </button>
+                                </a>
+                                <a href='https://github.com/adrianoadree/SimOat' target='_blank' rel='noreferrer'>
+                                    <button className="projects-button dropshadow-hover fontRaleway px-4 py-3">
+                                        <FontAwesomeIcon
+                                            icon={faGithub}
+                                            style={{ fontSize: '2em', marginRight: '8px' }}
+                                        />
+                                        <span>View Code</span>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </motion.div>
                 <motion.div className='row mt-5 m-auto' initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}

@@ -40,7 +40,7 @@ const ContactMe = () => {
             <div className="col-lg-4 d-flex align-items-center justify-content-center">
                 <h1
                     className="fontTitle px-5"
-                    style={{ fontSize: "10em", color: "#948979", lineHeight: "1.1" }}
+                    style={{ fontSize: "8em", color: "#948979", lineHeight: "1.1" }}
                 >
                     Shoot a Message
                 </h1>

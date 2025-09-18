@@ -84,7 +84,7 @@ const Footer = () => {
                         ))}
                     </div>
                     <hr style={{ marginTop: '2em' }} />
-                    <span ><p style={{ display: 'inline-block' }}>Copyright © Adrian Adriano 2025 | </p> <a href='/' style={{ display: 'inline-block' }}>Sitemap</a></span>
+                    <span ><p style={{ display: 'inline-block' }}>Copyright © Adrian Adriano 2025 | </p> <a href='/sitemap' style={{ display: 'inline-block' }}>Sitemap</a></span>
                 </div>
             </div>
             <div className='col-lg-3 p-5 flex justify-center text-start fontRaleway'>

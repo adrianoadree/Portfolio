@@ -1,56 +1,22 @@
-import { Image } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import Footer from '../Components/Footer';
+import BrickBreakerLogo from '../Assets/Projects/Brickbreaker/paddle.png';
+import ContactMe from "../Components/ContactMe";
+import screen1 from '../Assets/Projects/Brickbreaker/brickbreaker.png'
+import screen2 from '../Assets/Projects/Brickbreaker/brickbreaker2.png'
+
 
 function BrickBreaker() {
 
     return (
         <>
-            <>
-                <motion.div
-                    initial={{ x: "100%" }}
-                    animate={{
-                        x: "calc(50vw - 50%)", transition: { duration: 0.5 },
-                    }}
-                    className='mt-5 shadow'
-                    style={{ backgroundColor: 'white' }}>
-                    <div className='center'>
-                        <Image
-                            src={require('../Assets/Projects/Brickbreaker/paddle.png')}
-                            style={{ width: '150px' }}
-                        />
-                    </div>
-                </motion.div>
-                <div className='center fontRubik text-justify mt-3'>
-                    <p style={{ fontWeight: 'bold', fontSize: '20px' }}>
-                        BrickBreaker
+            <div className='row px-5' style={{ minHeight: '100vh', height: 'auto', backgroundColor: '#1d1d1dff' }}>
+                <div className='text-center px-5 pt-5 m-auto' >
+                    <img className='text-center px-5 pt-5 m-auto' alt='BrickBreaker' src={BrickBreakerLogo} style={{ height: '15em', maxHeight: '15em' }} />
+                    <p style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979" }}>
+                        BrickBreaker (Academic Project 2019)
                     </p>
-                    <p style={{ fontWeight: 'bold', fontSize: '20px', color: '#FF8400' }}>
-                        (Course Project 2019)
-                    </p>
-
-                </div>
-                <div className='center fontRubik text-justify'>
-                    <p>
-                        A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City
-                    </p>
-                    <Image
-                        className='shadow mx-2'
-                        rounded='true'
-                        src={require('../Assets/Skills/unity.png')}
-                        style={{ height: '75px' }}
-
-                    />
-                    <Image
-                        className='shadow mx-2'
-                        rounded='true'
-                        src={require('../Assets/Skills/cSharp.jpg')}
-                        style={{ height: '75px' }}
-
-                    />
-                </div>
-                <div className='row center' style={{ width: '100%', padding: '40px' }}>
-                    <motion.div className='mt-5'
+                    <motion.p className="fontRaleway p-5 project-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -59,29 +25,42 @@ function BrickBreaker() {
                             visible: { opacity: 1, scale: 1 },
                             hidden: { opacity: 0, scale: 0 }
                         }}>
-                        <div className='m-3' style={{ display: 'inline' }}>
-                            <Image
-                                className='shadow'
-                                rounded='true'
-                                src={require('../Assets/Projects/Brickbreaker/brickbreaker.png')}
-                                style={{ width: '500px' }}
-                            />
-                        </div>
-                        <div className='m-3' style={{ display: 'inline' }}>
-                            <Image
-                                className='shadow'
-                                rounded='true'
-                                src={require('../Assets/Projects/Brickbreaker/brickbreaker2.png')}
-                                style={{ width: '500px' }}
-                            />
-                        </div>
-                    </motion.div>
-
+                        A Brick breaker game Created in Unity using C#. Background image and sprites used in the game was based on Colgante Bridge of Naga City
+                    </motion.p>
                 </div>
-                <Footer />
-            </>
+            </div>
 
+            <div className='row pt-5 px-5 fontRaleway' style={{ backgroundColor: '#0F0E0E' }}>
+                <div className='col-lg-6'>
+                    <motion.div className='row py-4 card'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.2 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
+                        <img src={screen1} alt="BrickBreaker" />
+                    </motion.div>
+                </div>
+                <div className='col-lg-6'>
+                    <motion.div className='row py-4 card'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.2 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
+                        <img src={screen2} alt="BrickBreaker" />
+                    </motion.div>
+                </div>
+            </div>
 
+            <ContactMe />
+            <Footer />
         </>
     );
 }
