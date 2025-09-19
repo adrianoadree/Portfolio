@@ -598,7 +598,9 @@ body {
   font-size: 1.2em;
 }
 
-
+.mobile-nav {
+  display: none;
+}
 
 /* Tablet view (768px and below) */
 @media (max-width: 768px) {
@@ -614,7 +616,9 @@ body {
 
 /* Mobile view (480px and below) */
 @media (max-width: 480px) {
-
+  .mobile-nav {
+    display: block !important;
+  }
 
   .fontTitle {
     font-size: 3rem !important;

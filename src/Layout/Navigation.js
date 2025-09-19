@@ -44,6 +44,18 @@ const Navigation = () => {
                     </NavLink>
                 </div>
             </nav>
+            <nav className="mobile-nav">
+                <div className='nav-logo'>
+                    <NavLink className='text-link' to="/" style={{ float: 'left' }}>
+                        <img
+                            className="dropshadow-hover"
+                            src={AALogo}
+                            style={{ height: '4em' }}
+                            alt="Adrian Adriano"
+                        />
+                    </NavLink>
+                </div>
+            </nav>
             <Outlet />
         </>
     )
