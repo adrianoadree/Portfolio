@@ -465,6 +465,7 @@
 
 .thunder-container {
   display: flex;
+  text-align: center;
 }
 
 .thunder-crazy {
