@@ -19,7 +19,7 @@ const Skills = () => {
 
 
     return (
-        <div className='row text-center py-5' style={{ height: 'auto', backgroundColor: '#1E201E' }}>
+        <div className='row text-center py-5 skills-component' style={{ height: 'auto', backgroundColor: '#1E201E' }}>
 
             <motion.div className='row'
                 style={{ marginTop: '100px' }}
@@ -52,21 +52,21 @@ const Skills = () => {
                 </p>
                 <p>
                     <a href='https://react.dev/' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={ReactJsicon} style={{ height: '100px', width: 'auto' }} alt="ReactJS" /></a>
+                        <img className="dropshadow-hover skillsicon" src={ReactJsicon} style={{ height: '100px', width: 'auto' }} alt="ReactJS" /></a>
                     <a href='https://firebase.google.com/?gclsrc=aw.ds&gad_source=1&gad_campaignid=20100026061&gbraid=0AAAAADpUDOjnVVlzJrhHEPJYBAHIT9X6S&gclid=CjwKCAjw2brFBhBOEiwAVJX5GHDdX9Ue8TopsjiRzaLyqmYeLvNNlppQFvbDIDY_l5KPW2KJI17fRhoC-QIQAvD_BwE' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={firebaseicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="Google Firebase" /></a>
+                        <img className="dropshadow-hover skillsicon" src={firebaseicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="Google Firebase" /></a>
                     <a href='https://getbootstrap.com/' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={bootstrapicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="Bootstrap" /></a>
+                        <img className="dropshadow-hover skillsicon" src={bootstrapicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="Bootstrap" /></a>
                     <a href='https://developer.mozilla.org/en-US/docs/Web/HTML' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={HTMLicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="HTML" /></a>
+                        <img className="dropshadow-hover skillsicon" src={HTMLicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="HTML" /></a>
                     <a href='https://developer.mozilla.org/en-US/docs/Web/CSS' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={CSSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="CSS" /></a>
+                        <img className="dropshadow-hover skillsicon" src={CSSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="CSS" /></a>
                     <a href='https://www.javascript.com/' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={JSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="JavaScript" /></a>
+                        <img className="dropshadow-hover skillsicon" src={JSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="JavaScript" /></a>
                     <a href='https://octobercms.com/docs/' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={octobercms} style={{ height: '100px', width: 'auto', marginLeft: '1.5em' }} alt="octobercms" /></a>
+                        <img className="dropshadow-hover skillsicon" src={octobercms} style={{ height: '100px', width: 'auto', marginLeft: '1.5em' }} alt="octobercms" /></a>
                     <a href='https://wordpress.com/' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover" src={wordpressicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="WordPress" /></a>
+                        <img className="dropshadow-hover skillsicon" src={wordpressicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="WordPress" /></a>
                 </p>
             </motion.div>
 

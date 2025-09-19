@@ -17,7 +17,7 @@ const Navigation = () => {
                     </NavLink>
                 </div>
 
-                <div className='text-link-container'>
+                <div className='text-link-container nav-bar-right'>
                     <NavLink
                         to="/about-me"
                         className={({ isActive }) =>

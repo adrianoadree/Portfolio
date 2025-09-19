@@ -11,61 +11,6 @@
   border: 1px solid red;
 }
 
-.container {
-  overflow: hidden;
-  display: flex;
-  height: 500px;
-  width: 3000px;
-  margin: 0 auto;
-}
-
-.container div {
-  height: 400px;
-  min-width: 300px;
-  margin-left: 30px;
-}
-
-.bg {
-  background-color: rgb(112, 122, 212);
-}
-
-
-.fontShadowsIntoLight {
-  font-family: 'Shadows Into Light', cursive;
-}
-
-.fontBree {
-  font-family: 'Bree Serif', serif;
-}
-
-.fontRubik {
-  font-family: 'Rubik', sans-serif;
-}
-
-.fontBorel {
-  font-family: 'Borel', cursive;
-}
-
-
-.fontInconsolata {
-  font-family: 'Inconsolata', monospace;
-}
-
-.fontKanit {
-  font-family: 'Kanit', sans-serif;
-}
-
-
-.fontMonospace {
-  font-family: 'Inconsolata', monospace;
-  font-family: 'Rubik', sans-serif;
-}
-
-.border-round {
-  border-radius: 50px;
-  color: 0 0 0;
-}
-
 .center {
   text-align: center;
   margin: auto;
@@ -75,340 +20,7 @@
 
 
 
-.iconHover :hover {
-  scale: 1.3
-}
 
-
-.buttonHover :hover {
-  scale: 1.3;
-  cursor: pointer;
-}
-
-.hoverColorChange :hover {
-  color: #FF8400;
-}
-
-.hoverChangeShadow :hover {
-  scale: 1.3;
-  cursor: pointer;
-  border: 2px solid #000000;
-  padding: 10px;
-  box-shadow: 5px 5px #000000;
-  border-radius: 15px;
-}
-
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-svg {
-  display: block;
-  font: 7em 'Montserrat';
-  width: 100%;
-  height: 150px;
-  margin: 0 auto;
-}
-
-.text-copy {
-  fill: none;
-  stroke: white;
-  stroke-dasharray: 6% 29%;
-  stroke-width: 3px;
-  stroke-dashoffset: 0%;
-  animation: stroke-offset 5.5s infinite linear;
-}
-
-.text-copy:nth-child(1) {
-  stroke: #5800FF;
-  animation-delay: -1;
-}
-
-.text-copy:nth-child(2) {
-  stroke: #0096FF;
-  animation-delay: -2s;
-}
-
-.text-copy:nth-child(3) {
-  stroke: #72FFFF;
-  animation-delay: -3s;
-}
-
-.text-copy:nth-child(4) {
-  stroke: #33038d;
-  animation-delay: -4s;
-}
-
-.text-copy:nth-child(5) {
-  stroke: #00D7FF;
-  animation-delay: -5s;
-}
-
-@keyframes stroke-offset {
-  100% {
-    stroke-dashoffset: -35%;
-  }
-}
-
-.shadow {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
-}
-
-.shadowBottom {
-  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
-}
-
-.boxshadow {
-  border: 1px solid #3a3a3a;
-  padding: 10px;
-  box-shadow: 5px 5px #3a3a3a;
-  border-radius: 15px;
-}
-
-
-.circleshadow {
-  border: 1px solid #3a3a3a;
-  padding: 10px;
-  box-shadow: 5px 5px #3a3a3a;
-  border-radius: 100px;
-}
-
-.bgImage {
-  background-image:
-    url('../src/Assets/studiopic.jpg');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 300px 300px;
-
-}
-
-
-.bgAdNU {
-  background-image:
-    url('../src/Assets/Ateneo_de_Naga_University_logo.png');
-  height: 50px;
-  margin-top: -70px;
-  margin-left: 200px;
-  background-repeat: no-repeat;
-  background-size: 200px 200px;
-
-}
-
-
-
-.bgIMS {
-  background-image:
-    url('../src/Assets/Projects/IMS/IMS1.png');
-  margin-top: -70px;
-  margin-left: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-.bgBrickBreaker {
-  background-image:
-    url('../src/Assets/Projects/Brickbreaker/brickbreaker.png');
-  margin-top: -70px;
-  margin-left: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-
-.bgTuwayan {
-  background-image:
-    url('../src/Assets/Projects/Tuwayan/tuwayan1.png');
-  margin-top: -70px;
-  margin-left: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.bgWoop {
-  background-image:
-    url('../src/Assets/Projects/Woop/Woop1.png');
-  margin-top: -70px;
-  margin-left: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-.separator {
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-
-.separator::before,
-.separator::after {
-  content: '';
-  flex: 1;
-  border-bottom: 1px solid #000;
-}
-
-.separator:not(:empty)::before {
-  margin-right: .25em;
-}
-
-.separator:not(:empty)::after {
-  margin-left: .25em;
-}
-
-.buttonStyle {
-  width: '240px';
-  height: '50px';
-  border: '1px solid black';
-  border-radius: '10px'
-}
-
-
-.butt {
-  width: '240px';
-  height: '50px';
-  border: '1px solid black';
-  border-radius: '10px'
-}
-
-.inlineDisplay {
-  display: inline-block;
-  height: 400px;
-  width: 250px;
-}
-
-
-.bgImageArt1 {
-  background-image:
-    url('../src/Assets/Arts/Aesthetic_Conventionalism1.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 300px 300px;
-
-}
-
-.bgImageArt2 {
-  background-image:
-    url('../src/Assets/Arts/Aesthetic_Conventionalism2.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 300px 300px;
-}
-
-.bgImageArt3 {
-  background-image:
-    url('../src/Assets/Arts/VectorArt.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.bgImageArt4 {
-  background-image:
-    url('../src/Assets/Arts/Aesthetic_Hedonism.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.bgImageArt5 {
-  background-image:
-    url('../src/Assets/Arts/robredosword.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 70% 100%;
-
-}
-
-.bgImageArt6 {
-  background-image:
-    url('../src/Assets/Arts/E11_Adriano.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 80% 100%;
-}
-
-.bgImageArt7 {
-  background-image:
-    url('../src/Assets/Arts/Business_Logo.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.bgImageArt8 {
-  background-image:
-    url('../src/Assets/Arts/Logo.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.bgImageArt9 {
-  background-image:
-    url('../src/Assets/Arts/Art_as_communication_of_emotion.jpg');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-.bgImageArt10 {
-  background-image:
-    url('../src/Assets/Arts/Aesthetic_Functionalism.png');
-  height: 50px;
-  margin-top: -70px;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
-
-.section {
-  background: #ffffff00;
-  height: 70px;
-  position: relative;
-  width: 100%;
-}
-
-
-.section::before {
-  animation: bounce 1s ease infinite;
-  bottom: 2rem;
-  color: #FF8400;
-  content: '⮟';
-  font-size: 2rem;
-  height: 4rem;
-  left: 50%;
-  letter-spacing: -1px;
-  line-height: 4rem;
-  margin-left: -3rem;
-  opacity: 0.8;
-  position: absolute;
-  text-align: center;
-  width: 6rem;
-}
-
-@keyframes bounce {
-  50% {
-    transform: translateY(-50%);
-  }
-}
 
 
 .wave {
@@ -983,4 +595,32 @@ body {
   border: solid 2px #948979;
   color: white;
   font-size: 1.2em;
+}
+
+
+
+/* Tablet view (768px and below) */
+@media (max-width: 768px) {
+  .fontTitle {
+    font-size: 7rem !important;
+  }
+
+  .nav-bar-right {
+    display: none !important;
+  }
+}
+
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+
+
+  .fontTitle {
+    font-size: 3rem !important;
+  }
+
+  .skillsicon {
+    max-width: 5em !important;
+    height: auto !important;
+  }
 }

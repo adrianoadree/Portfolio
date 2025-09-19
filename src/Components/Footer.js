@@ -27,7 +27,7 @@ const Footer = () => {
 
     return (
         <footer className='row text-center fontRaleway' style={{ height: 'auto', backgroundColor: '#1E201E', color: '#948979' }}>
-            <div className='col-lg-3 pt-5 text-end px-5'>
+            <div className='col-lg-3 pt-5 text-end px-5 footer-nav'>
                 <h1>Navigation</h1>
                 <div className=" ">
                     <ul style={{
@@ -35,7 +35,7 @@ const Footer = () => {
                         listStyleType: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: ".7em"
                     }}>
                         <li>
-                            <a className='text-link' href="/">
+                            <a className='text-link' href="/about-me">
                                 About Me
                             </a>
                         </li>

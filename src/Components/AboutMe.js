@@ -17,7 +17,7 @@ const AboutMe = () => {
                         visible: { opacity: 1, scale: 1 },
                         hidden: { opacity: 0, scale: 0 }
                     }}>
-                    <h1 className='job-title px-5' style={{ marginTop: '.7em', fontSize: "10em", color: "#948979" }}>
+                    <h1 className='fontTitle px-5' style={{ marginTop: '.7em', fontSize: "10em", color: "#948979" }}>
                         About Me
                     </h1>
 
