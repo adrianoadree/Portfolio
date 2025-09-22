@@ -750,6 +750,11 @@ body {
     font-size: 2em !important;
   }
 
+  .project-description {
+    font-size: 1em !important;
+    padding: 0px !important;
+  }
+
   .page-description {
     font-size: 1em !important;
   }

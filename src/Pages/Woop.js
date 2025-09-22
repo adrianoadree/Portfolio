@@ -24,11 +24,11 @@ function Woop() {
         <>
             <div className='row px-5' style={{ minHeight: '100vh', height: 'auto', backgroundColor: '#1d1d1dff' }}>
                 <div className='text-center px-5 pt-5 m-auto' >
-                    <img className='text-center px-5 pt-5 m-auto' alt='WoopLogo' src={WoopLogo} style={{ height: '15em', maxHeight: '15em' }} />
+                    <img className='pt-5 m-auto' alt='WoopLogo' src={WoopLogo} style={{ height: 'auto', maxHeight: '15em', maxWidth: '55vw' }} />
                     <p style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979" }}>
                         Woop! Bicycle Errand Services (Internship Project 2023)
                     </p>
-                    <motion.p className="fontRaleway p-5 project-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
+                    <motion.p className="fontRaleway project-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

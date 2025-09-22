@@ -12,11 +12,11 @@ function BrickBreaker() {
         <>
             <div className='row px-5' style={{ minHeight: '100vh', height: 'auto', backgroundColor: '#1d1d1dff' }}>
                 <div className='text-center px-5 pt-5 m-auto' >
-                    <img className='text-center px-5 pt-5 m-auto' alt='BrickBreaker' src={BrickBreakerLogo} style={{ height: '15em', maxHeight: '15em' }} />
+                    <img className='text-center pt-5 m-auto' alt='BrickBreaker' src={BrickBreakerLogo} style={{ height: 'auto', width: '15em', maxHeight: '15em', maxWidth: '70vw' }} />
                     <p style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979" }}>
                         BrickBreaker (Academic Project 2019)
                     </p>
-                    <motion.p className="fontRaleway p-5 project-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
+                    <motion.p className="fontRaleway project-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

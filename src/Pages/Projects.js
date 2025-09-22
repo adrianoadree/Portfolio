@@ -34,15 +34,17 @@ const Projects = () => {
                 </div>
             </div>
             <div className='row px-5 fontRaleway py-5' style={{ backgroundColor: '#0F0E0E', color: "#948979", textAlign: 'justify' }}>
-                <motion.div className='row mt-5' initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className='col-lg-5 text-center m-auto'>
+                <div className='row mt-5'
+                >
+                    <motion.div className='col-lg-5 text-center m-auto'
+                        initial={{ opacity: 0.6 }}
+                        whileHover={{
+                            scale: 1.1,
+                            transition: { duration: 0.2 },
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                        whileInView={{ opacity: 1 }}
+                    >
                         <a href='/projects/simoat' >
                             <motion.img className='screendisplay' src={SimoatDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
                                 initial={{ opacity: 0.6 }}
@@ -55,8 +57,16 @@ const Projects = () => {
                             />
                         </a>
                         <p>click me to view screens</p>
-                    </div>
-                    <div className='col-lg-7 text-center' >
+                    </motion.div>
+                    <motion.div className='col-lg-7 text-center'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }} >
                         <img className='align-center project-logo' src={SimoatLogo} alt='IMS' style={{ maxHeight: '10em' }} />
 
                         <div className='row'>
@@ -95,17 +105,18 @@ const Projects = () => {
                             </div>
                         </div>
 
-                    </div>
-                </motion.div>
-                <motion.div className='row mt-5 m-auto' initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className='col-lg-5 text-center'>
+                    </motion.div>
+                </div>
+                <div className='row mt-5 m-auto'>
+                    <motion.div className='col-lg-5 text-center'
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}
+                    >
                         <a href='/projects/woop' >
                             <motion.img className='screendisplay' src={WoopDisplay} style={{ maxHeight: '70vh' }}
                                 initial={{ opacity: 0.6 }}
@@ -118,8 +129,15 @@ const Projects = () => {
                             />
                         </a>
                         <p>click me to view screens</p>
-                    </div>
-                    <div className='col-lg-7 text-center' >
+                    </motion.div>
+                    <motion.div className='col-lg-7 text-center'
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
                         <img className='align-center project-logo' src={WoopLogo} alt='Woop!' style={{ maxHeight: '10em' }} />
                         <div className='row'>
                             <h1 className='pt-1 project-title' style={{ fontSize: '4em', color: 'wheat' }}>Woop! Bicycle Errand Services</h1>
@@ -150,17 +168,18 @@ const Projects = () => {
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </motion.div>
-                <motion.div className='row mt-5' initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className='col-lg-5 text-center m-auto'>
+                    </motion.div>
+                </div>
+                <div className='row mt-5'>
+                    <motion.div className='col-lg-5 text-center m-auto'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
                         <a href='/projects/IMS' >
                             <motion.img className='screendisplay' src={IMSDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
                                 initial={{ opacity: 0.6 }}
@@ -173,8 +192,16 @@ const Projects = () => {
                             />
                         </a>
                         <p>click me to view screens</p>
-                    </div>
-                    <div className='col-lg-7 text-center' >
+                    </motion.div>
+                    <motion.div className='col-lg-7 text-center'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
                         <img className='align-center project-logo' src={IMSLogo} alt='IMS' style={{ maxHeight: '10em' }} />
 
                         <div className='row'>
@@ -213,17 +240,18 @@ const Projects = () => {
                             </div>
                         </div>
 
-                    </div>
-                </motion.div>
-                <motion.div className='row mt-5' initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className='col-lg-5 text-center m-auto'>
+                    </motion.div>
+                </div>
+                <div className='row mt-5' >
+                    <motion.div className='col-lg-5 text-center m-auto'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
                         <a href='/projects/tuwayan' >
                             <motion.img className='screendisplay' src={TuwayanDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
                                 initial={{ opacity: 0.6 }}
@@ -236,8 +264,16 @@ const Projects = () => {
                             />
                         </a>
                         <p>click me to view screens</p>
-                    </div>
-                    <div className='col-lg-7 text-center' >
+                    </motion.div>
+                    <motion.div className='col-lg-7 text-center'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
                         <img className='align-center project-logo' src={TuwayanLogo} alt='Tuwayan' style={{ maxHeight: '10em' }} />
 
                         <div className='row'>
@@ -276,17 +312,18 @@ const Projects = () => {
                             </div>
                         </div>
 
-                    </div>
-                </motion.div>
-                <motion.div className='row mt-5' initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    variants={{
-                        visible: { opacity: 1, scale: 1 },
-                        hidden: { opacity: 0, scale: 0 }
-                    }}>
-                    <div className='col-lg-5 text-center m-auto'>
+                    </motion.div>
+                </div>
+                <div className='row mt-5'>
+                    <motion.div className='col-lg-5 text-center m-auto'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
                         <a href='/projects/brickbreaker' >
                             <motion.img className='screendisplay' src={BrickBreakerDisplay} style={{ maxHeight: '50vh', opacity: '10%', maxWidth: '100%' }}
                                 initial={{ opacity: 0.6 }}
@@ -299,8 +336,16 @@ const Projects = () => {
                             />
                         </a>
                         <p>click me to view screens</p>
-                    </div>
-                    <div className='col-lg-7 text-center' >
+                    </motion.div>
+                    <motion.div className='col-lg-7 text-center'
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            visible: { opacity: 1, scale: 1 },
+                            hidden: { opacity: 0, scale: 0 }
+                        }}>
                         <img className='align-center project-logo' src={BrickBreakerLogo} alt='BrickBreaker' style={{ maxHeight: '10em' }} />
 
                         <div className='row'>
@@ -331,8 +376,8 @@ const Projects = () => {
                             </div>
                         </div>
 
-                    </div>
-                </motion.div>
+                    </motion.div>
+                </div>
             </div>
             <ContactMe />
             <Footer />

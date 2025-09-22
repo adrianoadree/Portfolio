@@ -17,11 +17,11 @@ function SimOat() {
         <>
             <div className='row px-5' style={{ minHeight: '100vh', height: 'auto', backgroundColor: '#1d1d1dff' }}>
                 <div className='text-center px-5 pt-5 m-auto' >
-                    <img className='text-center px-5 pt-5 m-auto' alt='SimOat | Your Overnight Oats' src={SimoatLogo} style={{ height: '15em', maxHeight: '15em' }} />
+                    <img className='text-center pt-5 m-auto' alt='SimOat | Your Overnight Oats' src={SimoatLogo} style={{ height: '15em', maxHeight: '15em' }} />
                     <p style={{ marginTop: '1em', fontSize: "1.5em", color: "#948979" }}>
                         SimOat | Your Overnight Oats (Personal Project 2025)
                     </p>
-                    <motion.p className="fontRaleway p-5 project-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
+                    <motion.p className="fontRaleway project-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
