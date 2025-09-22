@@ -27,10 +27,10 @@ const Arts = () => {
         <>
             <div className='row px-5' style={{ height: 'auto', minHeight: '100vh', backgroundColor: '#1d1d1dff' }}>
                 <div style={{ marginTop: '10em' }}>
-                    <h1 className='fade-text text-center job-title px-5 pt-5 m-auto' style={{ marginTop: '.2em', fontSize: "10em", color: "wheat" }}>
+                    <h1 className='fade-text text-center fontTitle px-5 pt-5 m-auto' style={{ marginTop: '.2em', fontSize: "10em", color: "wheat" }}>
                         Arts
                     </h1>
-                    <p className="fontRaleway p-5" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}>
+                    <p className="fontRaleway p-5 page-description" style={{ marginTop: '1em', fontSize: "2em", color: "#948979", textAlign: 'justify' }}>
                         Here you’ll find a collection of my Photoshop and Illustrator pieces that I’ve enjoyed creating over time. Each artwork is a little snapshot of my creativity, where I’ve experimented with different styles, colors, and ideas. For me, design is not just about making things look good, but also about expressing imagination and having fun with the process. This gallery is a glimpse into how I like to bring concepts to life visually while continuing to grow and explore as an artist.
                     </p>
                 </div>

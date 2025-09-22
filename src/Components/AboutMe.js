@@ -35,9 +35,8 @@ const AboutMe = () => {
                         visible: { opacity: 1, scale: 1 },
                         hidden: { opacity: 0, scale: 0 }
                     }}>
-                    <p className="fontRaleway" style={{ fontSize: "2em", color: "#948979", textAlign: 'justify' }}>
-                        I’m Adrian, a Website Designer currently based in Ortigas, Pasig. I earned my Bachelor of Science in Information Technology from Ateneo de Naga University in 2023. Originally from Iriga City, Camarines Sur, I’ve built a strong passion for front-end development and creating seamless digital experiences.
-                        My work focuses on designing and building modern, user-friendly websites using React.js, along with core web technologies like JavaScript, HTML, and CSS. Beyond coding, I also enjoy graphic design, particularly crafting vector illustrations that bring added creativity to my projects.
+                    <p className="fontRaleway aboutme-component" style={{ fontSize: "2em", color: "#948979", textAlign: 'justify' }}>
+                        Hi, I’m Adrian, a Web Designer working remotely with our Ortigas office. I specialize in creating and maintaining modern, user-friendly websites using React.js, JavaScript, HTML, and CSS, with SEO and Google Analytics integrated to help sites perform at their best. Beyond coding, I love adding creative touches through graphic design and vector illustrations, making each project not just functional but visually engaging.
                     </p>
                     <a href='/about-me'>
                         <button

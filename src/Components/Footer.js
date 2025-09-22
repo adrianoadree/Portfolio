@@ -26,34 +26,39 @@ const Footer = () => {
 
 
     return (
-        <footer className='row text-center fontRaleway' style={{ height: 'auto', backgroundColor: '#1E201E', color: '#948979' }}>
-            <div className='col-lg-3 pt-5 text-end px-5 footer-nav'>
+        <footer className='row text-center fontRaleway footer' style={{ height: 'auto', backgroundColor: '#1E201E', color: '#948979' }}>
+            <div className="col-lg-3 pt-5 text-end px-5 footer-nav">
                 <h1>Navigation</h1>
-                <div className=" ">
-                    <ul style={{
-                        marginTop: '2em', fontSize: '1.2em',
-                        listStyleType: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: ".7em"
-                    }}>
+                <div>
+                    <ul
+                        style={{
+                            marginTop: "2em",
+                            fontSize: "1.2em",
+                            listStyleType: "none",
+                            padding: 0,
+                            margin: 0,
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: ".7em",
+                        }}
+                    >
                         <li>
-                            <a className='text-link' href="/about-me">
+                            <a className="text-link" href="/about-me">
                                 About Me
                             </a>
                         </li>
                         <li>
-                            <a className='text-link' href="/projects" >
+                            <a className="text-link" href="/projects">
                                 Projects
                             </a>
                         </li>
                         <li>
-                            <a className='text-link' href="/arts">
+                            <a className="text-link" href="/arts">
                                 Arts
                             </a>
                         </li>
                     </ul>
-
-
                 </div>
-
             </div>
             <div className='col-lg-6 p-2 pt-5' >
                 <a className='text-link' href="/">

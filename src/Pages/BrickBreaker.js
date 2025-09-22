@@ -32,7 +32,7 @@ function BrickBreaker() {
 
             <div className='row pt-5 px-5 fontRaleway' style={{ backgroundColor: '#0F0E0E' }}>
                 <div className='col-lg-6'>
-                    <motion.div className='row py-4 card'
+                    <motion.div className='row py-4'
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
@@ -45,7 +45,7 @@ function BrickBreaker() {
                     </motion.div>
                 </div>
                 <div className='col-lg-6'>
-                    <motion.div className='row py-4 card'
+                    <motion.div className='row py-4'
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}

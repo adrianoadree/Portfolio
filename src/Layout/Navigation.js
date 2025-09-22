@@ -1,11 +1,25 @@
+import { useState } from "react";
 import { Outlet, NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AALogo from '../Assets/AA-white.png'
 
 const Navigation = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+
     return (
         <>
             <nav className='navstyle'>
+                {/* Hamburger menu (only visible on mobile/tablet) */}
+                <button
+                    className="hamburger"
+                    onClick={toggleMenu}
+                >
+                    ☰
+                </button>
+
+                {/* Logo */}
                 <div className='nav-logo'>
                     <NavLink className='text-link' to="/">
                         <img
@@ -17,6 +31,7 @@ const Navigation = () => {
                     </NavLink>
                 </div>
 
+                {/* Desktop links (unchanged) */}
                 <div className='text-link-container nav-bar-right'>
                     <NavLink
                         to="/about-me"
@@ -43,19 +58,21 @@ const Navigation = () => {
                         Arts
                     </NavLink>
                 </div>
-            </nav>
-            <nav className="mobile-nav">
-                <div className='nav-logo'>
-                    <NavLink className='text-link' to="/" style={{ float: 'left' }}>
-                        <img
-                            className="dropshadow-hover"
-                            src={AALogo}
-                            style={{ height: '4em' }}
-                            alt="Adrian Adriano"
-                        />
+
+                {/* Mobile dropdown */}
+                <div className={`nav-links-mobile ${isOpen ? "open" : ""}`}>
+                    <NavLink to="/about-me" className="text-link" onClick={() => setIsOpen(false)}>
+                        About Me
+                    </NavLink>
+                    <NavLink to="/projects" className="text-link" onClick={() => setIsOpen(false)}>
+                        Projects
+                    </NavLink>
+                    <NavLink to="/arts" className="text-link" onClick={() => setIsOpen(false)}>
+                        Arts
                     </NavLink>
                 </div>
             </nav>
+
             <Outlet />
         </>
     )
