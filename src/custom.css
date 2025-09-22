@@ -771,4 +771,15 @@ body {
     font-size: 1.5em;
   }
 
+  .view-button:hover {
+    height: auto;
+    width: auto;
+    border-radius: 1em;
+    background-color: #948979;
+    border: solid 2px #948979;
+    color: white;
+    font-size: 1.5em;
+    z-index: -1;
+  }
+
 }
