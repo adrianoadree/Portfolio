@@ -48,7 +48,7 @@ const Skills = () => {
                     hidden: { opacity: 0, scale: 0 }
                 }}>
                 <p className="fontRaleway" style={{ fontSize: "2em", color: "#948979" }}>
-                    Web Development Tools, & CMS
+                    Front-End Stack
                 </p>
                 <p>
                     <a href='https://react.dev/' target='_blank' rel="noreferrer">
@@ -63,10 +63,6 @@ const Skills = () => {
                         <img className="dropshadow-hover skillsicon" src={CSSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="CSS" /></a>
                     <a href='https://www.javascript.com/' target='_blank' rel="noreferrer">
                         <img className="dropshadow-hover skillsicon" src={JSicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="JavaScript" /></a>
-                    <a href='https://octobercms.com/docs/' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover skillsicon" src={octobercms} style={{ height: '100px', width: 'auto', marginLeft: '1.5em' }} alt="octobercms" /></a>
-                    <a href='https://wordpress.com/' target='_blank' rel="noreferrer">
-                        <img className="dropshadow-hover skillsicon" src={wordpressicon} style={{ height: '100px', marginLeft: '1.5em', width: 'auto' }} alt="WordPress" /></a>
                 </p>
             </motion.div>
 
